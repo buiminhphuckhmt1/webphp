@@ -1,0 +1,114 @@
+.news-wrapper {
+    position: relative;
+    padding: 72px 0;
+  
+    .row-breadcrumb {
+      margin-bottom: 26px;
+    }
+  }
+  
+  .news-list-wrapper {
+    position: relative;
+  
+    .news-sapo {
+      margin-bottom: 50px;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: calc(33 / 21);
+      letter-spacing: -0.03em;
+      color: #828282;
+    }
+  
+    .news-content-list {
+      position: relative;
+  
+      .list--inner {
+        margin-bottom: 90px;
+      }
+  
+      .list-item {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: flex-start;
+        gap: 38px;
+        flex-wrap: wrap;
+  
+        .item-image {
+          flex: 0 0 440px;
+          max-width: 440px;
+          @include ratio-img(60.22%);
+          border-radius: 4px;
+  
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 36.36%;
+            height: 33.2%;
+            background: url(../images/common/hover-deco.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            z-index: 1;
+            pointer-events: none;
+            transform: translateY(100%);
+            transition: all 0.3s;
+          }
+  
+          &:hover {
+            &:after {
+              transform: translateY(0);
+              transition: all 0.3s;
+            }
+          }
+        }
+  
+        .item-content {
+          flex: 1;
+  
+          .item-title {
+            @include font("Lexend Deca", 500, 26px, calc(32 / 26));
+            font-style: normal;
+            letter-spacing: -0.03em;
+            color: #4f4f4f;
+            margin-bottom: 14px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+  
+            &:hover {
+              color: $purple;
+              transition: all 0.3s;
+            }
+          }
+          .date {
+            @include font("Lexend Deca", 300, 16px, calc(20 / 16));
+            letter-spacing: -0.03em;
+            color: #bdbdbd;
+            font-style: normal;
+            margin-bottom: 14px;
+          }
+          .des {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: calc(24 / 16);
+            letter-spacing: -0.03em;
+            color: #828282;
+            @include line-clamp(4);
+          }
+          .btn-pill {
+            padding: 5px 35px;
+            @include font("Lexend Deca", 400, 20px, calc(30 / 20));
+            letter-spacing: -0.03em;
+  
+            &:hover {
+              background: $purple;
+              border: 1px solid $purple;
+            }
+          }
+        }
+      }
+    }
+  }
+  

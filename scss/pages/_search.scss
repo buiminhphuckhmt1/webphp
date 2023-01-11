@@ -1,0 +1,39 @@
+.section-search{
+    position: relative;
+    margin-top: 66.37px;
+    .section-search-title{
+        position: relative;
+        margin-bottom: 170.41px;
+        .section-search-navlink {
+            display: flex;
+            gap: 12px;
+            letter-spacing: -0.03em;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 1.25;
+            color: #765BA7;
+            text-decoration: none;
+            transition: all .3s;
+            margin-top: 69px;
+            img{
+                display: block;
+                max-width: 40px;
+            }
+        }
+        p{
+            font-family: 'SVN-Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 19px;
+            margin-top: 23.47px;
+            display: flex;
+            align-items: center;
+            color: #765BA7;
+            margin-bottom: 66px;
+            span{
+                font-weight: 800;
+            }
+        }
+    }
+}

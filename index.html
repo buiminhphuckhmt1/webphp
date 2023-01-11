@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Website Greenfield</title>
+</head>
+
+<body>
+    <div id="app">
+        <myheader></myheader>
+
+        <main>
+
+            <div class="master-wrapper">
+
+                <div class="indicator-line">
+                    <div class="indicator-top"></div>
+                    <div class="indicator-mid"></div>
+                    <div class="indicator-bot"></div>
+                </div>
+
+                <div class="gf-home--banner-wrapper">
+                    <div class="gf-banner-slider">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide" v-for="image in bannerImg" :key="image.index">
+                                    <img class="img-fluid" :src="image" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
+                    </div>
+                    <div class="gf-banner-deco">
+                        <div class="deco-text">
+                            <p class="text-uppercase">
+                                Happy School
+                            </p>
+                            <p>
+                                -An education from the heart within
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bf-scroll-down">
+                        <img class="img-fluid" src="images/common/scroll-ic.png" alt="">
+                    </div>
+                </div>
+
+                <div class="gf-home--gioithieu-wrapper">
+                    <div class="home-gioithieu--inner">
+                        <div class="home-gioithieu-section-wrapper">
+                            <div class="home-gioithieu-section" v-for="(item, index) in allAbout" :key="item.index"
+                                :id="'gioithieu-section-' + (index+1)">
+                                <!-- <div class="section-header">
+                                    <h3>
+                                        <a href="javascript:;" role="button" aria-expanded="true">
+                                            {{item.title}}
+                                        </a>
+                                    </h3>
+                                </div> -->
+                                <div class="section-container">
+                                    <div class="section-image-wrapper">
+                                        <div class="section-image">
+                                            <img class="img-fluid" :src="item.images" alt="">
+                                        </div>
+                                        <div class="info-circle">
+                                            {{item.imagesInfo}}
+                                        </div>
+                                    </div>
+                                    <div class="section-text-wrapper">
+                                        <h4>{{item.title}}</h4>
+                                        <p>{{item.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-gioithieu-nav">
+                            <ul>
+                                <li class="active">
+                                    <a href="#gioithieu-section-1" title="" class="gioithieu-navlink">
+
+                                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path id="pie" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.749 11.1026L20.6463 20L11.7489 28.8974C9.48127 26.6297 8.06578 23.481 8.05134 20C8.06578 16.5479 9.46683 13.3847 11.749 11.1026Z"
+                                                fill="white" />
+                                            <path id="outline"
+                                                d="M40.1484 20C40.1484 30.7696 31.418 39.5 20.6484 39.5C9.87888 39.5 1.14844 30.7696 1.14844 20C1.14844 9.23045 9.87888 0.5 20.6484 0.5C31.418 0.5 40.1484 9.23045 40.1484 20Z"
+                                                stroke="white" />
+                                        </svg>
+
+                                        Thương hiệu giáo dục uy tín
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#gioithieu-section-2" title="" class="gioithieu-navlink">
+
+                                        <svg width=" 41" height="40" viewBox="0 0 41 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path id="pie" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.749 11.1026L20.6463 20L11.7489 28.8974C9.48127 26.6297 8.06578 23.481 8.05134 20C8.06578 16.5479 9.46683 13.3847 11.749 11.1026Z"
+                                                fill="white" />
+                                            <path id="outline"
+                                                d="M40.1484 20C40.1484 30.7696 31.418 39.5 20.6484 39.5C9.87888 39.5 1.14844 30.7696 1.14844 20C1.14844 9.23045 9.87888 0.5 20.6484 0.5C31.418 0.5 40.1484 9.23045 40.1484 20Z"
+                                                stroke="white" />
+                                        </svg>
+
+                                        Cơ sở vật chất hiện đại
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#gioithieu-section-3" title="" class="gioithieu-navlink">
+
+                                        <svg width=" 41" height="40" viewBox="0 0 41 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path id="pie" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.749 11.1026L20.6463 20L11.7489 28.8974C9.48127 26.6297 8.06578 23.481 8.05134 20C8.06578 16.5479 9.46683 13.3847 11.749 11.1026Z"
+                                                fill="white" />
+                                            <path id="outline"
+                                                d="M40.1484 20C40.1484 30.7696 31.418 39.5 20.6484 39.5C9.87888 39.5 1.14844 30.7696 1.14844 20C1.14844 9.23045 9.87888 0.5 20.6484 0.5C31.418 0.5 40.1484 9.23045 40.1484 20Z"
+                                                stroke="white" />
+                                        </svg>
+
+                                        Chương trình giáo dục tối ưu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#gioithieu-section-4" title="" class="gioithieu-navlink">
+
+                                        <svg width=" 41" height="40" viewBox="0 0 41 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path id="pie" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.749 11.1026L20.6463 20L11.7489 28.8974C9.48127 26.6297 8.06578 23.481 8.05134 20C8.06578 16.5479 9.46683 13.3847 11.749 11.1026Z"
+                                                fill="white" />
+                                            <path id="outline"
+                                                d="M40.1484 20C40.1484 30.7696 31.418 39.5 20.6484 39.5C9.87888 39.5 1.14844 30.7696 1.14844 20C1.14844 9.23045 9.87888 0.5 20.6484 0.5C31.418 0.5 40.1484 9.23045 40.1484 20Z"
+                                                stroke="white" />
+                                        </svg>
+
+                                        Chứng nhận quốc tế chuẩn mực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#gioithieu-section-5" title="" class="gioithieu-navlink">
+
+                                        <svg width=" 41" height="40" viewBox="0 0 41 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path id="pie" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.749 11.1026L20.6463 20L11.7489 28.8974C9.48127 26.6297 8.06578 23.481 8.05134 20C8.06578 16.5479 9.46683 13.3847 11.749 11.1026Z"
+                                                fill="white" />
+                                            <path id="outline"
+                                                d="M40.1484 20C40.1484 30.7696 31.418 39.5 20.6484 39.5C9.87888 39.5 1.14844 30.7696 1.14844 20C1.14844 9.23045 9.87888 0.5 20.6484 0.5C31.418 0.5 40.1484 9.23045 40.1484 20Z"
+                                                stroke="white" />
+                                        </svg>
+
+                                        Thành tích học sinh vượt trội
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-home--program-wrapper">
+                    <div class="container">
+                        <div class="common-section-title purple-text">
+                            <h4 class="title-name">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                        fill="#765BA7" />
+                                </svg>
+
+                                Chương trình giáo dục
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="program-inner">
+                        <div class="program-item-wrapper">
+                            <div class="program-background"></div>
+                            <div class="program-image" style="background-image: url(images/home/program-img-1.jpg);">
+                            </div>
+                            <div class="program-content">
+                                <div class="program-content--inner">
+                                    <div class="content-wrapper">
+                                        <div class="content-head">
+                                            <div class="content-head-ic">
+                                                <img class="img-fluid" src="images/common/home-program-ic.png" alt="">
+                                            </div>
+                                            <h4 class="content-head-title">Hệ Chất lượng cao</h4>
+                                        </div>
+                                        <div class="content-main">
+                                            Chương trình giáo dục Quốc gia (MOET) kết hợp Chương trình Tiếng Anh
+                                            Cambridge (CEP) giúp học sinh nắm vững kiến thức trọng tâm của từng cấp
+                                            lớp,
+                                            đạt được các bằng cấp, chứng chỉ Tiếng Anh Quốc tế được công nhận toàn
+                                            cầu.
+                                        </div>
+                                    </div>
+
+                                    <a href="javascript" title="" class="btn-pill border-pill">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-item-wrapper">
+                            <div class="program-background"></div>
+                            <div class="program-image" style="background-image: url(images/home/program-img-2.jpg);">
+                            </div>
+                            <div class="program-content">
+                                <div class="program-content--inner">
+                                    <div class="content-wrapper">
+                                        <div class="content-head">
+                                            <div class="content-head-ic">
+                                                <img class="img-fluid" src="images/common/home-program-ic.png" alt="">
+                                            </div>
+                                            <h4 class="content-head-title">Hệ Song ngữ CDTC</h4>
+                                        </div>
+                                        <div class="content-main">
+                                            Chương trình giáo dục Quốc gia (MOET) kết hợp Chương trình Thể thao –
+                                            Năng
+                                            khiếu – Ngoại khóa bằng Tiếng Anh nâng cao và Luyện thi IELTS, giúp học
+                                            sinh
+                                            nâng cao khả năng học tập, làm việc và thích ứng tốt hơn trong thời đại
+                                            hòa nhập toàn cầu
+                                        </div>
+                                    </div>
+
+                                    <a href="javascript" title="" class="btn-pill border-pill">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-item-wrapper">
+                            <div class="program-background"></div>
+                            <div class="program-image" style="background-image: url(images/home/program-img-3.jpg);">
+                            </div>
+                            <div class="program-content">
+                                <div class="program-content--inner">
+                                    <div class="content-wrapper">
+                                        <div class="content-head">
+                                            <div class="content-head-ic">
+                                                <img class="img-fluid" src="images/common/home-program-ic.png" alt="">
+                                            </div>
+                                            <h4 class="content-head-title">Hệ Cambridge</h4>
+                                        </div>
+                                        <div class="content-main">
+                                            Chương trình giáo dục Quốc gia (MOET) kết hợp Chương trình Phổ thông
+                                            Quốc tế
+                                            Cambridge, giúp học sinh “du học tại chỗ” và “cơ hội kép” sở hữu các
+                                            chứng
+                                            chỉ được công nhận toàn cầu
+                                        </div>
+                                    </div>
+
+                                    <a href="javascript" title="" class="btn-pill border-pill">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section purple-bg meeting-studuent">
+                    <div class="container">
+                        <div class="common-section-title white-text">
+                            <h4 class="title-name">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                        fill="#765BA7" />
+                                </svg>
+
+                                Gặp gỡ học sinh
+                            </h4>
+
+                            <div class="view-detail">
+                                <a href="javascript:;" title="" class="view-detail-cta">
+                                    Xem Tiếp
+
+                                    <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="13.4736" cy="12.9082" r="12.8613" fill="white" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.2779 13.0876L10.4644 8.21339L11.1692 7.5173L16.3404 12.7536C16.4344 12.8488 16.4859 12.9778 16.4832 13.1115C16.4806 13.2452 16.424 13.3721 16.3263 13.4634L11.1551 18.3003L10.4784 17.5768L15.2779 13.0876Z"
+                                            fill="#765BA7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="meeting-student-wrapper">
+                            <div class="meeting-student-item" v-for="n in 4">
+                                <div class="student-image">
+                                    <a href="javascript:;" title="">
+                                        <img class="img-fluid" src="images/common/student-img.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="student-des">
+                                    <h4 class="student-name">Huỳnh Minh Quyên</h4>
+                                    <p class="student-text">
+                                        Giải Nhất - Cấp Quốc Tế - Cuộc thi đàn “Thailand
+                                        International virtual music competition 2021”
+                                    </p>
+                                </div>
+                                <a href="javascript:;" title="" class="btn-pill border-pill">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section purple-bg home-news">
+                    <div class="overlay-background" style="background: url(../images/home/home-news-bg.png);"></div>
+                    <div class="container">
+                        <div class="common-section-title white-text">
+                            <h4 class="title-name">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                        fill="#765BA7" />
+                                </svg>
+
+                                Gặp gỡ học sinh
+                            </h4>
+
+                            <div class="view-detail">
+                                <a href="javascript:;" title="" class="view-detail-cta">
+                                    Xem tất cả
+
+                                    <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="13.4736" cy="12.9082" r="12.8613" fill="white" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.2779 13.0876L10.4644 8.21339L11.1692 7.5173L16.3404 12.7536C16.4344 12.8488 16.4859 12.9778 16.4832 13.1115C16.4806 13.2452 16.424 13.3721 16.3263 13.4634L11.1551 18.3003L10.4784 17.5768L15.2779 13.0876Z"
+                                            fill="#765BA7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="home-news-wrapper">
+                            <div class="home-feature-news">
+                                <div class="home-news-item">
+                                    <div class="news-images">
+                                        <a href="javascript:;" title="">
+                                            <img class="img-fluid" src="images/home/news-image.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="javascript:;" title="" class="news-title">
+                                            Trang bị năng lực số cho công dân
+                                            4.0 với môn tin học chuẩn quốc tế tại hệ thống giáo dục Greenfield
+                                            School
+                                        </a>
+                                        <p class="news-des">
+                                            Có thể thấy ngày nay, bên cạnh khái niệm literacy – khả năng đọc và
+                                            viết, thế hệ học sinh cần phải thông thạo một kỹ năng mới – đó chính là
+                                            năng lực công nghệ số (digital literacy).
+                                        </p>
+                                        <a href="javascript:;" title="" class="view-detail-cta">
+                                            Xem Tiếp
+
+                                            <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="13.4736" cy="12.9082" r="12.8613" fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M15.2779 13.0876L10.4644 8.21339L11.1692 7.5173L16.3404 12.7536C16.4344 12.8488 16.4859 12.9778 16.4832 13.1115C16.4806 13.2452 16.424 13.3721 16.3263 13.4634L11.1551 18.3003L10.4784 17.5768L15.2779 13.0876Z"
+                                                    fill="#765BA7" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-list-news">
+                                <div class="home-news-item" v-for="n in 3">
+                                    <div class="news-images">
+                                        <a href="javascript:;" title="">
+                                            <img class="img-fluid" src="images/home/news-image.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news-content">
+                                        <a href="javascript:;" title="" class="news-title">
+                                            Trang bị năng lực số cho công dân
+                                            4.0 với môn tin học chuẩn quốc tế tại hệ thống giáo dục Greenfield
+                                            School
+                                        </a>
+                                        <p class="news-des">
+                                            Có thể thấy ngày nay, bên cạnh khái niệm literacy – khả năng đọc và
+                                            viết, thế hệ học sinh cần phải thông thạo một kỹ năng mới – đó chính là
+                                            năng lực công nghệ số (digital literacy).
+                                        </p>
+                                        <a href="javascript:;" title="" class="view-detail-cta">
+                                            Xem Tiếp
+
+                                            <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="13.4736" cy="12.9082" r="12.8613" fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M15.2779 13.0876L10.4644 8.21339L11.1692 7.5173L16.3404 12.7536C16.4344 12.8488 16.4859 12.9778 16.4832 13.1115C16.4806 13.2452 16.424 13.3721 16.3263 13.4634L11.1551 18.3003L10.4784 17.5768L15.2779 13.0876Z"
+                                                    fill="#765BA7" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section green-bg home-events">
+                    <div class="container">
+                        <div class="common-section-title white-text">
+                            <h4 class="title-name">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                        fill="#765BA7" />
+                                </svg>
+
+                                Sự kiện
+                            </h4>
+                        </div>
+
+                        <div class="home-events-wrapper">
+                            <div class="events-slider">
+                                <!-- Slider main container -->
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide" v-for="n in 7">
+                                            <div class="events-item-wrapper">
+                                                <div class="events-image-wrap">
+                                                    <a href="javascript:;" title="">
+                                                        <img class="img-fluid" src="images/common/student-img.png"
+                                                            alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="events-deco">
+                                                    <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path id="pie" fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M11.749 11.1026L20.6463 20L11.7489 28.8974C9.48127 26.6297 8.06578 23.481 8.05134 20C8.06578 16.5479 9.46683 13.3847 11.749 11.1026Z"
+                                                            fill="white" />
+                                                        <path id="outline"
+                                                            d="M40.1484 20C40.1484 30.7696 31.418 39.5 20.6484 39.5C9.87888 39.5 1.14844 30.7696 1.14844 20C1.14844 9.23045 9.87888 0.5 20.6484 0.5C31.418 0.5 40.1484 9.23045 40.1484 20Z"
+                                                            stroke="white" />
+                                                    </svg>
+                                                </div>
+                                                <div class="events-content">
+                                                    <a href="javascript:;" title="" class="event-name">
+                                                        Chương trình Giáng sinh
+                                                        “Let it Snow”
+                                                    </a>
+                                                    <ul>
+                                                        <li>
+                                                            Địa điểm: <span>Lô 01-74 Khu đô thị Ecopark</span>
+                                                        </li>
+                                                        <li>
+                                                            Thời gian: <span>28.01.2022</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev">
+                                    <img class="img-fluid" src="images/common/slide-prev.png" alt="">
+                                </div>
+                                <div class="swiper-button-next">
+                                    <img class="img-fluid" src="images/common/slide-next.png" alt="">
+                                </div>
+                            </div>
+                            <div class="home-events-cta">
+                                <a href="javascript:;" title="" class="btn-pill border-pill purple-pill">
+                                    Xem thêm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section purple-bg home-videos">
+                    <div class="container">
+                        <div class="common-section-title white-text">
+                            <h4 class="title-name">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                        fill="#765BA7" />
+                                </svg>
+
+                                Video
+                            </h4>
+                        </div>
+
+                        <div class="home-video-slider">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide" v-for="n in 7">
+                                        <div class="video-item-wrapper">
+                                            <div class="video-image-wrap">
+                                                <a href="javascript:;" title="">
+                                                    <img class="img-fluid" src="images/common/video-thumb.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="video-content">
+                                                <a href="javascript:;" title="" class="video-name">
+                                                    Trang bị năng lực số cho công dân 4.0 với môn tin học chuẩn quốc
+                                                    tế tại hệ thống giáo dục Greenfield School
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev">
+                                <img class="img-fluid" src="images/common/slide-prev.png" alt="">
+                            </div>
+                            <div class="swiper-button-next">
+                                <img class="img-fluid" src="images/common/slide-next.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section purple-bg parents-story"
+                    style="background: url(../images/home/parents-story-bg.jpg);">
+                    <div class="parents-story--inner">
+                        <div class="container">
+                            <div class="common-section-title white-text">
+                                <h4 class="title-name">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                            fill="#765BA7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                            fill="#765BA7" />
+                                    </svg>
+
+                                    Câu chuyện phụ huynh
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="parents-story-slider-wrapper">
+                            <div class="parents-story-slider">
+                                <!-- Slider main container -->
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide" v-for="n in 7">
+                                            <div class="story-item-wrapper">
+                                                <div class="story-image">
+                                                    <img class="img-fluid" src="images/common/video-thumb.jpg" alt="">
+                                                </div>
+                                                <div class="story-content">
+                                                    <div class="story-head">
+                                                        <h4 class="head-title">Chị Hoàng Khánh Ngọc</h4>
+                                                        <ul>
+                                                            <li>Giám Đốc Miền nam - Ngân hàng VIB</li>
+                                                            <li>Phụ huynh em Hà My, lớp 5</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="story-body">
+                                                        <div class="story-body-deco">
+                                                            <img class="img-fluid" src="images/common/story-deco.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="story-body-text">
+                                                            Bản thân tôi, qua sự giới thiệu này, tôi cũng đã tự tìm
+                                                            hiểu, nghiên cứu, đánh giá hết tất cả các khía cạnh,
+                                                            cũng như so sánh với các ngôi trường khác. Sau khi đã
+                                                            nghiên cứu, tôi quyết định chọn Việt Úc. Và đến bây giờ
+                                                            Bản thân tôi, qua sự giới thiệu này, tôi cũng đã tự tìm
+                                                            hiểu, nghiên cứu, đánh giá hết tất cả các khía cạnh
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev">
+                                    <img class="img-fluid" src="images/common/slide-prev.png" alt="">
+                                </div>
+                                <div class="swiper-button-next">
+                                    <img class="img-fluid" src="images/common/slide-next.png" alt="">
+                                </div>
+                            </div>
+                            <div class="parents-story-cta">
+                                <a href="javascript:;" title="" class="btn-pill border-pill yellow-pill">
+                                    Xem thêm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section white-bg home-partner">
+                    <div class="container">
+                        <div class="common-section-title purple-text">
+                            <h4 class="title-name">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 12.3107C6.24141 10.6308 4.87571 9.26514 3.1959 9.26514C1.51609 9.26514 0.150391 10.6308 0.150391 12.3107C0.150391 13.9905 1.51609 15.3562 3.1959 15.3562C4.87571 15.3562 6.24141 13.9905 6.24141 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 3.39268C15.1594 1.71287 13.7937 0.347168 12.1139 0.347168C10.4341 0.347168 9.06836 1.71287 9.06836 3.39268C9.06836 5.07249 10.4341 6.43818 12.1139 6.43818C13.7937 6.43818 15.1594 5.07249 15.1594 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 3.39268C32.9953 1.71287 31.6296 0.347168 29.9498 0.347168C28.27 0.347168 26.9043 1.71287 26.9043 3.39268C26.9043 5.07249 28.27 6.43818 29.9498 6.43818C31.6296 6.43818 32.9953 5.07249 32.9953 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 29.4093C6.24141 27.7295 4.87571 26.3638 3.1959 26.3638C1.51609 26.3638 0.150391 27.7295 0.150391 29.4093C0.150391 31.0891 1.51609 32.4548 3.1959 32.4548C4.87571 32.4548 6.24141 31.0891 6.24141 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 29.4093C24.0773 27.7295 22.7117 26.3638 21.0318 26.3638C19.352 26.3638 17.9863 27.7295 17.9863 29.4093C17.9863 31.0891 19.352 32.4548 21.0318 32.4548C22.7117 32.4548 24.0773 31.0891 24.0773 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 20.4913C32.9953 18.8115 31.6296 17.4458 29.9498 17.4458C28.27 17.4458 26.9043 18.8115 26.9043 20.4913C26.9043 22.1711 28.27 23.5368 29.9498 23.5368C31.6296 23.5368 32.9953 22.1711 32.9953 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 3.39268C6.24141 1.71287 4.87571 0.347168 3.1959 0.347168C1.51609 0.347168 0.150391 1.71287 0.150391 3.39268C0.150391 5.07249 1.51609 6.43818 3.1959 6.43818C4.87571 6.43818 6.24141 5.07249 6.24141 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 12.3107C32.9953 10.6308 31.6296 9.26514 29.9498 9.26514C28.27 9.26514 26.9043 10.6308 26.9043 12.3107C26.9043 13.9905 28.27 15.3562 29.9498 15.3562C31.6296 15.3562 32.9953 13.9905 32.9953 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 3.39268C24.0773 1.71287 22.7117 0.347168 21.0318 0.347168C19.352 0.347168 17.9863 1.71287 17.9863 3.39268C17.9863 5.07249 19.352 6.43818 21.0318 6.43818C22.7117 6.43818 24.0773 5.07249 24.0773 3.39268Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 29.4093C15.1594 27.7295 13.7937 26.3638 12.1139 26.3638C10.4341 26.3638 9.06836 27.7295 9.06836 29.4093C9.06836 31.0891 10.4341 32.4548 12.1139 32.4548C13.7937 32.4548 15.1594 31.0891 15.1594 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.24141 20.4913C6.24141 18.8115 4.87571 17.4458 3.1959 17.4458C1.51609 17.4458 0.150391 18.8115 0.150391 20.4913C0.150391 22.1711 1.51609 23.5368 3.1959 23.5368C4.87571 23.5368 6.24141 22.1711 6.24141 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M32.9953 29.4093C32.9953 27.7295 31.6296 26.3638 29.9498 26.3638C28.27 26.3638 26.9043 27.7295 26.9043 29.4093C26.9043 31.0891 28.27 32.4548 29.9498 32.4548C31.6296 32.4548 32.9953 31.0891 32.9953 29.4093Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 12.3107C24.0773 10.6308 22.7117 9.26514 21.0318 9.26514C19.352 9.26514 17.9863 10.6308 17.9863 12.3107C17.9863 13.9905 19.352 15.3562 21.0318 15.3562C22.7117 15.3562 24.0773 13.9905 24.0773 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 20.4913C15.1594 18.8115 13.7937 17.4458 12.1139 17.4458C10.4341 17.4458 9.06836 18.8115 9.06836 20.4913C9.06836 22.1711 10.4341 23.5368 12.1139 23.5368C13.7937 23.5368 15.1594 22.1711 15.1594 20.4913Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1594 12.3107C15.1594 10.6308 13.7937 9.26514 12.1139 9.26514C10.4341 9.26514 9.06836 10.6308 9.06836 12.3107C9.06836 13.9905 10.4341 15.3562 12.1139 15.3562C13.7937 15.3562 15.1594 13.9905 15.1594 12.3107Z"
+                                        fill="#765BA7" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0773 20.4913C24.0773 18.8115 22.7117 17.4458 21.0318 17.4458C19.352 17.4458 17.9863 18.8115 17.9863 20.4913C17.9863 22.1711 19.352 23.5368 21.0318 23.5368C22.7117 23.5368 24.0773 22.1711 24.0773 20.4913Z"
+                                        fill="#765BA7" />
+                                </svg>
+
+                                Đối tác
+                            </h4>
+                        </div>
+
+                        <div class="partner-slider">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="partner-item">
+                                            <div class="partner-item--inner">
+                                                <img class="img-fluid" src="images/home/Aden-1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partner-item">
+                                            <div class="partner-item--inner">
+                                                <img class="img-fluid" src="images/home/Erato-1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partner-item">
+                                            <div class="partner-item--inner">
+                                                <img class="img-fluid" src="images/home/Ecopark-1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partner-item">
+                                            <div class="partner-item--inner">
+                                                <img class="img-fluid" src="images/home/gioithieu-img-1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" v-for="n in 5">
+                                        <div class="partner-item">
+                                            <div class="partner-item--inner">
+                                                <img class="img-fluid" src="images/home/Cambridge-1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <supportsection></supportsection>
+            </div>
+
+        </main>
+
+        <myfooter></myfooter>
+    </div>
+</body>
+
+
+<!-- vue core -->
+<script src="js/vue.js"></script>
+<script src="js/httpVueLoader.js"></script>
+<!-- end vue core -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="libs/swiper/swiper-bundle.js"></script>
+<script src="libs/bootstrap/popper.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        components: {
+            myheader: httpVueLoader("vue_components/header.vue"),
+            myfooter: httpVueLoader("vue_components/footer.vue"),
+            supportsection: httpVueLoader("vue_components/support.vue"),
+        },
+        data() {
+            return {
+                bannerImg: ['images/home/banner-img-1.jpg', 'images/home/banner-img-2.jpg', 'images/home/banner-img-3.jpg', 'images/home/banner-img-4.jpg', 'images/home/banner-img-5.jpg'],
+                allAbout: [
+                    {
+                        id: 1,
+                        title: 'Thương hiệu giáo dục uy tín',
+                        description: 'Thành lập năm 2012, Greenfield School là Trường Tư thục Liên cấp với Hệ đào tạo từ Tiểu học đến THPT. Trong 10 năm qua, gần 15.000 học sinh đã đồng hành cùng Greenfield School; Greenfield School đang giảng dạy gần 3000 học sinh từ Lớp 1 đến Lớp 12; là nơi làm việc của đội ngũ 300 Cán bộ, Nhân viên nhiệt tình, tận tâm và trách nhiệm.',
+                        images: 'images/home/gioithieu-img-1.jpg',
+                        imagesInfo: '10 năm'
+                    },
+                    {
+                        id: 2,
+                        title: 'Cơ sở vật chất hiện đại',
+                        description: 'Greenfield School được xây dựng trên khuôn viên 3 hecta với hơn 50% diện tích được cây xanh che phủ. Trường sở hữu hơn 120 phòng học, hơn 50 phòng chức năng, hệ thống sân chơi đa dạng bao gồm sân bóng đá tiêu chuẩn FIFA, hệ thống các sân bóng rổ, sân Golf, sân bắn cung, nhà thi đấu đa năng… không chỉ đáp ứng nhu cầu dạy và học chuyên môn mà còn tạo ra môi trường an toàn và vui vẻ cho học sinh.',
+                        images: 'images/home/gioithieu-img-2.jpg',
+                        imagesInfo: '3 hecta'
+                    },
+                    {
+                        id: 3,
+                        title: 'Chương trình giáo dục tối ưu',
+                        description: 'Chương trình giáo dục tại Greenfield School trang bị toàn diện cho học sinh kiến thức, kỹ năng, phẩm chất; đồng thời tối ưu hóa các lộ trình học tập nhằm mang lại lợi ích giáo dục cao nhất cho học sinh. Greenfield School triển khai 3 Hệ đào tạo: Hệ Chất lượng cao, Hệ Song ngữ Công dân toàn cầu, Hệ Quốc tế Cambridge, mở rộng cánh cửa giúp học sinh theo học trường Đại học phù hợp nhất ở bất kỳ đâu trên thế giới.',
+                        images: 'images/home/gioithieu-img-3.jpg',
+                        imagesInfo: '3 hệ đào tạo'
+                    },
+                    {
+                        id: 4,
+                        title: 'Chứng nhận quốc tế chuẩn mực',
+                        description: 'Greenfield School được Cơ quan Đánh giá Giáo dục Quốc tế Cambridge (CAIE) công nhận là Trường Quốc tế Cambridge (Cambridge International School) với mã số VN455, là thành viên của Hệ thống hơn 10.000 các Trường Quốc tế Cambridge với mạng lưới tại 160 Quốc gia trên thế giới. CAIE là tổ chức giáo dục hàng đầu cung cấp các chương trình học và văn bằng quốc tế đa dạng cho học sinh từ 5 đến 19 tuổi.',
+                        images: 'images/home/gioithieu-img-4.jpg',
+                        imagesInfo: 'VN455'
+                    },
+                    {
+                        id: 5,
+                        title: 'Thành tích học sinh vượt trội',
+                        description: 'Học sinh Greenfield School đã đạt được hơn 5000 giải thưởng uy tín trong nước và quốc tế tại các cuộc thi học thuật và năng khiếu. 100% học sinh Lớp 12 Greenfield School tốt nghiệp THPT và theo học các trường Đại học hàng đầu trong và ngoài nước, trong đó nhiều học sinh đã giành các suất học bổng có giá trị từ 30 – 100% từ các trường Đại học danh tiếng.',
+                        images: 'images/home/gioithieu-img-1.jpg',
+                        imagesInfo: '100 %'
+                    },
+                ],
+                allProgram: [
+                    {
+                        id: 1,
+                        title: 'Hệ Chất lượng cao',
+                        description: ' Chương trình giáo dục Quốc gia (MOET) kết hợp Chương trình Tiếng Anh Cambridge (CEP) giúp học sinh nắm vững kiến thức trọng tâm của từng cấp lớp, đạt được các bằng cấp, chứng chỉ Tiếng Anh Quốc tế được công nhận toàn cầu.',
+                        images: 'images/home/program-img-1.jpg',
+                    },
+                    {
+                        id: 2,
+                        title: 'Hệ Song ngữ CDTC',
+                        description: ' Chương trình giáo dục Quốc gia (MOET) kết hợp Chương trình Thể thao – Năng khiếu – Ngoại khóa bằng Tiếng Anh nâng cao và Luyện thi IELTS, giúp học sinh nâng cao khả năng học tập, làm việc và thích ứng tốt hơn trong thời đại hòa nhập toàn cầu',
+                        images: 'images/home/program-img-2.jpg',
+                    },
+                    {
+                        id: 3,
+                        title: 'Hệ Chất lượng cao',
+                        description: 'Chương trình giáo dục Quốc gia (MOET) kết hợp Chương trình Phổ thông Quốc tế Cambridge, giúp học sinh “du học tại chỗ” và “cơ hội kép” sở hữu các chứng chỉ được công nhận toàn cầu',
+                        images: 'images/home/program-img-3.jpg',
+                    },
+                ]
+            }
+        },
+        methods: {
+
+        },
+
+        mounted() {
+            this.$nextTick(() => {
+
+                $(window).bind("load", function () {
+
+                    // Home Banner
+                    let homeBannerSwiper = new Swiper('.gf-banner-slider .swiper', {
+                        // Optional parameters
+                        spaceBetween: 0,
+                        loop: true,
+                        speed: 1500,
+                        allowTouchMove: false,
+                        autoplay: {
+                            delay: 3000,
+                        },
+                        pagination: {
+                            el: ".gf-banner-slider .swiper-pagination",
+                            clickable: true,
+                            renderBullet: function (index, className) {
+                                return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+                            },
+                        },
+
+                        // Navigation arrows
+                        // navigation: {
+                        //     nextEl: '.video-slide-container .swiper-button-next',
+                        //     prevEl: '.video-slide-container .swiper-button-prev',
+                        // },
+                    });
+
+                    // Home events
+                    let homeEventSwiper = new Swiper('.home-events-wrapper .swiper', {
+                        // Optional parameters
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                        speed: 1500,
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.home-events-wrapper .swiper-button-next',
+                            prevEl: '.home-events-wrapper .swiper-button-prev',
+                        },
+                    });
+
+                    // Home videos
+                    let homeVideoSwiper = new Swiper('.home-video-slider .swiper', {
+                        // Optional parameters
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        speed: 1500,
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.home-video-slider .swiper-button-next',
+                            prevEl: '.home-video-slider .swiper-button-prev',
+                        },
+                    });
+
+                    // Home parent story
+                    let parentStorySwiper = new Swiper('.parents-story-slider .swiper', {
+                        // Optional parameters
+                        // slidesPerView: 3,
+                        spaceBetween: 0,
+                        // centerMode: true,
+                        speed: 1500,
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.parents-story-slider .swiper-button-next',
+                            prevEl: '.parents-story-slider .swiper-button-prev',
+                        },
+                        on: {
+                            init: function () {
+                                this.slideTo(1)
+                            }
+                        }
+                    });
+
+                    // Home partners
+                    let partnerSwiper = new Swiper('.partner-slider .swiper', {
+                        // Optional parameters
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                        // centerMode: true,
+                        speed: 1500,
+
+                        // If we need pagination
+                        pagination: {
+                            el: '.partner-slider .swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+
+                })
+            });
+        },
+    });
+</script>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Website Greenfield</title>
+</head>
+
+<body>
+    <div id="app">
+        <myheader></myheader>
+
+        <main>
+
+            <div class="master-wrapper">
+
+                <div class="gf-common-banner big-banner">
+                    <div class="gf-banner-image">
+                        <img class="img-fluid" src="images/about/gioithieu-tamnhin-bg.jpg" alt="">
+                    </div>
+                    <div class="gf-banner-deco">
+                        <div class="deco-text">
+                            <p class="text-uppercase">
+                                tầm nhìn <br /> sỨ MỆNH
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section white-bg gioithieu-wrapper">
+                    <div class="container">
+                        <div class="w-1170">
+                            <div class="gioithieu-list-wrapper">
+                                <ul class="gioithieu-list">
+                                    <li class="gioithieu-list-item active">
+                                        <a href="javascript:;">
+                                            Tầm nhìn & Sứ mệnh
+                                        </a>
+                                    </li>
+                                    <li class="gioithieu-list-item">
+                                        <a href="javascript:;">
+                                            Đội ngũ nhân sự
+                                        </a>
+                                    </li>
+                                    <li class="gioithieu-list-item">
+                                        <a href="javascript:;">
+                                            Giá trị cốt lõi
+                                        </a>
+                                    </li>
+                                    <li class="gioithieu-list-item">
+                                        <a href="javascript:;">
+                                            Chân dung học sinh
+                                        </a>
+                                    </li>
+                                    <li class="gioithieu-list-item">
+                                        <a href="javascript:;">
+                                            Thành tích học sinh
+                                        </a>
+                                    </li>
+                                    <li class="gioithieu-list-item">
+                                        <a href="javascript:;">
+                                            Cơ sở vật chất
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="row-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><img class="img-fluid"
+                                                    src="images/common/home-ic.png" alt=""></a></li>
+                                        <li class="breadcrumb-item"><a href="#">Giới thiệu</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Tầm nhìn & sứ mệnh</li>
+                                    </ol>
+                                </nav>
+                            </div>
+
+                            <div class="gioithieu-body-wrapper">
+                                <div class="section-editor">
+                                    <div class="section-title">
+                                        <img class="img-fluid" src="images/common/title-deco.svg" alt="">
+
+                                        Tầm nhìn
+                                    </div>
+
+                                    <div class="section-content">
+                                        <p>
+                                            Trở thành hệ thống giáo dục xuất sắc, nơi mang đến nền giáo dục tiêu chuẩn
+                                            quốc tế kết hợp hài hòa với xu thế và bối cảnh tại Việt Nam.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="section-editor">
+                                    <div class="section-title">
+                                        <img class="img-fluid" src="images/common/title-deco.svg" alt="">
+
+                                        Sứ mệnh
+                                    </div>
+
+                                    <div class="section-content">
+                                        <p>
+                                            Thành lập những ngôi trường hạnh phúc:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Nơi học sinh được yêu thương, chăm sóc và phát triển toàn diện để trở
+                                                thành
+                                                những công dân có trách nhiệm, đóng góp tích cực cho cộng đồng và luôn
+                                                chủ
+                                                động thích nghi với sự thay đổi không ngừng của thế giới hiện đại.
+                                            </li>
+                                            <li>
+                                                Nơi nuôi dưỡng một tập thể gắn kết và xuất sắc, những người luôn nhiệt
+                                                huyết, tận tâm và truyền tải hiệu quả những chương trình giáo dục xuất
+                                                sắc
+                                                nhất của Greenfield cho các thế hệ học sinh.
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-width">
+                        <div class="link-cta">
+                            <div class="deco">
+                                <img class="img-fluid" src="images/about/link-cta-deco.png" alt="">
+                            </div>
+                            <a href="javascript:;" target="_blank">
+                                <img class="img-fluid" src="images/about/gioithieu-video.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <supportsection></supportsection>
+
+            </div>
+
+
+        </main>
+
+        <myfooter></myfooter>
+    </div>
+</body>
+
+
+<!-- vue core -->
+<script src="js/vue.js"></script>
+<script src="js/httpVueLoader.js"></script>
+<!-- end vue core -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="libs/swiper/swiper-bundle.js"></script>
+<script src="libs/bootstrap/popper.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        components: {
+            myheader: httpVueLoader("vue_components/header.vue"),
+            myfooter: httpVueLoader("vue_components/footer.vue"),
+            supportsection: httpVueLoader("vue_components/support.vue"),
+        },
+        data() {
+            return {}
+        },
+        methods: {
+
+        },
+
+        mounted() {
+            this.$nextTick(() => {
+
+                $(window).bind("load", function () {
+
+                })
+            });
+        },
+    });
+</script>
+
+</html>

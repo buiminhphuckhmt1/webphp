@@ -1,0 +1,224 @@
+.gf-contact{
+    position: relative;
+    display: flex;
+    margin-top: 66px;
+    .contact-form{
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        max-width: 643px;
+        padding: 34px;
+        margin-left:auto ;
+        .form-group{
+            label{
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                align-items: center;
+                color: #765BA7;
+            }
+            span{
+                color: red;
+            }
+            input{
+                width: 585px;
+                display: block;
+                border:none;
+                padding-bottom: 8px;
+                border-bottom: 0.7px solid #BDBDBD;
+                margin-top: 8px;
+                margin-bottom: 36px;
+            }
+            button{
+                width: 224px;
+                height: 45px;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color:  #FFFFFF;
+                background: #765BA7;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+        .form-group:last-child{
+            text-align: center;
+        }
+    }
+    .cotact-text{
+        p{
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 48px;
+            color: #765BA7;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        h3{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            text-transform: uppercase;
+            color: #765BA7;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            li{
+                list-style: none;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                margin: 17px 0;
+            }
+            #first-contact{
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 600;
+                color: #4F4F4F;
+                line-height: 24px;
+                margin-top: 24px;
+                margin-bottom: 29px;
+            }
+        }
+    }
+}
+.contact-map{
+    position: relative;
+    margin-top: 60.5px;
+    margin-bottom: 49.96px;
+}
+.gf-registration{
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    .registration-text{
+        position: relative;
+        padding-top: 16px;
+        p{
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 48px;
+            color: #765BA7;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        h3{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            text-transform: uppercase;
+            color: #765BA7;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin-bottom: 24px;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            margin-bottom: 29px;
+            li{
+                list-style: none;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                margin: 17px 0;
+            }
+            #first-contact{
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                color: #4F4F4F;
+                line-height: 24px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #second-contact{
+                list-style:inside;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                color: #4F4F4F;
+                line-height: 24px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .registration-form{
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        // max-width: 633px;
+        padding: 34px;
+        margin-left:auto ;
+        margin-bottom: 187.83px;
+        .form-group{
+            label{
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                align-items: center;
+                color: #765BA7;
+            }
+            span{
+                color: red;
+            }
+            input{
+                width: 595px;
+                display: block;
+                border:none;
+                padding-bottom: 8px;
+                border-bottom: 0.7px solid #BDBDBD;
+                margin-top: 8px;
+                margin-bottom: 36px;
+            }
+            button{
+                width: 224px;
+                height: 45px;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color:  #FFFFFF;
+                background: #765BA7;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+        .form-group:last-child{
+            text-align: center;
+        }
+    }
+}

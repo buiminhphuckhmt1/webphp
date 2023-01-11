@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <title>Website Greenfield</title>
+</head>
+
+<body>
+    <div id="app">
+        <myheader></myheader>
+
+        <main>
+
+            <div class="master-wrapper">
+
+                <div class="gf-common-banner big-banner">
+                    <div class="gf-banner-image">
+                        <img class="img-fluid" src="images/search/search-banner.jpg" alt="">
+                    </div>
+                    <div class="gf-banner-deco">
+                        <div class="deco-text">
+                            <p class="text-uppercase">
+                                   liên hệ 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gf-section white-bg section-search">
+                    <div class="section-search-title">
+                        <div class="container">
+                            <div class="w-1170">
+                                <div class="row-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#"><img class="img-fluid"
+                                                        src="images/common/home-ic.png" alt=""></a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Tìm kiếm</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="section-search-navlink">
+                                    <img src="images/common/title-deco.svg" alt="" class="img-fluid">
+                                    Kết quả tìm kiếm:
+                                </div>
+                                <p><span>Không có&nbsp</span>&nbspkết quả phù hợp với từ khóa&nbsp<span>“Trường”</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <supportsection></supportsection>
+
+            </div>
+
+
+        </main>
+
+        <myfooter></myfooter>
+    </div>
+</body>
+
+
+<!-- vue core -->
+<script src="js/vue.js"></script>
+<script src="js/httpVueLoader.js"></script>
+<!-- end vue core -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="libs/swiper/swiper-bundle.js"></script>
+<script src="libs/bootstrap/popper.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/fancybox/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        components: {
+            myheader: httpVueLoader("vue_components/header.vue"),
+            myfooter: httpVueLoader("vue_components/footer.vue"),
+            supportsection: httpVueLoader("vue_components/support.vue"),
+        },
+        data() {
+            return {
+            }
+        },
+        methods: {
+
+        },
+
+        mounted() {
+            this.$nextTick(() => {
+
+                $(window).bind("load", function () {
+
+                })
+            });
+        },
+    });
+</script>
+
+</html>

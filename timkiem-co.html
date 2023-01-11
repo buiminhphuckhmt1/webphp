@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+    <title>Website Greenfield</title>
+</head>
+
+<body>
+    <div id="app">
+        <myheader></myheader>
+
+        <main>
+
+            <div class="master-wrapper">
+
+                <div class="gf-common-banner big-banner">
+                    <div class="gf-banner-image">
+                        <img class="img-fluid" src="images/search/search-banner.jpg" alt="">
+                    </div>
+                    <div class="gf-banner-deco">
+                        <div class="deco-text">
+                            <p class="text-uppercase">
+                                   Tìm kiếm 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="gf-section white-bg section-search">
+                        <div class="section-search-title">
+                            <div class="container">
+                                <div class="w-1170">
+                                    <div class="row-breadcrumb">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#"><img class="img-fluid"
+                                                            src="images/common/home-ic.png" alt=""></a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Tìm kiếm</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="section-search-navlink">
+                                        <img src="images/common/title-deco.svg" alt="" class="img-fluid">
+                                        Kết quả tìm kiếm:
+                                    </div>
+                                    <p>Có&nbsp<span>08</span>&nbspkết quả phù hợp với từ khóa&nbsp<span>“Trường”</span></p> 
+                                    <div class="news-list-wrapper">
+                                        <div class="news-content-list">
+                                            <div class="list--inner">
+                                                <div class="list-item" v-for="n in 5">
+                                                    <div class="item-image">
+                                                        <a href="javascript:;" title="">
+                                                            <img class="img-fluid" src="images/common/video-thumb.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="item-content">
+                                                        <a href="javascript:;" class="item-title" title="">
+                                                            Khoảng cách địa lý không phải rào cản, sự ngừng học của Giáo viên
+                                                            mới
+                                                            chính là tụt hậu
+                                                        </a>
+                                                        <p class="date">18.10.2022</p>
+                                                        <p class="des">
+                                                            Tròn 10 năm đồng hành với Greenfield School, cô Bùi Thanh Huyền –
+                                                            Trưởng
+                                                            nhóm Tin học Greenfield School luôn mong mỏi học những điều mới khám
+                                                            phá
+                                                            những...Tròn 10 năm đồng hành với Greenfield School, cô Bùi Thanh
+                                                            Huyền
+                                                            – Trưởng nhóm Tin học Greenfield School luôn mong mỏi học những điều
+                                                            mới
+                                                            khám phá những...
+                                                        </p>
+                                                        <a href="javascript:;" title=""
+                                                            class="btn-pill border-pill purple-all purple-pill">
+                                                            Xem thêm
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="paginate-custom">
+                                                <a class="arrow" href="" title="">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </a>
+                                                <a href="" title="" class="active">1</a>
+                                                <a href="" title="">2</a>
+                                                <a href="" title="">3</a>
+                                                <a href="" title="">4</a>
+                                                <a class="arrow" href="" title="">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="news-event-wrapper">
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <supportsection></supportsection>
+
+            </div>
+
+
+        </main>
+
+        <myfooter></myfooter>
+    </div>
+</body>
+
+
+<!-- vue core -->
+<script src="js/vue.js"></script>
+<script src="js/httpVueLoader.js"></script>
+<!-- end vue core -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="libs/swiper/swiper-bundle.js"></script>
+<script src="libs/bootstrap/popper.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/fancybox/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        components: {
+            myheader: httpVueLoader("vue_components/header.vue"),
+            myfooter: httpVueLoader("vue_components/footer.vue"),
+            supportsection: httpVueLoader("vue_components/support.vue"),
+        },
+        data() {
+            return {
+            }
+        },
+        methods: {
+
+        },
+
+        mounted() {
+            this.$nextTick(() => {
+
+                $(window).bind("load", function () {
+
+                })
+            });
+        },
+    });
+</script>
+
+</html>
