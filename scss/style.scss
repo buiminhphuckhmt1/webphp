@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import "../scss/_fonts.scss";
+@import "../scss/bootstrap-grid", "../scss/bootstrap-reboot",
+  "../scss/bootstrap";
+
+@import "../scss/reset", "../scss/variables", "../scss/body",
+  //components
+  "../scss/components/header",
+  "../scss/components/footer",
+  // pages
+  "../scss/pages/index",
+  "../scss/pages/gioithieu", "../scss/pages/search", "../scss/pages/contact","../scss/pages/news", "../scss/pages/404", "../scss/pages/program";

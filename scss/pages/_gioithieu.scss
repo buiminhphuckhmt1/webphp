@@ -1,0 +1,1348 @@
+.gioithieu-wrapper {
+  position: relative;
+  padding-top: 37px;
+
+  .gioithieu-list-wrapper {
+    position: relative;
+    margin-bottom: 79px;
+
+    .gioithieu-list {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 63px;
+      flex-wrap: wrap;
+
+      &-item {
+        display: inline-block;
+        list-style: none;
+        padding-bottom: 10px;
+
+        font-family: "Lexend Deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        letter-spacing: -0.03em;
+        color: #828282;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &:hover {
+          color: $purple;
+        }
+
+        &.active {
+          font-weight: 700;
+          color: $purple;
+          border-bottom: 1px solid $purple;
+        }
+      }
+    }
+  }
+
+  .gioithieu-body-wrapper {
+    margin-top: 23px;
+  }
+
+  .section-content {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: calc(33 / 22);
+    letter-spacing: -0.03em;
+    color: #828282;
+  }
+
+  .link-cta {
+    position: relative;
+
+    .deco {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  }
+
+  .teacher-list {
+    position: relative;
+    margin-bottom: 70px;
+
+    .teacher-list-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+      padding-bottom: 42px;
+      margin-bottom: 42px;
+      border-bottom: 1px solid #bdbdbd;
+
+      .teacher-image {
+        flex: 0 0 270px;
+        max-width: 270px;
+        border-radius: 50%;
+        padding: 9px;
+        background: $white;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+
+        .image--inner {
+          @include ratio-img(100%);
+          border-radius: 50%;
+        }
+      }
+
+      .teacher-content {
+        flex: 1;
+        margin-top: 20px;
+
+        .content-head {
+          margin-bottom: 16px;
+          .name {
+            @include font("Lexend Deca", 500, 26px, calc(38 / 26));
+            color: $purple;
+            letter-spacing: -0.03em;
+            margin-bottom: 0;
+          }
+          .title {
+            @include font("Lexend Deca", 300, 18px, calc(18 / 27));
+            letter-spacing: -0.03em;
+            text-transform: capitalize;
+            color: $purple;
+            margin-bottom: 0;
+            opacity: 0.7;
+          }
+        }
+        .content-des {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: calc(27 / 18);
+          letter-spacing: -0.03em;
+          color: #828282;
+        }
+      }
+    }
+
+    .viewmore-wrapper {
+      text-align: center;
+
+      .viewmore-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        letter-spacing: -0.03em;
+        color: $purple;
+        text-decoration: none;
+
+        img {
+          display: block;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+.teacher-search-wrapper {
+  position: relative;
+  background: #f7f7f7;
+  padding: 83px 0 74px;
+
+  .search-container {
+    .search-form-wrapper {
+      margin-bottom: 45px;
+
+      form {
+        display: flex;
+        gap: 30px;
+        align-items: flex-end;
+
+        .form-gr,
+        button {
+          flex: 0 0 calc((100% / 4) - (30px * 3 / 4));
+          max-width: calc((100% / 4) - (30px * 3 / 4));
+        }
+
+        .form-gr {
+          label {
+            display: block;
+            font-style: normal;
+            @include font("Lexend Deca", 400, 18px, 1);
+            margin-bottom: 13px;
+            letter-spacing: -0.03em;
+            color: $purple;
+          }
+
+          input[type="text"] {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background: $white;
+            padding: 12px 14px;
+            @include font("Lexend Deca", 300, 14px, calc(22 / 14));
+            letter-spacing: 0.01em;
+            width: 100%;
+            color: #828282;
+
+            &::placeholder {
+              color: #828282;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          select {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 12px 14px;
+            @include font("Lexend Deca", 300, 14px, calc(22 / 14));
+            letter-spacing: 0.01em;
+            width: 100%;
+            color: #828282;
+
+            &:focus {
+              box-shadow: none;
+            }
+
+            option {
+              &:first-child {
+                display: none;
+              }
+            }
+          }
+        }
+
+        button {
+          border-radius: 5px;
+          background: $purple;
+          @include font("Lexend Deca", 500, 18px, calc(30 / 18));
+          letter-spacing: -0.03em;
+          color: $white;
+          padding: 9px;
+          border: 0;
+
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    .search-result-wrapper {
+      position: relative;
+
+      .result-list {
+        position: relative;
+        margin-left: -8px;
+        margin-right: -8px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 14px;
+        row-gap: 45px;
+        margin-bottom: 30px;
+
+        .result-item {
+          flex: 0 0 calc((100% / 4) - (14px * 3 / 4));
+          max-width: calc((100% / 4) - (14px * 3 / 4));
+          padding: 8px;
+          border-radius: 5px;
+          background: transparent;
+          transition: all 0.3s;
+
+          .item-image {
+            @include ratio-img(100%);
+            border-radius: 5px;
+            margin-bottom: 20px;
+          }
+
+          .item-content {
+            margin-bottom: 20px;
+
+            .item-name {
+              @include font("Lexend Deca", 500, 18px, calc(28 / 18));
+              font-style: normal;
+              letter-spacing: -0.03em;
+              color: $purple;
+              margin-bottom: 0;
+              text-decoration: none;
+            }
+
+            .item-title {
+              @include font("Lexend Deca", 300, 16px, calc(24 / 16));
+              font-style: normal;
+              letter-spacing: -0.03em;
+              color: $purple;
+              margin-bottom: 0;
+              opacity: 0.7;
+            }
+          }
+
+          &:hover {
+            background: $white;
+            box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-teacher {
+  .text-inner {
+    @include font("Lexend Deca", 300, 16px, calc(27 / 16));
+    @include line-clamp(6);
+    text-align: justify;
+    letter-spacing: -0.03em;
+    color: #bdbdbd;
+    margin-bottom: 20px;
+  }
+  .detail-cta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include font("Lexend Deca", 400, 16px, 1);
+    letter-spacing: -0.03em;
+    color: #4f4f4f;
+    text-decoration: none;
+
+    img {
+      display: block;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .common-section-title {
+    justify-content: center;
+  }
+}
+
+.about-employment {
+  position: relative;
+  padding: 84px 0 100px;
+
+  .about-employment-head {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+
+    .head-title {
+      @include font("Lexend Deca", 600, 45px, calc(67 / 45));
+      font-style: normal;
+      letter-spacing: -0.03em;
+      margin-bottom: 0;
+      color: $purple;
+    }
+
+    .btn-pill {
+      margin: 0;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: calc(30 / 20);
+    }
+  }
+}
+
+.employment-list {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .employment-item {
+    flex: 0 0 calc((100% / 3) - (30px * 2 / 3));
+    max-width: calc((100% / 3) - (30px * 2 / 3));
+  }
+}
+
+.employment-item {
+  position: relative;
+  background: $white;
+
+  .employment-image {
+    @include ratio-img(76.61%);
+  }
+
+  .employment-content {
+    padding: 20px 13px 37px;
+
+    .employment-name {
+      @include font("Lexend Deca", 500, 24px, calc(28 / 24));
+      font-style: normal;
+      letter-spacing: -0.03em;
+      color: #666666;
+      text-decoration: none;
+      margin-bottom: 7px;
+
+      &:hover {
+        color: $purple;
+      }
+    }
+
+    .employment-date {
+      @include font("Lexend Deca", 300, 14px, calc(26 / 14));
+      letter-spacing: -0.03em;
+      font-style: normal;
+      color: #828282;
+    }
+
+    .employment-cta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      @include font("Lexend Deca", 400, 16px, calc(20 / 16));
+      letter-spacing: -0.03em;
+      font-style: normal;
+      color: $purple;
+      text-decoration: none;
+      margin-top: 20px;
+
+      img {
+        display: block;
+      }
+    }
+  }
+}
+
+.about-value {
+  position: relative;
+  padding: 70px 0 100px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $green;
+    opacity: 0.59;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 21px;
+    left: -86px;
+    width: 580px;
+    height: 580px;
+    background: #40865d;
+    opacity: 0.36;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .about-value-deco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    .deco-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 55%;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(70, 173, 113, 0) 0%,
+          #46ad71 100%
+        );
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
+    }
+
+    .deco-bot {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 55%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(70, 173, 113, 0) 0%,
+          #46ad71 100%
+        );
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% / 3);
+        background: linear-gradient(
+          180deg,
+          rgba(70, 173, 113, 0) 0%,
+          #46ad71 100%
+        );
+      }
+    }
+  }
+
+  .about-value-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    gap: 78px;
+
+    .content-menu {
+      flex: 0 0 272px;
+      max-width: 272px;
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+          margin-bottom: 38px;
+
+          .content-menu-link {
+            position: relative;
+            display: flex;
+            gap: 23px;
+            align-items: center;
+
+            font-weight: 700;
+            font-size: 28px;
+            line-height: calc(41 / 28);
+            color: $white;
+            text-decoration: none;
+
+            svg {
+              display: block;
+              max-width: 88px;
+              flex: 0 0 88px;
+            }
+
+            &:hover {
+              svg {
+                circle {
+                  fill: $white;
+                }
+                g {
+                  path {
+                    fill: $green;
+                  }
+                }
+                path {
+                  fill: $green;
+                }
+              }
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 100%;
+              height: 2px;
+              width: 150px;
+              background: $white;
+              transform: translateY(-50%);
+              opacity: 0;
+              pointer-events: none;
+            }
+
+            &.active {
+              svg {
+                border-radius: 50%;
+                box-shadow: 0px 4.08559px 20.428px rgba(0, 0, 0, 0.12);
+
+                circle {
+                  fill: $white;
+                }
+                g {
+                  path {
+                    fill: $green;
+                  }
+                }
+                path {
+                  fill: $green;
+                }
+              }
+
+              &::before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content-body {
+      flex: 1;
+
+      .content-media {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 40px;
+
+        img {
+          max-width: 100%;
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .content-text {
+        padding-left: 40px;
+        border-left: 6px solid $yellow;
+
+        .name {
+          font-weight: 700;
+          font-size: 45px;
+          line-height: 1;
+          color: $white;
+          margin-bottom: 13px;
+        }
+        .des {
+          @include font("Lexend Deca", 500, 20px, calc(32 / 20));
+          font-style: normal;
+          text-align: justify;
+          letter-spacing: -0.03em;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.about-chandunghs {
+  position: relative;
+  padding: 0 0 100px;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 14px;
+  //   left: -86px;
+  //   width: 580px;
+  //   height: 580px;
+  //   background: #e0e0e0;
+  //   opacity: 0.36;
+  //   border-radius: 50%;
+  //   z-index: 1;
+  // }
+
+  .chandunghs-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 42px;
+
+    .chandunghs-menu {
+      flex: 0 0 377px;
+      max-width: 377px;
+      border-left: 1px solid $purple;
+      padding-left: 42px;
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          position: relative;
+          list-style: none;
+          padding-bottom: 22px;
+          margin-bottom: 22px;
+          border-bottom: 1px solid $purple;
+
+          &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+
+          .chandunghs-link {
+            display: flex;
+            align-items: center;
+            gap: 21px;
+
+            font-weight: 500;
+            font-size: 22px;
+            line-height: calc(33 / 22);
+            letter-spacing: -0.03em;
+            color: $purple;
+            text-decoration: none;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: -49.5px;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background: $purple;
+              margin-top: -7px;
+              transform: translateY(-50%);
+              opacity: 0;
+              pointer-events: none;
+            }
+
+            span {
+              opacity: 0.7;
+            }
+
+            svg {
+              flex: 0 0 78px;
+              display: block;
+              border-radius: 50%;
+              box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+            }
+
+            &.active {
+              font-weight: 600;
+
+              span {
+                opacity: 1;
+              }
+              &::before {
+                opacity: 1;
+              }
+
+              svg {
+                box-shadow: none;
+
+                circle {
+                  fill: $purple;
+                }
+
+                path {
+                  fill: $white;
+                }
+              }
+            }
+
+            &:hover {
+              svg {
+                circle {
+                  fill: $purple;
+                }
+
+                path {
+                  fill: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .chandunghs-body {
+      flex: 1;
+      position: relative;
+
+      .chandunghs-body-content {
+        border-left: 6px solid $purple;
+        padding-left: 29px;
+        margin-bottom: 40px;
+
+        display: flex;
+        align-items: flex-start;
+        gap: 13px;
+
+        .content-deco {
+          flex: 0 0 30px;
+        }
+        .content-text {
+          @include font("Lexend Deca", 500, 18px, calc(32 / 18));
+          font-style: normal;
+          text-align: justify;
+          letter-spacing: -0.03em;
+          color: #828282;
+        }
+      }
+
+      .chandunghs-body-media {
+        img {
+          max-width: 100%;
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.about-thanhtichhs {
+  position: relative;
+  margin-top: 26px;
+
+  .thanhtichhs-intro {
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: calc(33 / 20);
+      letter-spacing: -0.03em;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .thanhtichhs-list-wrapper {
+    position: relative;
+    margin-top: 100px;
+
+    .thanhtichhs-search-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 17px;
+        align-items: flex-end;
+
+        .form-gr {
+          flex: 0 0 264px;
+          max-width: 264px;
+
+          label {
+            display: block;
+            font-style: normal;
+            @include font("Lexend Deca", 400, 16px, 1);
+            margin-bottom: 13px;
+            letter-spacing: -0.03em;
+            color: $purple;
+          }
+
+          input[type="text"] {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background: $white;
+            padding: 12px 14px;
+            @include font("Lexend Deca", 300, 14px, calc(22 / 14));
+            letter-spacing: 0.01em;
+            width: 100%;
+            color: #828282;
+
+            &::placeholder {
+              color: #828282;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          select {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 12px 14px;
+            @include font("Lexend Deca", 300, 14px, calc(22 / 14));
+            letter-spacing: 0.01em;
+            width: 100%;
+            color: #828282;
+
+            &:focus {
+              box-shadow: none;
+            }
+
+            option {
+              &:first-child {
+                display: none;
+              }
+            }
+          }
+        }
+
+        button {
+          flex: 1;
+          padding: 11px;
+          border: 0;
+          border-radius: 5px;
+          background: $purple;
+        }
+      }
+    }
+    .thanhtichhs-result-wrapper {
+      position: relative;
+      margin-top: 95px;
+      margin-bottom: 50px;
+
+      .result-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 50px;
+        gap: 130px;
+        margin-bottom: 87px;
+      }
+
+      .thanhtichhs-item {
+        flex: 0 0 270px;
+        max-width: 270px;
+
+        a {
+          text-decoration: none;
+        }
+
+        .thanhtichhs-item--image {
+          @include ratio-img(100%);
+          border-radius: 50%;
+          max-width: 227px;
+          margin: 0 auto 18px;
+        }
+
+        .thanhtichhs-item--content {
+          text-align: center;
+          .name {
+            @include font("Lexend Deca", 500, 22px, calc(28 / 22));
+            letter-spacing: -0.03em;
+            color: #4f4f4f;
+            margin-bottom: 3px;
+          }
+          .des {
+            @include font("Lexend Deca", 400, 16px, calc(20 / 16));
+            letter-spacing: -0.03em;
+            color: #828282;
+            margin-bottom: 3px;
+          }
+          .detail-cta {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            @include font("Lexend Deca", 400, 16px, calc(20 / 16));
+            letter-spacing: -0.03em;
+            color: #4f4f4f;
+
+            svg {
+              display: block;
+            }
+          }
+        }
+
+        &:hover {
+          .thanhtichhs-item--content {
+            .name,
+            .des,
+            .detail-cta {
+              color: $purple;
+            }
+
+            .detail-cta {
+              svg {
+                circle {
+                  fill: $green;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-facility {
+  position: relative;
+  margin-top: 26px;
+  margin-bottom: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .content-intro {
+    flex: 0 0 987px;
+    max-width: 987px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(33 / 18);
+    letter-spacing: -0.03em;
+  }
+
+  .content-list {
+    flex: 0 0 400px;
+    max-width: 400px;
+
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 31px;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include font("Lexend Deca", 500, 24px, calc(27 / 24));
+      font-style: normal;
+      letter-spacing: -0.03em;
+      color: #4f4f4f;
+
+      img {
+        display: block;
+        flex: 0 0 55px;
+      }
+    }
+  }
+}
+
+.facility-media {
+  padding: 76px 0;
+
+  .facility-media--inner {
+    display: flex;
+    gap: 94px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .media-thumb-list {
+    flex: 0 0 1170px;
+    max-width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 55px;
+
+    .media-thumb {
+      flex: 0 0 calc((100% / 2) - (30px / 2));
+      max-width: calc((100% / 2) - (30px / 2));
+
+      .thumb-image {
+        @include ratio-img(62.28%);
+        margin-bottom: 23px;
+
+        a {
+          display: block;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 34.36%;
+          background: linear-gradient(
+            180deg,
+            rgba(33, 33, 33, 0) 0%,
+            #212121 100%
+          );
+          pointer-events: none;
+        }
+
+        .thumb-title {
+          position: absolute;
+          bottom: 12px;
+          left: 0;
+          z-index: 1;
+          pointer-events: none;
+
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          @include font("Lexend Deca", 400, 18px, calc(22 / 18));
+          letter-spacing: -0.03em;
+          color: $yellow;
+
+          .index {
+            @include font("Lexend Deca", 500, 43px, calc(54 / 43));
+            letter-spacing: -0.03em;
+            color: $white;
+            min-width: 83px;
+            text-align: right;
+            padding: 2px 31px 5px 0;
+            background: url(../images/common/index-deco.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+
+      .thumb-content {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(33 / 20);
+        letter-spacing: -0.03em;
+        color: $white;
+      }
+    }
+  }
+
+  .media-nav {
+    flex: 0 0 231px;
+    max-width: 231px;
+    position: sticky;
+    top: 200px;
+    margin-bottom: 200px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      width: 231px;
+
+      li {
+        list-style: none;
+        margin-bottom: 28px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.active {
+          a {
+            color: $yellow;
+
+            svg {
+              #pie {
+                fill: $yellow;
+              }
+              #outline {
+                opacity: 1;
+                stroke: $yellow;
+              }
+            }
+          }
+        }
+      }
+
+      .media-navlink {
+        display: flex;
+        gap: 12px;
+
+        letter-spacing: -0.03em;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: calc(30 / 24);
+        color: $white;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        svg {
+          display: block;
+          flex: 0 0 40px;
+          max-width: 40px;
+
+          #outline {
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          color: $yellow;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.section-editor {
+  margin-bottom: 54px;
+
+  .section-title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: "Lexend Deca";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: calc(67 / 40);
+    letter-spacing: -0.03em;
+    color: $purple;
+
+    img {
+      display: block;
+      max-width: 40px;
+    }
+  }
+}
+
+#thanhtichhsModal {
+  .modal-700 {
+    @media (min-width: 992px) {
+      max-width: 700px;
+    }
+  }
+
+  .modal-content {
+    border-radius: 8px;
+  }
+
+  .modal-body {
+    padding: 53px;
+  }
+
+  .btn-close {
+    width: 39px;
+    height: 39px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #d9d9d9;
+    background: $purple;
+    opacity: 1;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -19px;
+    right: -19px;
+
+    img {
+      display: block;
+    }
+  }
+
+  .detail-image {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .content-info {
+    margin-bottom: 30px;
+
+    .name {
+      @include font("Lexend Deca", 500, 24px, calc(30 / 24));
+      color: $purple;
+      letter-spacing: -0.03em;
+      font-style: normal;
+      margin-bottom: 10px;
+    }
+    .des {
+      margin: 0;
+
+      li {
+        @include font("Lexend Deca", 400, 18px, calc(22 / 18));
+        letter-spacing: -0.03em;
+        font-style: normal;
+        color: $grayText;
+      }
+    }
+  }
+
+  .content-achievement {
+    margin-bottom: 18px;
+
+    .title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: calc(25 / 20);
+      letter-spacing: -0.03em;
+      color: $purple;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .list-deco {
+          padding: 10px;
+          flex: 0 0 60px;
+        }
+
+        .list-content {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: calc(24 / 16);
+        }
+      }
+    }
+  }
+
+  .social-share {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      @include font("Lexend Deca", 500, 16px, calc(24 / 16));
+      color: #4f4f4f;
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      li {
+        list-style: none;
+      }
+
+      .social-link {
+        display: block;
+        max-width: 26px;
+
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}

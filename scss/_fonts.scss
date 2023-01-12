@@ -1,0 +1,286 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/css/all.min.css");
+
+// LexendDeca
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-Bold.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-Black.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-Black.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-ExtraBold.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-ExtraBold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-ExtraLight.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-Light.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-Medium.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-Regular.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-Thin.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca/LexendDeca-SemiBold.woff2") format("woff2"),
+    url("../fonts/LexendDeca/LexendDeca-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// End LexendDeca
+
+// SVN-Gilroy
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyBlackItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyBlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyBold.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-Gilroy-Black.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-Gilroy-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyBoldItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyBlack.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyHeavy.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyHeavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyHeavyItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyHeavyItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyMedium.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyLight.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyLightItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyLightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-Gilroy-Italic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-Gilroy-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyMediumItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyMediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-Gilroy.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-Gilroy.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy XBold";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyXBoldItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyXBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyThinItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroySemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroySemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy XBold";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyXBold.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyXBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroySemiBold.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroySemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy XLight";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyXLightItalic.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyXLightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyThin.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyThin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy XLight";
+  src: url("../fonts/SVN-Gilroy/SVN-GilroyXLight.woff2") format("woff2"),
+    url("../fonts/SVN-Gilroy/SVN-GilroyXLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+// End SVN-Gilroy
