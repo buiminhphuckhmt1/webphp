@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="gf-support-section">
         <div class="container">
             <div class="gf-support-wrapper">
@@ -38,4 +38,4 @@
             </div>
         </div>
     </div>
-</template>
+</template> -->
