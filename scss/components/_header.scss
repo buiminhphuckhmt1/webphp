@@ -6,7 +6,8 @@
   z-index: 11;
   background: transparent;
   transition: all 0.3s;
-  background: none;
+  background-image: url(../images/backgroud/vector_1908398.png);
+  background-repeat: no-repeat;
   .header--inner {
       position: relative;
       display: flex;
@@ -58,6 +59,7 @@
 
               &:hover {
                 transition: all 0.3s;
+                color: green;
               }
             }
             &:hover {
@@ -67,7 +69,7 @@
 
             &.active {
               a {
-                color: #FF6115;
+                color: green;
               }
               // background-color: #2E2BDE;
             }

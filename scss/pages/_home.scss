@@ -7,6 +7,8 @@
 .home-wrapper{
     position: relative;
     margin-top: 90px;
+    background-image: url(../images/backgroud/vector_1908398.png);
+    background-repeat: no-repeat;
 }
 .right-contet{
     flex: 0 0 500px;
@@ -24,6 +26,7 @@
         font-size: 32px;
         line-height: 47px;
         color: #0C0F59;
+        margin-top: 79px;
     }
     h2{
         font-family: 'Lexend Deca';
@@ -33,6 +36,7 @@
         line-height: 35px;
         text-align: center;
         color: #2044C4;
+        margin-top: 45px;
     }
 }
 .home-search{
@@ -46,11 +50,13 @@
             background: #FDF1F1;
             border: 1px solid #877272;
             border-radius: 10px;
+            padding: 17px 5px;
+            margin-top: 142px;
         }
         .btn-search{
             position: absolute;
             right: 10px;
-            top: 12px;
+            top: 150px;
             z-index: 3;
             background: #2E2BDE;
             border-radius: 5px;
