@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" style="background-image: url(../images/backgroud/vector_1908398.png);">
         <div class="header--inner">
             <div class="header-logo">
                 <a href="javascript:;" title="">
