@@ -27,6 +27,9 @@
                 <button>
                     Nộp đơn ứng tuyển
                 </button>
+                <button class="btn-register">
+                    Đăng nhập
+                </button>
             </div>
         </div>
     </div>

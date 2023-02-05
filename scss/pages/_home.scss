@@ -7,18 +7,53 @@
 .home-wrapper{
     position: relative;
     margin-top: 90px;
-    background-image: url(../images/backgroud/vector_1908398.png);
+    margin-bottom: 79px;
+}
+.backgroud-slide{
+    position: absolute;
+    width: 600px;
+    height: 661px;
+    right: -30px;
+    top: 40px;
+    background-image: url(../images/backgroud/rightbg.png);
     background-repeat: no-repeat;
+    background-size:contain;
+
 }
 .right-contet{
-    flex: 0 0 500px;
+    flex: 0 0 550px;
     max-width: 550px;
+    background-position-y:40px ;
+    .swiper{
+        margin-top: 70px;
+        img{
+        @include ratio-img(60%)}
+        .swiper-button-next{
+            color: rgba(0, 0, 0, 0.6);
+            margin-right: 50px;
+        }
+        .swiper-button-prev{
+            color: rgba(0, 0, 0, 0.6);
+            margin-left: 10px;
+        }
+    }
 }
 .left-content{
     flex: 1;
     position: relative;
     display: block;
     overflow: hidden;
+    .social{
+        margin-top: 147px;
+        position: relative;
+        p{
+            margin-bottom: 5px;
+        }
+        .social-icon{
+            display: flex;
+            gap:20px
+        }
+    }
     h1{
         font-family: 'Lexend Deca';
         font-style: normal;
@@ -27,6 +62,7 @@
         line-height: 47px;
         color: #0C0F59;
         margin-top: 79px;
+        text-align: center;
     }
     h2{
         font-family: 'Lexend Deca';
@@ -40,18 +76,22 @@
     }
 }
 .home-search{
+    position: relative;
     form{
-        margin: 0;
-        padding: 0;
-        border: 0;
         input{
             position: relative;
-            width: 621px;
+            width: 100%;
             background: #FDF1F1;
-            border: 1px solid #877272;
+            border: none;
             border-radius: 10px;
-            padding: 17px 5px;
+            padding: 17px 45px;
             margin-top: 142px;
+        }
+        svg{
+            position: absolute;
+            left: 12px;
+            top: 158px;
+            z-index: 3;
         }
         .btn-search{
             position: absolute;

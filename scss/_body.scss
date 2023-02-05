@@ -14,6 +14,9 @@ body {
   font-size: 18px;
   line-height: calc(30 / 18);
   color: $grayText;
+  background-image: url(../images/backgroud/vector_1908398.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (max-width: 767px) {
     font-size: 16px;
@@ -27,21 +30,12 @@ body {
 // fix container width
 .container {
   width: 100%;
-//   max-width: 1530px;
-//    @media (min-width: 1200px){
-//   max-width: 1170px;}
-//   @media (min-width: 992px)
-//  {
-//     max-width: 960px;
-//}
-  // @media (max-width : 1400px) {
-  //   padding-left: 30px;
-  //   padding-right: 30px;
-  // }
-  // @media (max-width : 640px) {
-  //   padding-left: 15px;
-  //   padding-right: 15px;
-  // }
+  @media (min-width: 992px){
+  max-width: 992px;
+}
+@media (min-width: 1200px){
+  max-width: 1200px;
+}
 }
 
 .master-wrapper {

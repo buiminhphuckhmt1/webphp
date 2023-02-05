@@ -1,10 +1,10 @@
 .footer {
   position: relative;
   padding-top: 40px;
-  background: url(../images/common/footer-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 57px;
+  display: flex;
 
   &::before {
     content: "";
@@ -13,162 +13,61 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #765ba7;
-    opacity: 0.9;
+    background: #C9D0F3;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
     transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: -1;
   }
 
-  .container {
-    position: relative;
-    z-index: 2;
+  h3{
+      
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #0C0F59;
+    margin: 0;
   }
-
-  .footer-top {
+  ul{
+    list-style: none;
+    margin-top: 31px;
+    padding-left: 0;
+    li{
+      display: flex;
+      margin-bottom:36px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+      align-items: center;
+      svg{
+        margin-right: 27px;
+        line-height: 36px;
+      }
+    }
+  }
+  .right-footer{
     position: relative;
-    display: flex;
+    flex:1;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 36px;
+    padding-right: 133px;
   }
-
-  .footer-logo-wrapper {
-    .footer-logo {
-      max-width: 347px;
-      margin-bottom: 23px;
-
-      a,
-      img {
-        display: block;
-      }
-    }
-    .footer-name {
-      font-weight: 600;
-      font-size: 23px;
-      line-height: calc(28 / 23);
-      letter-spacing: -0.02em;
-      color: $white;
-    }
-  }
-
-  .social-ic-wrapper {
+  .left-footer{
+   flex: 0 0 255px;
+   max-width:255px ;
+   margin-top: 34px;
+   .social-footer{
     display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 23px;
-
-    p {
-      font-family: "Lexend Deca";
-      font-weight: 500;
-      font-size: 14px;
-      line-height: calc(20 / 14);
-      margin-bottom: 0;
-      color: $white;
-    }
-
-    .social-ic-gr {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-
-      a,
-      svg {
-        display: block;
-      }
-
-      a {
-        &:hover {
-          svg {
-            rect {
-              stroke: $blue;
-              fill: $blue;
-            }
-          }
-        }
-      }
-    }
+    gap: 40px;
+    margin-top: 20px;
+   }
   }
 
-  .footer-info-wrapper {
-    flex: 0 0 383px;
-    max-width: 383px;
-
-    ul {
-      padding: 0;
-      margin: 0;
-
-      li {
-        list-style: none;
-        font-family: "Lexend Deca";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: calc(20 / 16);
-        margin-bottom: 18px;
-        color: $white;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        p {
-          margin-bottom: 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: $white;
-        }
-
-        span {
-          font-weight: 300;
-        }
-      }
-    }
-  }
-  .footer-link-wrapper {
-    ul {
-      padding: 0;
-      margin: 0;
-
-      li {
-        margin-bottom: 13px;
-        list-style: none;
-
-        a {
-          font-family: "Lexend Deca";
-          font-style: normal;
-          font-weight: 300;
-          font-size: 16px;
-          line-height: 20px;
-          color: $white;
-          transition: all 0.3s;
-          text-decoration: none;
-
-          &:hover {
-            color: $yellow;
-            transition: all 0.3s;
-            text-decoration: underline;
-          }
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  .footer-bot {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    text-align: center;
-    letter-spacing: -0.03em;
-    color: $white;
-    padding: 12px 0;
-    border-top: 1px solid $white;
-  }
 }

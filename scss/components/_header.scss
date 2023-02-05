@@ -8,6 +8,7 @@
   transition: all 0.3s;
   background-image: url(../images/backgroud/vector_1908398.png);
   background-repeat: no-repeat;
+  background-size: cover;
   .header--inner {
       position: relative;
       display: flex;
@@ -77,6 +78,7 @@
         }
       }
       .header-register{
+        position: relative;
         line-height: 80px;
         button{
           border-radius: 6px;
@@ -88,6 +90,21 @@
           text-align: center;
           color: #FFFFFF;
           padding: 11px 20px;
+          border: none;
+        }
+        .btn-register{
+          left: 0px;
+          top: 79px;
+          position: absolute;
+          background: #C61D12;
+          border-radius: 10px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 29px;
+          text-align: center;
+          color: #FFFFFF;
+          padding: 11px 55px;
           border: none;
         }
       }
