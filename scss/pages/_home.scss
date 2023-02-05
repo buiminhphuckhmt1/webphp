@@ -113,3 +113,77 @@
         }
     }
 }
+.register-wrapper{
+    position: relative;
+    margin-top: 90px;
+    margin-bottom: 79px;
+    .left-content{
+        padding-right: 32px;
+    }
+    .register-form{
+        h1{
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 35px;
+            text-align: center;
+            color: #0C0F59;
+            text-transform: uppercase;
+        }
+        form{
+            background: rgba(255, 252, 252, 0.6);
+            border-radius: 20px;
+            background-image: url(../images/backgroud/rightbg.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            display: block;
+            padding: 30px;
+            .group-form{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 23px 0;
+                h5{
+                    font-family: 'Lexend Deca';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #000000;
+                    text-transform: capitalize;
+                }
+                input{
+                    width: 375px;
+                    background: #F9D0D0;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    margin-left: auto;
+                }
+                textarea{
+                    width: 375px;
+                    background: #F9D0D0;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    margin-left: auto;
+                }
+                button{
+                background: #2E2BDE;
+                border-radius: 10px;
+                justify-items: center;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 29px;
+                color: #FFFFFF;
+                border: none;
+                padding: 5px 25px;
+                }
+            }
+        }
+    }
+    .backgroud-slide{
+        background: none;
+    }
+}
