@@ -1,224 +1,134 @@
-.gf-contact{
+.contact-wrapper{
     position: relative;
-    display: flex;
-    margin-top: 66px;
-    .contact-form{
-        position: relative;
-        background: #FFFFFF;
-        border: 1px solid #FFFFFF;
-        box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
-        border-radius: 12px;
-        max-width: 643px;
-        padding: 34px;
-        margin-left:auto ;
-        .form-group{
-            label{
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 24px;
-                align-items: center;
-                color: #765BA7;
-            }
-            span{
-                color: red;
-            }
-            input{
-                width: 585px;
-                display: block;
-                border:none;
-                padding-bottom: 8px;
-                border-bottom: 0.7px solid #BDBDBD;
-                margin-top: 8px;
-                margin-bottom: 36px;
-            }
-            button{
-                width: 224px;
-                height: 45px;
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 22px;
-                color:  #FFFFFF;
-                background: #765BA7;
-                border: none;
-                border-radius: 4px;
-            }
+    margin-top: 96px;
+    margin-bottom:40px ;
+    .contact-content-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    .left-content{
+        flex:0 0 726px;
+        flex-wrap: wrap;
+        display: block;
+        h1{
+            font-family: 'Lexend Deca';
+            text-align: left;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 47px;
+            color: #0C0F59;
+            margin: 0;
         }
-        .form-group:last-child{
-            text-align: center;
-        }
-    }
-    .cotact-text{
         p{
             font-family: 'Lexend Deca';
             font-style: normal;
-            font-weight: 300;
-            font-size: 32px;
-            line-height: 48px;
-            color: #765BA7;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
         }
-        h3{
-            font-style: normal;
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 48px;
-            text-transform: uppercase;
-            color: #765BA7;
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-        }
-        ul{
-            padding: 0;
-            margin: 0;
-            li{
-                list-style: none;
+        .contact-form{
+            width: 100%;
+            position: relative;
+            display: block;
+            background: #F3EFEF;
+            border-radius: 15px;
+            padding: 41px 20px;
+            margin-top: 46px;
+            h1{
                 font-family: 'Lexend Deca';
                 font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 22px;
-                letter-spacing: 0.01em;
-                margin: 17px 0;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 35px;
+                color: #0C0F59;
+                padding: 0;
             }
-            #first-contact{
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 600;
-                color: #4F4F4F;
-                line-height: 24px;
-                margin-top: 24px;
-                margin-bottom: 29px;
+            .group-form-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                gap: 8px;
+                margin-top: 30px;
+                margin-bottom: 47px;
+                .group-form-1{
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    input{
+                        width: 100%;
+                        border: #0C0F59;
+                        padding: 5px 21px;
+                        border-radius: 10px;
+                    }
+                }
+                .group-form-2{
+                    flex:1;
+                    input{
+                        width: 100%;
+                        border: #0C0F59;
+                        padding: 5px 21px;
+                        border-radius: 10px;
+                    }
+                }
             }
+            .group-form{
+                textarea{
+                    width: 100%;
+                    height: 218px;
+                    margin-bottom: 20px;
+                    border-radius: 10px;
+                    padding: 10px;
+                    border: none;
+                }
+                button{
+                    width: 100%;
+                    border: none;
+                    background: #2E2BDE;
+                    border-radius: 10px;
+                    font-family: 'Lexend Deca';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 35px;
+                    color: #FFFFFF;
+
+                }
+            }
+
         }
     }
-}
-.contact-map{
-    position: relative;
-    margin-top: 60.5px;
-    margin-bottom: 49.96px;
-}
-.gf-registration{
-    position: relative;
-    display: flex;
-    margin-top: 50px;
-    .registration-text{
-        position: relative;
-        padding-top: 16px;
-        p{
+    .right-contet{
+        flex: 1;
+        padding-left: 72px;
+        margin-top: 100px;
+        h1{
             font-family: 'Lexend Deca';
             font-style: normal;
-            font-weight: 300;
-            font-size: 32px;
-            line-height: 48px;
-            color: #765BA7;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-        }
-        h3{
-            font-style: normal;
             font-weight: 700;
-            font-size: 36px;
-            line-height: 48px;
-            text-transform: uppercase;
-            color: #765BA7;
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-            margin-bottom: 24px;
+            font-size: 24px;
+            line-height: 35px;
+            color: #0C0F59;
         }
-        ul{
+        .right-contet-contact{
+            width: 100%;
+            list-style: none;
             padding: 0;
-            margin: 0;
-            margin-bottom: 29px;
             li{
-                list-style: none;
+                display: flex;
+                margin-bottom: 25px;
                 font-family: 'Lexend Deca';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
-                line-height: 22px;
-                letter-spacing: 0.01em;
-                margin: 17px 0;
-            }
-            #first-contact{
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 16px;
-                color: #4F4F4F;
-                line-height: 24px;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            #second-contact{
-                list-style:inside;
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 16px;
-                color: #4F4F4F;
-                line-height: 24px;
-                margin-top: 0;
-                margin-bottom: 0;
+                font-size: 24px;
+                line-height: 33px;
+                text-align: justify;
+                color: #000000;
+                svg{
+                    margin-right: 27px;
+                    line-height: 36px;
+                }
             }
         }
     }
-    .registration-form{
-        position: relative;
-        background: #FFFFFF;
-        border: 1px solid #FFFFFF;
-        box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
-        border-radius: 12px;
-        // max-width: 633px;
-        padding: 34px;
-        margin-left:auto ;
-        margin-bottom: 187.83px;
-        .form-group{
-            label{
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 24px;
-                align-items: center;
-                color: #765BA7;
-            }
-            span{
-                color: red;
-            }
-            input{
-                width: 595px;
-                display: block;
-                border:none;
-                padding-bottom: 8px;
-                border-bottom: 0.7px solid #BDBDBD;
-                margin-top: 8px;
-                margin-bottom: 36px;
-            }
-            button{
-                width: 224px;
-                height: 45px;
-                font-family: 'Lexend Deca';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 22px;
-                color:  #FFFFFF;
-                background: #765BA7;
-                border: none;
-                border-radius: 4px;
-            }
-        }
-        .form-group:last-child{
-            text-align: center;
-        }
     }
 }
