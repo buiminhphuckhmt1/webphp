@@ -11,6 +11,7 @@
         line-height: 47px;
         color: #000000;
         text-transform: uppercase;
+        margin-bottom: 26px;
     }
     .activity-content-wrapper{
         .activity-content{
@@ -60,6 +61,7 @@
     }
 }
 .blog-detail-wrapper{
+    display: block;
     p{
         width: 100%;
         font-family: 'Lexend Deca';
@@ -69,5 +71,14 @@
         line-height: 33px;
         text-align: justify;
         color: #000000;
+        img{
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
     }
 }

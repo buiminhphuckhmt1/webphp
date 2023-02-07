@@ -1,0 +1,67 @@
+.login-wrapper{
+    position: relative;
+    margin-top: 196px;
+    margin-bottom:40px ;
+    display: block;
+    text-align: center;
+    .w-594{
+        max-width: 594px;
+        margin: auto;
+    }
+    .logo-login{
+        h1{
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 59px;
+            text-align: center;
+            color: #0C0F59;
+            margin-top: 32px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+    }
+    .login-form{
+        background: rgba(255, 252, 252, 0.6);
+        border-radius: 20px;
+        padding: 29px 26px;
+        display:block;
+        .group-form{
+            display: flex;
+            margin-bottom: 18px;
+            justify-content: center;
+            h5{
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+                padding-right: 20px;
+            }
+            input{
+                width: 375px;
+                display: inline-flex;
+                background: #F9D0D0;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                padding:0 20px;
+            }
+            button{
+                background: #2e2bde;
+                border-radius: 10px;
+                justify-items: center;
+                font-family: "Lexend Deca";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 29px;
+                color: #fff;
+                border: none;
+                padding: 5px 25px;
+                margin-top: 39px;
+            }
+        }
+    }
+}

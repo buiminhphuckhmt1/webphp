@@ -14,30 +14,28 @@
     <div id="app">
         <myheader></myheader>
         <main>
-        <div class="activity-wrapper">
-            <div class="container">
-                <h1>Chương trình “Tết ấm yêu thương 2022” </h1>
-                <div class="blog-detail-wrapper">
-                    <p>
-                            <img class="img-fluid" src="images/ativity.png" alt="">
-                    </p>
-                    <p>
-                        Tết ấm yêu thương là chương trình thường niên của Đội TNTN Khoa CNTT mỗi khi dịp tết đến xuân về. Chương trình tổ chức nhằm mong muốn lan tỏa không khí tết xum vầy đến với những người có hoàn cảnh khó khăn, yếu thế trong xã hội với mong muốn “Ai cũng có Tết”.
-                    </p>
-                    <p>
-                        <img class="img-fluid" src="images/ativity.png" alt="">
-                    </p>
-                    <p>
-                        Tại đây các bạn tình ngyện viên đã có cơ hội tự tay gói và luộc những chiếc bánh trưng để gửi đến các bác, các ông thương binh. Đồng thời giao lưu thăm hỏi động viên các bác.
-                    </p>
-                    <p>
-                        <img class="img-fluid" src="images/ativity.png" alt="">
-                    </p>
+        <div class="login-wrapper">
+            <div class="w-594">
+                <div class="logo-login">
+                    <img src="images/comon/logo_tntn_2.png" alt="">
+                    <h1>Đăng nhập</h1>
                 </div>
+                <form action="" class="login-form">
+                    <div class=" group-form">
+                        <h5>Tài khoản</h5>
+                        <input type="text" placeholder="">
+                    </div>
+                    <div class=" group-form">
+                        <h5>Mật khẩu</h5>
+                        <input type="text" placeholder="">
+                    </div>
+                    <div class=" group-form">
+                        <button type="submit">Nộp đơn</button>
+                    </div>
+                </form>
             </div>
         </div>
         </main>
-        <myfooter></myfooter>
 
     </div>
 </body>
@@ -60,7 +58,7 @@
         components: {
             myheader: httpVueLoader("vue_components/header.vue"),
             myfooter: httpVueLoader("vue_components/footer.vue"),
-            "article-blog": httpVueLoader('vue_components/article-blog.vue'),
+            supportsection: httpVueLoader("vue_components/support.vue"),
         },
         mounted() {
             this.$nextTick(() => {
@@ -68,6 +66,21 @@
                 $(window).bind("load", function () {
 
                     // Home Banner
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 1,
+                        speed: 1500,
+                        autoplay: {
+                            delay: 5000,
+                        },
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    });
 
                     // Home events
                     let homeEventSwiper = new Swiper('.home-events-wrapper .swiper', {
