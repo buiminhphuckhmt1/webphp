@@ -14,39 +14,24 @@
     <div id="app">
         <myheader></myheader>
         <main>
-        <div class="typical-face-wrapper">
+        <div class="activity-wrapper">
             <div class="container">
-                <h1>GƯƠNG MẶT TIÊU BIỂU ĐỘI TNTN KHOA CNTT</h1>
-                <div class="typical-face-content-wrapper" v-for="item in 3">
-                    <div  class="typical-face-content">
-                    <div class="left-content">
-                        <div class="image-wrapper">
-                        <img src="images/2.png" alt="">
-                        </div>
-                        <h3>hoàng thu hằng</h3>
-                    </div>
-                    <div class="right-contet">
-                        <ul>
-                            <li>
-                                Họ và tên: Hoàng Thu Hằng
-                            </li>
-                            <li>
-                                Chức vụ: Đội trưởng Khóa 12
-                            </li>
-                            <li>
-                                Năm sinh: 2000
-                            </li>
-                            <li>
-                                Lớp - Khóa: HTTT01 - K13
-                            </li>
-                            <li>
-                                Quê quán: Bắc Giang
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
+                <h1>Hoạt động mới nhất</h1>
+                <div class="blog-detail-wrapper">
                     <p>
-                        Là một trong những nữ đội trưởng vô cùng tài năng và năng động. Chị Hoàng Thu Hằng luôn mang đến những nguồn năng lượng vô cùng tích cực đến với tất cả anh chị em trong đội. 
+                            <img class="img-fluid" src="images/ativity.png" alt="">
+                    </p>
+                    <p>
+                        Tết ấm yêu thương là chương trình thường niên của Đội TNTN Khoa CNTT mỗi khi dịp tết đến xuân về. Chương trình tổ chức nhằm mong muốn lan tỏa không khí tết xum vầy đến với những người có hoàn cảnh khó khăn, yếu thế trong xã hội với mong muốn “Ai cũng có Tết”.
+                    </p>
+                    <p>
+                        <img class="img-fluid" src="images/ativity.png" alt="">
+                    </p>
+                    <p>
+                        Tại đây các bạn tình ngyện viên đã có cơ hội tự tay gói và luộc những chiếc bánh trưng để gửi đến các bác, các ông thương binh. Đồng thời giao lưu thăm hỏi động viên các bác.
+                    </p>
+                    <p>
+                        <img class="img-fluid" src="images/ativity.png" alt="">
                     </p>
                 </div>
             </div>
@@ -75,7 +60,7 @@
         components: {
             myheader: httpVueLoader("vue_components/header.vue"),
             myfooter: httpVueLoader("vue_components/footer.vue"),
-            supportsection: httpVueLoader("vue_components/support.vue"),
+            "article-blog": httpVueLoader('vue_components/article-blog.vue'),
         },
         mounted() {
             this.$nextTick(() => {

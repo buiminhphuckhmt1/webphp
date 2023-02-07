@@ -28,13 +28,17 @@
       flex:0 0 450px;
       max-width: 450px;
       display: block;
+      .image-wrapper{
+        overflow: hidden;
+        max-width: 100%;
+        height: 450px;
       img{
       &:hover{
         zoom: 1.1;
-        transition: all 2s;
+        transition: all 9s;
       }
       @include ratio-img(100%);
-      }
+      }}
       h3{
         font-family: 'Lexend Deca';
         font-style: normal;

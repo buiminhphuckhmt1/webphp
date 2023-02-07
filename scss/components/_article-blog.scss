@@ -1,0 +1,34 @@
+.article-blog-news {
+	&:hover {
+		.item-image {
+			img {
+				transition: all 0.3s linear;
+				transform: scale(1.1);
+				transform-origin: center center;
+				filter: opacity(0.5);
+			}
+		}
+	}
+
+	.item-image {
+		@include ratio-img(60%);
+		border-radius: 10px;
+	}
+
+	.item-content {
+		margin: 20px 0;
+
+		.item-name {
+			@include line-clamp(2);
+			line-height: calc(26 / 20);
+			letter-spacing: -0.01em;
+			font-family: 'Lexend Deca';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			text-align: justify;
+			color: #000000;
+			text-decoration: none;
+		}
+	}
+}
