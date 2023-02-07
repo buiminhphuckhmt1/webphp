@@ -5,7 +5,7 @@
 }
 .home-wrapper{
     position: relative;
-    margin-top: 90px;
+    // margin-top: 90px;
     margin-bottom: 79px;
 }
 .backgroud-slide{
@@ -13,7 +13,7 @@
     width: 600px;
     height: 661px;
     right: -30px;
-    top: 40px;
+    top: 20px;
     background-image: url(../images/backgroud/rightbg.png);
     background-repeat: no-repeat;
     background-size:contain;
@@ -24,7 +24,7 @@
     max-width: 550px;
     background-position-y:40px ;
     .swiper{
-        margin-top: 70px;
+        margin-top: 50px;
         img{
         @include ratio-img(60%)}
         .swiper-button-next{
@@ -54,9 +54,8 @@
         }
     }
     h1{
-        font-family: 'Lexend Deca';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 800;
         font-size: 32px;
         line-height: 47px;
         color: #0C0F59;
@@ -84,18 +83,18 @@
             border: none;
             border-radius: 10px;
             padding: 17px 45px;
-            margin-top: 142px;
+            margin-top: 122px;
         }
         svg{
             position: absolute;
             left: 12px;
-            top: 158px;
+            top: 138px;
             z-index: 3;
         }
         .btn-search{
             position: absolute;
             right: 10px;
-            top: 150px;
+            top: 130px;
             z-index: 3;
             background: #2E2BDE;
             border-radius: 5px;
