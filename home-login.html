@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="right-contet">
-                        <div class="swiper mySwiper">
+                        <div id="contet" class="swiper mySwiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <img src="images/1.png" alt="">
@@ -78,6 +78,36 @@
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
+                </div>
+                <div class="category-months-wrapper">
+                    <div class="left-category-months">
+                        <h1>Chuyên mục tháng: Lời muốn nói</h1>
+                        <form action="">
+                            <textarea name="" class="textarea-form" cols="30" rows="10" style="    overflow: hidden;
+                            resize: none;"></textarea>
+                            <input class="btn-category" type="submit">
+                        </form>
+                    </div>
+                    <div class="right-category-months">
+                        <div id="category-months" class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="images/month-slide.png" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="images/month-slide.png" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="images/month-slide.png" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-home">
+                    <img src="images/banner-home1.png" alt="">
                 </div>
             </div>
         </div>
@@ -113,7 +143,7 @@
                 $(window).bind("load", function () {
 
                     // Home Banner
-                    var swiper = new Swiper(".mySwiper", {
+                    var swiper = new Swiper("#contet", {
                         slidesPerView: 1,
                         speed: 1500,
                         autoplay: {
@@ -122,76 +152,18 @@
                         navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
+                        },
+                        });
+
+                    var swiper = new Swiper("#category-months", {
+                        autoplay: {
+                            delay: 5000,
+                        },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
                     },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        dynamicBullets: true,
-                    },
                     });
-
-                    // Home events
-                    let homeEventSwiper = new Swiper('.home-events-wrapper .swiper', {
-                        // Optional parameters
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                        speed: 1500,
-
-                        // Navigation arrows
-                        navigation: {
-                            nextEl: '.home-events-wrapper .swiper-button-next',
-                            prevEl: '.home-events-wrapper .swiper-button-prev',
-                        },
-                    });
-
-                    // Home videos
-                    let homeVideoSwiper = new Swiper('.home-video-slider .swiper', {
-                        // Optional parameters
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                        speed: 1500,
-
-                        // Navigation arrows
-                        navigation: {
-                            nextEl: '.home-video-slider .swiper-button-next',
-                            prevEl: '.home-video-slider .swiper-button-prev',
-                        },
-                    });
-
-                    // Home parent story
-                    let parentStorySwiper = new Swiper('.parents-story-slider .swiper', {
-                        // Optional parameters
-                        // slidesPerView: 3,
-                        spaceBetween: 0,
-                        // centerMode: true,
-                        speed: 1500,
-
-                        // Navigation arrows
-                        navigation: {
-                            nextEl: '.parents-story-slider .swiper-button-next',
-                            prevEl: '.parents-story-slider .swiper-button-prev',
-                        },
-                        on: {
-                            init: function () {
-                                this.slideTo(1)
-                            }
-                        }
-                    });
-
-                    // Home partners
-                    let partnerSwiper = new Swiper('.partner-slider .swiper', {
-                        // Optional parameters
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                        // centerMode: true,
-                        speed: 1500,
-
-                        // If we need pagination
-                        pagination: {
-                            el: '.partner-slider .swiper-pagination',
-                            clickable: true,
-                        },
-                    });
-
                     iconInterval();
                     fixedsocialPopup();
                     triggerFixedEle();

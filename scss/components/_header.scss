@@ -102,6 +102,12 @@
           svg{
             margin-right: 20px;
           }
+          &:active{
+            .menu-login{
+              display: block;
+              right: 10px;
+            }
+          }
         }
         .btn-register{
           left: 0px;
@@ -117,6 +123,30 @@
           color: #FFFFFF;
           padding: 11px 55px;
           border: none;
+        }
+        .menu-login{
+          position: absolute;
+          right: 0px;
+          // display: none;
+          ul{
+            list-style: none;
+            padding: 13px;
+            border-radius: 15px;
+            background: #7E99F8;
+            width: 202px;
+            li{
+              a{
+                display: flex;
+                flex-wrap: wrap;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 23px;
+                text-align: center;
+                color: #FFFFFF;
+                margin-bottom: 13px;
+              }
+            }
+          }
         }
       }
 }

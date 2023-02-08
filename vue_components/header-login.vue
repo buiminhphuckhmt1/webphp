@@ -31,6 +31,26 @@
                     </svg>
                     Me
                 </a>
+                <div class="menu-login">
+                    <ul>
+                        <li>
+                            <a href="">
+                                Thông tin cá nhân
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                
+                                Thông báo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Đăng xuất
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
