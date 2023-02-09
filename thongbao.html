@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Thanh niên tình nguyện Haui
+    </title>
+</head>
+
+<body>
+    <div id="app">
+        <myheader></myheader>
+        <main>
+            <div class="message-wrapper">
+                <div class="container">
+                    <div class="message-content">
+                        <h1>BẠN CÓ THÔNG BÁO TỪ ĐỘI TNTN KHOA CNTT</h1>
+                        <form action="" class="message-form">
+                            <table>
+                                <tr v-for="item in 4">
+                                    <td>
+                                        <div class="message-detail">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="message-detail">THÔNG BÁO HỌP ĐỘI THƯỜNG XUYÊN THÁNG 12</div>
+                                    </td>
+                                    <td>
+                                        <div class=" message-detail">
+                                            <button class="active" type="submit">Đã xem</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr v-for="item in 4">
+                                    <td>
+                                        <div class="message-detail">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="message-detail">THÔNG BÁO HỌP ĐỘI THƯỜNG XUYÊN THÁNG 12</div>
+                                    </td>
+                                    <td>
+                                        <div class=" message-detail">
+                                            <button type="submit">Đã xem</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <myfooter></myfooter>
+
+    </div>
+</body>
+
+
+<!-- vue core -->
+<script src="js/vue.js"></script>
+<script src="js/httpVueLoader.js"></script>
+<!-- end vue core -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="libs/swiper/swiper-bundle.js"></script>
+<script src="libs/bootstrap/popper.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/gsap/gsap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        components: {
+            myheader: httpVueLoader("vue_components/header-login.vue"),
+            myfooter: httpVueLoader("vue_components/footer.vue"),
+            supportsection: httpVueLoader("vue_components/support.vue"),
+        },
+        mounted() {
+            this.$nextTick(() => {
+
+                $(window).bind("load", function () {
+
+                    // Home Banner
+
+                    iconInterval();
+                    fixedsocialPopup();
+                    triggerFixedEle();
+                })
+            });
+        },
+    });
+</script>
+
+</html>

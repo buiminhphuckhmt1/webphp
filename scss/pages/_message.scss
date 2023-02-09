@@ -1,0 +1,51 @@
+.message-wrapper{
+    margin-bottom: 79px;
+    .message-content{
+        width: 100%;
+        .message-form{
+            width: 100%;
+            background: #C9D0F3;
+            border-radius: 20px;
+            table{
+                width: 100%;
+                border: none;
+            tr{
+                width: 100%;
+                border-bottom: 1px solid white;
+                td{
+                    border-left: 1px solid white;
+                    .message-detail{
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 27px;
+                        color: #000000;
+                        padding: 10px 20px;
+                        text-align: center;
+                        button{
+                            border: none;
+                            border-radius: 10px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 23px;
+                            color: #FFFFFF;
+                            background: #9290D3;
+                            padding: 5px 20px;
+                        }
+                        .active{
+                            background: #2E2BDE;
+                        }
+                    }
+                    &:first-child{
+                        border-left: none;
+                    }
+
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+        }
+    }
+}
