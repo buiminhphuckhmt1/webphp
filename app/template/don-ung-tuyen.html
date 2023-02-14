@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Thanh niên tình nguyện Haui
+    </title>
+</head>
+
+<body>
+    <div id="app">
+        <myheader></myheader>
+        <main>
+        <div class="register-wrapper">
+            <div class="container">
+                <div class="t__top--slider">
+                    <div class="backgroud-slide"></div>
+                    <div class="left-content">
+                        <div class="register-form">
+                            <h1>đơn xin tham gia đội</h1>
+                            <form action="">
+                                <div class=" group-form">
+                                    <h5>Họ và tên</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>ngày sinh</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>ma sinh vien</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>lớp-khóa</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>khoa</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>quê quán</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>số điện thoại</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>email</h5>
+                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                </div>
+                                <div class=" group-form">
+                                    <h5>mong muốn</h5>
+                                    <textarea type="text" placeholder="Tìm kiếm thông tin"></textarea>
+                                </div>
+                                <div class=" group-form">
+                                    <button type="submit">Nộp đơn</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right-contet">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="images/1.png" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="images/1.png" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="images/1.png" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <myfooter></myfooter>
+
+    </div>
+</body>
+
+
+<!-- vue core -->
+<script src="js/vue.js"></script>
+<script src="js/httpVueLoader.js"></script>
+<!-- end vue core -->
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="libs/swiper/swiper-bundle.js"></script>
+<script src="libs/bootstrap/popper.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+<script src="libs/gsap/gsap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        components: {
+            myheader: httpVueLoader("vue_components/header.vue"),
+            myfooter: httpVueLoader("vue_components/footer.vue"),
+            supportsection: httpVueLoader("vue_components/support.vue"),
+        },
+        mounted() {
+            this.$nextTick(() => {
+
+                $(window).bind("load", function () {
+
+                    // Home Banner
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 1,
+                        speed: 1500,
+                        autoplay: {
+                            delay: 5000,
+                        },
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    });
+
+                    // Home events
+                    let homeEventSwiper = new Swiper('.home-events-wrapper .swiper', {
+                        // Optional parameters
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                        speed: 1500,
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.home-events-wrapper .swiper-button-next',
+                            prevEl: '.home-events-wrapper .swiper-button-prev',
+                        },
+                    });
+
+                    // Home videos
+                    let homeVideoSwiper = new Swiper('.home-video-slider .swiper', {
+                        // Optional parameters
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        speed: 1500,
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.home-video-slider .swiper-button-next',
+                            prevEl: '.home-video-slider .swiper-button-prev',
+                        },
+                    });
+
+                    // Home parent story
+                    let parentStorySwiper = new Swiper('.parents-story-slider .swiper', {
+                        // Optional parameters
+                        // slidesPerView: 3,
+                        spaceBetween: 0,
+                        // centerMode: true,
+                        speed: 1500,
+
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.parents-story-slider .swiper-button-next',
+                            prevEl: '.parents-story-slider .swiper-button-prev',
+                        },
+                        on: {
+                            init: function () {
+                                this.slideTo(1)
+                            }
+                        }
+                    });
+
+                    // Home partners
+                    let partnerSwiper = new Swiper('.partner-slider .swiper', {
+                        // Optional parameters
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                        // centerMode: true,
+                        speed: 1500,
+
+                        // If we need pagination
+                        pagination: {
+                            el: '.partner-slider .swiper-pagination',
+                            clickable: true,
+                        },
+                    });
+
+                    iconInterval();
+                    fixedsocialPopup();
+                    triggerFixedEle();
+                })
+            });
+        },
+    });
+</script>
+
+</html>
