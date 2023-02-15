@@ -1,22 +1,33 @@
 <?php 
-  $layout = "LayoutTrangTrong.php";
+  $layout = "LayoutTrangChu.php";
  ?>
-<h1>Tin tức</h1>
-        <div class="wrapper-blog"> 
-          <!-- list news -->
-          <div class="row">
-            <?php foreach($data as $row): ?>
-            <div class="col-md-6 article" style="height:400px; overflow:hidden;"> <a href="index.php?controller=news&action=detail&id=<?php echo $row->id; ?>" class="image"> <img src="../assets/upload/news/<?php echo $row->photo; ?>" alt="<?php echo $row->name; ?>" title="<?php echo $row->name; ?>" class="img-responsive"> </a>
-              <h3><a href="index.php?controller=news&action=detail&id=<?php echo $row->id; ?>u"><?php echo $row->name; ?></a></h3>
-              <p class="desc"><?php echo $row->description; ?></p>
+<div class="activity-wrapper">
+            <div class="container">
+                <h1>Hoạt động mới nhất</h1>
+                <div class="activity-content-wrapper">
+                    <div  class="activity-content">
+                    <div class="left-content">
+                        <div class="left-image">
+                        <img class="img-fluid" src="../template/images/ativity.png" alt="">
+                        </div>
+                        <h3>Chương trình “Tết ấm yêu thương 2022” </h3>
+                    </div>
+                    <div class="right-content">
+                        <div class="activity-right-content" v-for="item in 2">
+                            <div class="right-image">
+                            <img src="../template/images/activity.png" alt="">
+                            </div>
+                            <h4>Chương trình “Kế hoạch nhỏ”</h4>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-wrapper">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12" v-for="item in 9">
+                            <?php include "Views/ArticleBlogView.php"; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <?php endforeach; ?>
-          </div>
-          <!-- end list news --> 
-          <ul class="pagination pull-right" style="margin-top: 0px !important">
-            <li><a href="#">Trang</a></li>
-            <?php for($i = 1; $i <= $numPage; $i++): ?>
-            <li><a href="index.php?controller=news&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-          <?php endfor; ?>
-          </ul>
         </div>

@@ -79,17 +79,19 @@
       .header-register{
         position: relative;
         line-height: 80px;
-        button{
+        .btn-register{
           border-radius: 6px;
           background: #2E2BDE;
+          padding: 11px 20px;
+          border: none;
+          a{
           font-style: normal;
           font-weight: 700;
           font-size: 20px;
           line-height: 29px;
           text-align: center;
           color: #FFFFFF;
-          padding: 11px 20px;
-          border: none;
+          }
         }
         a{
           font-style: normal;
@@ -109,7 +111,7 @@
             right: 10px;
           }
         }
-        .btn-register{
+        .btn-login{
           left: 0px;
           top: 79px;
           position: absolute;
@@ -123,6 +125,14 @@
           color: #FFFFFF;
           padding: 11px 55px;
           border: none;
+          a{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 29px;
+            text-align: center;
+            color: #fff;
+          }
         }
 }
 }

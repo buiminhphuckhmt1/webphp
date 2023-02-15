@@ -3,7 +3,7 @@
         <div class="header--inner">
             <div class="header-logo">
                 <a href="javascript:;" title="">
-                    <img class="img-fluid no-scroll" src="images/comon/logo_tntn.png" alt="">
+                    <img class="img-fluid no-scroll" src="../template/images/comon/logo_tntn.png" alt="">
                     <!-- <img class="img-fluid is-scroll" src="images/comon/logo_tntn.png" alt=""> -->
                 </a>
             </div>
@@ -19,7 +19,7 @@
                         <a href="javascrip">Gương mặt tiêu biểu</a> 
                     </li>
                     <li class="content-nav-item ">
-                        <a href="javascrip">Liên hệ</a>
+                        <a href="ContactView.php">Liên hệ</a>
                     </li>
                 </ul>
             </div>

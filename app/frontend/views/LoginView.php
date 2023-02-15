@@ -1,31 +1,24 @@
 <?php 
   $layout = "LayoutTrangTrong.php";
  ?>
-<div class="template-customer">
-          <h1>Đăng nhập tài khoản</h1>
-          <p>Nếu bạn có tài khoản xin vui lòng đăng nhập</p>
-          <div class="row" style="margin-top:50px;">
-            <div class="col-md-6">
-              <div class="wrapper-form">
-                <form method='post' action="index.php?controller=account&action=loginPost">
-                  <p class="title"><span>Đăng nhập tài khoản</span></p>
-                  <div class="form-group">
-                    <label>Email:<b id="req">*</b></label>
-                    <input type="email" class="input-control" name="email" required="">
-                  </div>
-                  <div class="form-group">
-                    <label>Mật khẩu:<b id="req">*</b></label>
-                    <input type="password" class="input-control" name="password" required="">
-                  </div>
-                  <input type="submit" class="button" value="Đăng nhập">
+<div class="login-wrapper">
+            <div class="w-594">
+                <div class="logo-login">
+                    <img src="../template/images/comon/logo_tntn_2.png" alt="">
+                    <h1>Đăng nhập</h1>
+                </div>
+                <form method="post" class="login-form" action="index.php?controller=account&amp;action=loginPost">
+                    <div class=" group-form">
+                        <h5>Tài khoản</h5>
+                        <input type="email" name="email" placeholder="">
+                    </div>
+                    <div class=" group-form">
+                        <h5>Mật khẩu</h5>
+                        <input type="password" name="password" placeholder="">
+                    </div>
+                    <div class=" group-form">
+                        <button type="submit">Đăng nhập</button>
+                    </div>
                 </form>
-              </div>
             </div>
-            <div class="col-md-6">
-              <div class="wrapper-form">
-                <p class="title"><span>Tạo tài khoản mới</span></p>
-                <p>Đăng ký tài khoản để mua hàng nhanh hơn. Theo dõi đơn đặt hàng, vận chuyển. Cập nhật các sự kiện và chương trình giảm giá của chúng tôi.</p>
-                <a href="/Account/Register" class="button">Đăng ký</a> </div>
-            </div>
-          </div>
         </div>

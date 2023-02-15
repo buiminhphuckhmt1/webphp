@@ -1,150 +1,70 @@
-<!-- header -->
-<header id="header">
-<!-- top header -->
-<div class="top-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-6"> <span><i class="fa fa-phone"></i> (04) 6674 2332</span> <span><i class="fa fa-envelope-o"></i> <a href="mailto:support@mail.com">support@mail.com</a></span> </div>
-      <?php if(isset($_SESSION["customer_email"]) == false): ?>
-        <div class="col-xs-12 col-sm-6 col-md-6 customer"> <a href="index.php?controller=account&action=login">Đăng nhập</a>&nbsp; &nbsp;<a href="index.php?controller=account&action=register">Đăng ký</a> </div>
-      <?php else: ?>
-        <div class="col-xs-12 col-sm-6 col-md-6 customer"> <a href="#">Xin chào <?php echo $_SESSION["customer_email"]; ?></a>&nbsp; &nbsp;<a href="index.php?controller=account&action=logout">Đăng xuất</a> </div>
-      <?php endif; ?>
-    </div>
-  </div>
-</div>
-<!-- end top header --> 
-<!-- middle header -->
-<div class="mid-header">
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-3 logo "> <a href="index.html"> <img src="../assets/frontend/100/047/633/themes/517833/assets/logo221b.png?1481775169361" alt="DKT Store" title="DKT Store" class="img-responsive"> </a> </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 header-search"> 
-      <!--<form method="post" id="frm" action="">-->
-      <div style="margin-top:25px;" id="box-search">
-        <input type="text" onkeyup="ajaxSearch();" value="" placeholder="Nhập từ khóa tìm kiếm..." id="key" class="input-control">
-        <button style="margin-top:5px;" type="submit"> <i class="fa fa-search" onclick="return search();"></i> </button>
-        <!-- list box search -->
-        <div id="box-search-list">
-          <ul>
-            <li><img src="http://localhost:8080/devpro/php63/php63_project/assets/upload/products/1670158805_132195018346013007_2.jpg"> <a href="#">17 - 16 - MacBook Pro 16 Touch Bar 2.6GHz Core i7-</a></li>
-            <li><img src="http://localhost:8080/devpro/php63/php63_project/assets/upload/products/1670158805_132195018346013007_2.jpg"> <a href="#">17 - 16 - MacBook Pro 16 Touch Bar 2.6GHz Core i7-</a></li>
-            <li><img src="http://localhost:8080/devpro/php63/php63_project/assets/upload/products/1670158805_132195018346013007_2.jpg"> <a href="#">17 - 16 - MacBook Pro 16 Touch Bar 2.6GHz Core i7-</a></li>
-          </ul>
-        </div>
-        <!-- /list box search -->        
-      </div>
-      <style type="text/css">
-          #box-search{position: relative;}
-          #box-search-list{position: absolute; z-index: 1; width: 100%; background: white; display: none; height: 300px; overflow: scroll;}
-          #box-search-list ul{padding:0px; margin:0px; list-style: none;}
-          #box-search-list ul li{border-bottom: 1px solid #dddddd;}
-          #box-search-list img{width: 50px;}
-        </style>
-      <!--</form>--> 
-      <script type="text/javascript">
-        function search(){
-          var key = document.getElementById("key").value;
-          //di chuyen den trang tim kiem
-          location.href="index.php?controller=search&action=searchName&key="+key;
-        }
-        function ajaxSearch(){
-          //phai load thu vien jquery vao trang nay
-          //kiem tra thu vien jquery co load o trang hay khong
-          //$(document).ready(function(){ alert('da load jquery'); });          
-          $("#box-search-list ul").empty();
-          //lay textbox co id=key
-          var key = $("#key").val();
-          if(key != ""){
-            //dat css de hien thi box search
-            $("#box-search-list").attr("style","display:block;");
-            //ajax goi den url de lay ket qua tra ve
-            //---
-            $.ajax({
-              url: "index.php?controller=search&action=ajaxSearch&key="+key,
-              success: function( result ) {
-                //do du lieu vao box-search-list
-                $("#box-search-list ul").append(result);
-              }
-            });
-            //---
-          }
-        }
-      </script>
-    </div>
-    <?php 
-      $numberProduct = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-     ?>
-    <div class="col-xs-12 col-sm-12 col-md-3 mini-cart">
-      <div class="wrapper-mini-cart"> <span class="icon"><i class="fa fa-shopping-cart"></i></span> <a href="cart"> <span class="mini-cart-count"> <?php echo $numberProduct; ?> </span> sản phẩm <i class="fa fa-caret-down"></i></a>
-        <div class="content-mini-cart">
-          <div class="has-items">
-            <ul class="list-unstyled">
-             <?php if(isset($_SESSION['cart'])): ?> 
-              <?php foreach($_SESSION['cart'] as $product): ?>
-                <?php 
-                  //ep kieu tu array sang object
-                  $product = (object)$product;
-                 ?>
-              <li class="clearfix" id="item-1853038">
-                <div class="image"> <a href="index.php?controller=products&action=detail&id=<?php echo $product->id; ?>"> <img alt="<?php echo $product->name; ?>" src="../assets/upload/products/<?php echo $product->photo; ?>" title="<?php echo $product->name; ?>" class="img-responsive"> </a> </div>
-                <div class="info">
-                  <h3><a href="index.php?controller=products&action=detail&id=<?php echo $product->id; ?>"><?php echo $product->name; ?></a></h3>
-                  <p><?php echo $product->number; ?> x <?php echo number_format($product->price - ($product->price * $product->discount)/100); ?>₫</p>
+<template>
+    <div class="header" style="background-image: url(../template/images/backgroud/vector_1908398.png);">
+        <div class="header--inner">
+            <div class="header-logo">
+                <a href="index.php?controller=home" title="">
+                    <img class="img-fluid no-scroll" src="../template/images/comon/logo_tntn.png" alt="">
+                    <!-- <img class="img-fluid is-scroll" src="images/comon/logo_tntn.png" alt=""> -->
+                </a>
+            </div>
+            <div class="header-content">
+                <ul class="content-nav-list">
+                    <li class="content-nav-item ">
+                        <a href="index.php?controller=aboutus ">Giới thiệu</a>
+                    </li>
+                    <li class="content-nav-item ">
+                        <a href="index.php?controller=news ">Hoạt động</a>
+                    </li>
+                    <li class="content-nav-item ">
+                        <a href="index.php?controller=typicalface">Gương mặt tiêu biểu</a> 
+                    </li>
+                    <li class="content-nav-item ">
+                        <a href="index.php?controller=contact">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+            <?php if(isset($_SESSION["customer_email"]) == false): ?>
+            <div class="header-register">
+                <button class="btn-register">
+                <a href="index.php?controller=account&action=register">Nộp đơn ứng tuyển</a>
+                </button>
+                <button class="btn-login">
+                    <a href="index.php?controller=account&action=login">Đăng nhập</a>
+                </button>
+            </div>
+            <?php else: ?>
+                <div class="header-register">
+                <a href="javascrip:;">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.375 18.75C34.375 21.2364 33.3873 23.621 31.6291 25.3791C29.871 27.1373 27.4864 28.125 25 28.125C22.5136 28.125 20.129 27.1373 18.3709 25.3791C16.6127 23.621 15.625 21.2364 15.625 18.75C15.625 16.2636 16.6127 13.879 18.3709 12.1209C20.129 10.3627 22.5136 9.375 25 9.375C27.4864 9.375 29.871 10.3627 31.6291 12.1209C33.3873 13.879 34.375 16.2636 34.375 18.75Z" fill="#0C0F59"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 25C0 18.3696 2.63392 12.0107 7.32233 7.32233C12.0107 2.63392 18.3696 0 25 0C31.6304 0 37.9893 2.63392 42.6777 7.32233C47.3661 12.0107 50 18.3696 50 25C50 31.6304 47.3661 37.9893 42.6777 42.6777C37.9893 47.3661 31.6304 50 25 50C18.3696 50 12.0107 47.3661 7.32233 42.6777C2.63392 37.9893 0 31.6304 0 25ZM25 3.125C20.8806 3.12522 16.8449 4.28863 13.3575 6.48134C9.87012 8.67404 7.07276 11.8069 5.28739 15.5194C3.50202 19.2318 2.80121 23.3729 3.26562 27.4661C3.73003 31.5593 5.34079 35.4382 7.9125 38.6562C10.1313 35.0812 15.0156 31.25 25 31.25C34.9844 31.25 39.8656 35.0781 42.0875 38.6562C44.6592 35.4382 46.27 31.5593 46.7344 27.4661C47.1988 23.3729 46.498 19.2318 44.7126 15.5194C42.9272 11.8069 40.1299 8.67404 36.6425 6.48134C33.1551 4.28863 29.1194 3.12522 25 3.125Z" fill="#0C0F59"/>
+                    </svg>
+                    Me
+                </a>
+                <div class="menu-login show">
+                    <ul>
+                        <li>
+                       
+                            <a href="index.php?controller=personalinformation">
+                                Thông tin cá nhân
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="index.php?controller=report">
+                                
+                                Thông báo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php?controller=account&action=logout">
+                                Đăng xuất
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div> <a href="index.php?controller=cart&action=remove&id=<?php echo $product->id; ?>"> <i class="fa fa-times"></i></a> </div>
-              </li>
-                <?php endforeach; ?>
-              <?php endif; ?>
-            </ul>
-            <a href="index.php?controller=cart&action=checkout" class="button">Thanh toán</a> </div>
+            </div>
+            <?php endif; ?>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-<!-- end middle header --> 
-<!-- bottom header -->
-<div class="bottom-header">
-  <div class="container">
-    <div class="clearfix">
-      <ul class="main-nav hidden-xs hidden-sm list-unstyled">
-        <li class="active"><a href="index.php">Trang chủ</a></li>
-        <li class="has-submenu"> <a href="#"> <span>Sản phẩm</span><i class="fa fa-caret-down" style="margin-left: 5px;"></i> </a>
-          <ul class="list-unstyled level1">
-          <?php 
-            $conn = Connection::getInstance();
-            //lay cac danh muc co parent_id = 0
-            $query = $conn->query("select * from categories where parent_id = 0 order by id desc");
-            $categories = $query->fetchAll(PDO::FETCH_OBJ);
-           ?>
-           <?php foreach($categories as $row): ?>
-            <li><a href="index.php?controller=products&action=category&category_id=<?php echo $row->id; ?>"><?php echo $row->name; ?></a></li>
-            <?php 
-                //lay cac danh muc cap con
-                $querySub = $conn->query("select * from categories where parent_id = {$row->id} order by id desc");
-                $categoriesSub = $querySub->fetchAll(PDO::FETCH_OBJ);
-             ?>
-             <?php foreach($categoriesSub as $rowSub): ?>
-            <li style="padding-left:20px;"><a hrefindex.php?controller=products&action=category&category_id=<?php echo $rowSub->id; ?>"><?php echo $rowSub->name; ?></a></li>
-              <?php endforeach; ?>
-            <?php endforeach; ?>
-          </ul>
-        </li>
-        <li><a href="index.php?controller=cart">Giỏ hàng</a></li>
-        <li><a href="index.php?controller=news">Tin tức</a></li>
-        <li><a href="index.php?controller=contact">Liên hệ</a></li>
-      </ul>
-      <a href="javascript:void(0);" class="toggle-main-menu hidden-md hidden-lg"> <i class="fa fa-bars"></i> </a>
-      <ul class="list-unstyled mobile-main-menu hidden-md hidden-lg" style="display:none">
-        <li class="active"><a href="index.php">Trang chủ</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li><a href="index.php?controller=tintuc">Tin tức</a></li>
-        <li><a href="index.php?controller=lienhe">Liên hệ</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- end bottom header -->
-</header>
-<!-- end header -->
+</template>
