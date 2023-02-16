@@ -11,27 +11,27 @@
         <div class="panel-body">
             <table class="table table-bordered table-hover">
                 <tr>
-                    <th style="width:100px;">Photo</th>
-                    <th>Name</th>
-                    <th style="width:70px;">Hot</th>
+                    <th style="width:100px;">CoverImage</th>
+                    <th>Title</th>
+                    <!-- <th style="width:70px;">Hot</th> -->
                     <th style="width:100px;"></th>
                 </tr>
                 <?php foreach($data as $row): ?>
                 <tr>
                     <td>
-                        <?php if($row->photo != ""&&file_exists("../assets/upload/news/".$row->photo)): ?>
-                        <img src="../assets/upload/news/<?php echo $row->photo; ?>" style="width:100px;">
+                        <?php if($row->CoverImage!= ""&&file_exists("../assets/upload/news/".$row->photo)): ?>
+                        <img src="../assets/upload/news/<?php echo $row->CoverImage; ?>" style="width:100px;">
                         <?php endif; ?>
                     </td>
-                    <td><?php echo $row->name; ?></td>
-                    <td>
+                    <td><?php echo $row->Title; ?></td>
+                    <!-- <td>
                         <?php if($row->hot == 1): ?>
                             <span class="fa fa-check"></span>
                         <?php endif; ?>
-                    </td>
+                    </td> -->
                     <td style="text-align:center;">
-                        <a href="index.php?controller=news&action=update&id=<?php echo $row->id; ?>">Edit</a>&nbsp;
-                        <a href="index.php?controller=news&action=delete&id=<?php echo $row->id; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
+                        <a href="index.php?controller=news&action=update&ID=<?php echo $row->ID; ?>">Edit</a>&nbsp;
+                        <a href="index.php?controller=news&action=delete&ID=<?php echo $row->ID; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

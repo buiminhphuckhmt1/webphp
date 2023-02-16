@@ -7,7 +7,7 @@
 			$from = $page * $recordPerPage;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from users order by id desc limit $from,$recordPerPage");
+			$query = $conn->query("select * from account order by id desc limit $from,$recordPerPage");
 			//lay tat ca cac ban ghi
 			$result = $query->fetchAll(PDO::FETCH_OBJ);
 			//tra ve ket qua
@@ -17,7 +17,7 @@
 		public function modelTotalRecord(){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from users");
+			$query = $conn->query("select * from account");
 			//tra ve tong so ban ghi
 			return $query->rowCount();
 		}
@@ -25,7 +25,7 @@
 		public function modelGetRecord($id){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("select * from users where id=:var_id");
+			$query = $conn->prepare("select * from account where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 			//tra ve mot ban ghi
 			return $query->fetch(PDO::FETCH_OBJ);
@@ -34,16 +34,17 @@
 		public function modelUpdate($id){
 			$name = $_POST['name'];
 			$password = $_POST['password'];
+			$role = $_POST['role'];
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("update users set name=:var_name where id=:var_id");
-			$query->execute(["var_name"=>$name,"var_id"=>$id]);
+			$query = $conn->prepare("update account set name=:var_name,role=:var_role where id=:var_id");
+			$query->execute(["var_name"=>$name,"var_role"=>$role,"var_id"=>$id]);
 			//neu password khong rong thi update password
 			if($password != ""){
 				//ma hoa password
 				$password = md5($password);
-				$query = $conn->prepare("update users set password=:var_password where id=:var_id");
+				$query = $conn->prepare("update account set password=:var_password where id=:var_id");
 				$query->execute(["var_password"=>$password,"var_id"=>$id]);
 			}
 		}
@@ -52,18 +53,22 @@
 			$name = $_POST['name'];
 			$email = $_POST['email'];
 			$password = $_POST['password'];
+			$role = $_POST['role'];
+
+
+			$password = md5($password);
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into users set name=:var_name,password=:var_password,email=:var_email");
-			$query->execute(["var_name"=>$name,"var_email"=>$email,"var_password"=>$var_password]);
+			$query = $conn->prepare("insert into account set name=:var_name,password=:var_password,email=:var_email,role=:var_role");
+			$query->execute(["var_name"=>$name,"var_email"=>$email,"var_password"=>$password,"var_role"=>$role]);
 		}
 		//xoa ban ghi
 		public function modelDelete(){
-			$id = isset($_GET["id"]) && is_numeric($_GET["id"]) ? $_GET["id"] : 0;
+			$id = isset($_GET["ID"]) && is_numeric($_GET["ID"]) ? $_GET["ID"] : 0;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("delete from users where id=:var_id");
+			$query = $conn->prepare("delete from account where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 		}
 	}

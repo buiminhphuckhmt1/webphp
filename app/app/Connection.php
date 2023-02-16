@@ -4,7 +4,7 @@
 		//từ khóa static: không cần khởi tạo object cho class Connection mà từ tên class có thể truy cập vào hàm này theo cú pháp: Connection::getInstance();
 		public static function getInstance(){
 			$server_name = "localhost";
-			$database_name = "php63_project";
+			$database_name = "tntn_test2";
 			$username = "root";
 			$password = "";
 			//kết nối csdl, trả kết quả về biến kết nối

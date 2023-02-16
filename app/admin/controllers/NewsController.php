@@ -21,9 +21,9 @@
 		//url: index.php?controller=news&action=update&id=number
 		public function update(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;
 			//tao bien $action de gan vao thuoc tinh action cua the form
-			$action = "index.php?controller=news&action=updatePost&id=$id";
+			$action = "index.php?controller=news&action=updatePost&ID=$id";
 			//lay mot ban ghi
 			$record = $this->modelGetRecord($id);
 			$this->loadView("NewsFormView.php",["action"=>$action,"record"=>$record]);
@@ -32,7 +32,7 @@
 		//url:index.php?controller=news&action=updatePost
 		public function updatePost(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;
 			//goi ham modelUpdate de update ban ghi
 			$this->modelUpdate($id);
 			//quay tro lai trang user
@@ -57,7 +57,7 @@
 		//url: index.php?controller=news&action=delete&id=number
 		public function delete(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;
 			//xoa ban ghi
 			$record = $this->modelDelete($id);
 			//quay tro lai trang user
