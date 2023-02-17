@@ -111,12 +111,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?controller=products">
+                    <a href="index.php?controller=userfeedback">
                         <i class="fa fa-th"></i> <span>Quản lý phản hồi user</span>
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?controller=orders">
+                    <a href="index.php?controller=memberfeedback">
                         <i class="fa fa-th"></i> <span>Quản lý phản hồi member</span>
                     </a>
                 </li>
@@ -126,7 +126,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?controller=users">
+                    <a href="index.php?controller=account">
                         <i class="fa fa-th"></i> <span>Quản lý accounts</span>
                     </a>
                 </li>

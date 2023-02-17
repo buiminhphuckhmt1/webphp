@@ -40,11 +40,11 @@
 			$query = $conn->prepare("update actitvity set title=:var_title,content=:var_content where id=:var_id");
 			$query->execute(["var_title"=>$title,"var_id"=>$id,"var_content"=>$content]);
 			//neu user chon anh de update thi tien hanh upload anh
-			if($_FILES['photo']['title'] != ""){
+			if($_FILES['photo']['name'] != ""){
 				//lay ten anh
-				$photo = time()."_".$_FILES['photo']['title'];
+				$photo = time()."_".$_FILES['photo']['name'];
 				//upload anh
-				move_uploaded_file($_FILES['photo']['tmp_title'], "../assets/upload/news/$photo");
+				move_uploaded_file($_FILES['photo']['tmp_name'], "../assets/upload/news/$photo");
 				//update cot photo trong table users
 				$query = $conn->prepare("update actitvity set coverimage=:var_photo where id=:var_id");
 				$query->execute(["var_photo"=>$photo,"var_id"=>$id]);

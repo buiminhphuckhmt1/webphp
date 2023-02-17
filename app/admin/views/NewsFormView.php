@@ -10,18 +10,18 @@
         <form method="post" enctype="multipart/form-data" action="<?php echo $action; ?>">
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
-                <div class="col-md-2">Title</div>
+                <div class="col-md-2">Tiêu đề</div>
                 <div class="col-md-10">
-                    <input type="text" value="<?php echo isset($record->title)?$record->title:''; ?>" name="title" class="form-control" required>
+                    <input type="text" value="<?php echo isset($record->Title)?$record->Title:''; ?>" name="title" class="form-control" required>
                 </div>
             </div>
             <!-- end rows -->
             <!-- rows -->
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
-                <div class="col-md-2">Content</div>
+                <div class="col-md-2">Nội dung</div>
                 <div class="col-md-10">
-                    <textarea id="content" name="content"><?php echo isset($record->content)?$record->content:''; ?></textarea>
+                    <textarea id="content" name="content"><?php echo isset($record->Content)?$record->Content:''; ?></textarea>
                     <script type="text/javascript">
                     	CKEDITOR.replace("content");
                     </script>
@@ -30,17 +30,9 @@
             <!-- end rows -->
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
-                <div class="col-md-2">Upload CoverImage</div>
+                <div class="col-md-2">Upload ảnh nền</div>
                 <div class="col-md-10">
-                    <input type="file" name="coverimage">
-                </div>
-            </div>
-            <!-- end rows -->
-            <!-- rows -->
-            <div class="row" style="margin-top:5px;">
-                <div class="col-md-2">Upload Image</div>
-                <div class="col-md-10">
-                    <input type="file" name="image">
+                    <input type="file" name="photo">
                 </div>
             </div>
             <!-- end rows -->

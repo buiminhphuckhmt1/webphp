@@ -1,5 +1,5 @@
 <?php 
-	trait CategoriesModel{
+	trait AccountModel{
 		//liệt kê các bản ghi có phân trang
 		public function modelRead($recordPerPage){
 			//lấy biến p truyền từ url
@@ -7,7 +7,7 @@
 			$from = $page * $recordPerPage;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from categories where parent_id=0 order by id desc limit $from,$recordPerPage");
+			$query = $conn->query("select * from account order by id desc limit $from,$recordPerPage");
 			//lay tat ca cac ban ghi
 			$result = $query->fetchAll(PDO::FETCH_OBJ);
 			//tra ve ket qua
@@ -17,7 +17,7 @@
 		public function modelTotalRecord(){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from categories where parent_id=0");
+			$query = $conn->query("select * from account");
 			//tra ve tong so ban ghi
 			return $query->rowCount();
 		}
@@ -25,7 +25,7 @@
 		public function modelGetRecord($id){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("select * from categories where id=:var_id");
+			$query = $conn->prepare("select * from account where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 			//tra ve mot ban ghi
 			return $query->fetch(PDO::FETCH_OBJ);
@@ -33,41 +33,43 @@
 		//update ban ghi
 		public function modelUpdate($id){
 			$name = $_POST['name'];
-			$parent_id = $_POST['parent_id'];
+			$password = $_POST['password'];
+			$role = $_POST['role'];
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("update categories set name=:var_name,parent_id=:var_parent_id where id=:var_id");
-			$query->execute(["var_name"=>$name,"var_id"=>$id,"var_parent_id"=>$parent_id]);
+			$query = $conn->prepare("update account set name=:var_name,role=:var_role where id=:var_id");
+			$query->execute(["var_name"=>$name,"var_role"=>$role,"var_id"=>$id]);
+			//neu password khong rong thi update password
+			if($password != ""){
+				//ma hoa password
+				$password = md5($password);
+				$query = $conn->prepare("update account set password=:var_password where id=:var_id");
+				$query->execute(["var_password"=>$password,"var_id"=>$id]);
+			}
 		}
 		//insert ban ghi
 		public function modelCreate(){
 			$name = $_POST['name'];
-			$parent_id = $_POST['parent_id'];
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+			$role = $_POST['role'];
+
+
+			$password = md5($password);
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into categories set name=:var_name,parent_id=:var_parent_id");
-			$query->execute(["var_name"=>$name,"var_parent_id"=>$parent_id]);
+			$query = $conn->prepare("insert into account set name=:var_name,password=:var_password,email=:var_email,role=:var_role");
+			$query->execute(["var_name"=>$name,"var_email"=>$email,"var_password"=>$password,"var_role"=>$role]);
 		}
 		//xoa ban ghi
 		public function modelDelete(){
-			$id = isset($_GET["id"]) && is_numeric($_GET["id"]) ? $_GET["id"] : 0;
+			$id = isset($_GET["ID"]) && is_numeric($_GET["ID"]) ? $_GET["ID"] : 0;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			//khi xoa danh muc cap cha thi se xoa luong cap con
-			$query = $conn->prepare("delete from categories where id=:var_id or parent_id=:var_id");
+			$query = $conn->prepare("delete from account where id=:var_id");
 			$query->execute(["var_id"=>$id]);
-		}
-		//lấy các danh mục cấp 1
-		public function getCategoriesSub($category_id){
-			//lay bien ket noi csdl
-			$conn = Connection::getInstance();
-			$query = $conn->query("select * from categories where parent_id=$category_id order by id desc");
-			//lay tat ca cac ban ghi
-			$result = $query->fetchAll(PDO::FETCH_OBJ);
-			//tra ve ket qua
-			return $result;
 		}
 	}
  ?>

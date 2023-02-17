@@ -1,9 +1,9 @@
 <?php 
 	//include filde ProductsModel.php
-	include "models/ProductsModel.php";
-	class ProductsController extends Controller{
+	include "models/MemberModel.php";
+	class MemberController extends Controller{
 		//ke thua class ProductsModel
-		use ProductsModel;
+		use MemberModel;
 		//hien thi danh sach cac ban ghi
 		public function index(){
 			//quy dinh so ban ghi tren mot trang
@@ -15,53 +15,53 @@
 			//lay du lieu
 			$data = $this->modelRead($recordPerPage);
 			//goi view, truyen du lieu ra view
-			$this->loadView("ProductsView.php",["data"=>$data,"numPage"=>$numPage]);
+			$this->loadView("MemberView.php",["data"=>$data,"numPage"=>$numPage]);
 		}
 		//sua ban ghi - GET
-		//url: index.php?controller=products&action=update&id=number
+		//url: index.php?controller=Member&action=update&id=number
 		public function update(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;
 			//tao bien $action de gan vao thuoc tinh action cua the form
-			$action = "index.php?controller=products&action=updatePost&id=$id";
+			$action = "index.php?controller=Member&action=updatePost&id=$id";
 			//lay mot ban ghi
 			$record = $this->modelGetRecord($id);
-			$this->loadView("ProductsFormView.php",["action"=>$action,"record"=>$record]);
+			$this->loadView("MemberFormView.php",["action"=>$action,"record"=>$record]);
 		}
 		//sua ban ghi - POST -> khi an nut submit
-		//url:index.php?controller=products&action=updatePost
+		//url:index.php?controller=Member&action=updatePost
 		public function updatePost(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;
 			//goi ham modelUpdate de update ban ghi
 			$this->modelUpdate($id);
 			//quay tro lai trang user
-			header("location:index.php?controller=products");
+			header("location:index.php?controller=member");
 		}
 		//them ban ghi
-		//url: index.php?controller=products&action=create
+		//url: index.php?controller=Member&action=create
 		public function create(){
 			//tao bien $action de gan vao thuoc tinh action cua the form
-			$action = "index.php?controller=products&action=createPost";
-			$this->loadView("ProductsFormView.php",["action"=>$action]);
+			$action = "index.php?controller=member&action=createPost";
+			$this->loadView("MemberFormView.php",["action"=>$action]);
 		}
 		//them ban ghi - POST -> khi an nut submit
-		//url:index.php?controller=products&action=createPost
+		//url:index.php?controller=Member&action=createPost
 		public function createPost(){
 			//goi ham modelCreate de update ban ghi
 			$this->modelCreate();
 			//quay tro lai trang user
-			header("location:index.php?controller=products");
+			header("location:index.php?controller=member");
 		}
 		//xoa ban ghi
-		//url: index.php?controller=products&action=delete&id=number
+		//url: index.php?controller=Member&action=delete&id=number
 		public function delete(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;
 			//xoa ban ghi
 			$record = $this->modelDelete($id);
 			//quay tro lai trang user
-			header("location:index.php?controller=products");
+			header("location:index.php?controller=member");
 		}
 	}
  ?>

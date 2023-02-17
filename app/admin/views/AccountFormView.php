@@ -4,7 +4,7 @@
  ?>
 <div class="col-md-12">  
     <div class="panel panel-primary">
-        <div class="panel-heading">Add edit user</div>
+        <div class="panel-heading">Add edit account</div>
         <div class="panel-body">
         <form method="post" action="<?php echo $action; ?>">
             <!-- rows -->

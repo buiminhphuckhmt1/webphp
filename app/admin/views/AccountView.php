@@ -4,10 +4,10 @@
  ?>
 <div class="col-md-12">
     <div style="margin-bottom:5px;">
-        <a href="index.php?controller=users&action=create" class="btn btn-primary">Add user</a>
+        <a href="index.php?controller=account&action=create" class="btn btn-primary">Add Account</a>
     </div>
     <div class="panel panel-primary">
-        <div class="panel-heading">List User</div>
+        <div class="panel-heading">List Account</div>
         <div class="panel-body">
             <table class="table table-bordered table-hover">
                 <tr>
@@ -22,8 +22,8 @@
                     <td><?php echo $row->Email; ?></td>
                     <td><?php echo $row->Role; ?></td>
                     <td style="text-align:center;">
-                        <a href="index.php?controller=users&action=update&ID=<?php echo $row->ID; ?>">Edit</a>&nbsp;
-                        <a href="index.php?controller=users&action=delete&ID=<?php echo $row->ID; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
+                        <a href="index.php?controller=account&action=update&ID=<?php echo $row->ID; ?>">Edit</a>&nbsp;
+                        <a href="index.php?controller=account&action=delete&ID=<?php echo $row->ID; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -34,7 +34,7 @@
             <ul class="pagination">
                 <li class="page-item active"><a class="page-link" href="#">Trang</a></li>
                 <?php for($i = 1; $i <= $numPage; $i++): ?>
-                    <li class="page-item"><a class="page-link" href="index.php?controller=users&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                    <li class="page-item"><a class="page-link" href="index.php?controller=account&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
                 <?php endfor; ?>
             </ul>
         </div>
