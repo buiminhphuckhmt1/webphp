@@ -121,6 +121,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="index.php?controller=typicalface">
+                        <i class="fa fa-th"></i> <span>Gương mặt tiêu biểu</span>
+                    </a>
+                </li>
+                <li>
                     <a href="index.php?controller=news">
                         <i class="fa fa-th"></i> <span>Hoạt động</span>
                     </a>

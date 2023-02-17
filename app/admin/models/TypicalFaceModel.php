@@ -1,5 +1,5 @@
 <?php 
-	trait MemberModel{
+	trait TypicalFaceModel{
 		//liệt kê các bản ghi có phân trang
 		public function modelRead($recordPerPage){
 			//lấy biến p truyền từ url
@@ -7,7 +7,7 @@
 			$from = $page * $recordPerPage;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from member order by id desc limit $from,$recordPerPage");
+			$query = $conn->query("select * from topmember order by id desc limit $from,$recordPerPage");
 			//lay tat ca cac ban ghi
 			$result = $query->fetchAll(PDO::FETCH_OBJ);
 			//tra ve ket qua
@@ -17,7 +17,7 @@
 		public function modelTotalRecord(){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from member");
+			$query = $conn->query("select * from topmember");
 			//tra ve tong so ban ghi
 			return $query->rowCount();
 		}
@@ -25,26 +25,24 @@
 		public function modelGetRecord($id){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("select * from member where id=:var_id");
+			$query = $conn->prepare("select * from topmember where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 			//tra ve mot ban ghi
 			return $query->fetch(PDO::FETCH_OBJ);
 		}
 		//update ban ghi
 		public function modelUpdate($id){
-			$code = $_POST['code'];
 			$name = $_POST['name'];
+            $position = $_POST['position'];
 			$birthdate = $_POST["birthdate"];
             $class = $_POST["class"];
-            $department = $_POST["department"];
             $address = $_POST["address"];
-            $phone = $_POST["phone"];
-            $email = $_POST["email"];
+            $description = $_POST["description"];
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("update member set Stu_Code=:var_Code,Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email where id=:var_id");
-			$query->execute(["var_Code"=>$code,"var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_id"=>$id]);
+			$query = $conn->prepare("update topmember set Name=:var_name,Position=:var_position,BirthDate=:var_BirthDate,Class=:var_Class,Address=:var_Address,description=:var_description where id=:var_id");
+			$query->execute(["var_name"=>$name,"var_id"=>$id,"var_position"=>$position,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Address"=>$address,"var_description"=>$description]);
 			//neu user chon anh de update thi tien hanh upload anh
 			if($_FILES['photo']['name'] != ""){
 				//lay ten anh
@@ -52,33 +50,31 @@
 				//upload anh
 				move_uploaded_file($_FILES['photo']['tmp_name'], "../assets/upload/news/$photo");
 				//update cot photo trong table users
-				$query = $conn->prepare("update member set image=:var_photo where id=:var_id");
+				$query = $conn->prepare("update topmember set image=:var_photo where id=:var_id");
 				$query->execute(["var_photo"=>$photo,"var_id"=>$id]);
 			}
 		}
 		//insert ban ghi
 		public function modelCreate(){
-			$code = $_POST['code'];
 			$name = $_POST['name'];
+            $position = $_POST['position'];
 			$birthdate = $_POST["birthdate"];
             $class = $_POST["class"];
-            $department = $_POST["department"];
             $address = $_POST["address"];
-            $phone = $_POST["phone"];
-            $email = $_POST["email"];
-			$photo = "";
+            $description = $_POST["description"];
+			$image = "";
 			//neu user chon anh de update thi tien hanh upload anh
-			if($_FILES['photo']['name'] != ""){
+			if($_FILES['image']['name'] != ""){
 				//lay ten anh
-				$photo = time()."_".$_FILES['photo']['name'];
+				$photo = time()."_".$_FILES['image']['name'];
 				//upload anh
-				move_uploaded_file($_FILES['photo']['tmp_name'], "../assets/upload/news/$photo");
+				move_uploaded_file($_FILES['image']['tmp_name'], "../assets/upload/news/$photo");
 			}
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into member set Stu_Code=:var_Code,Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email,Image=:var_Image");
-			$query->execute(["var_Code"=>$code,"var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_Image"=>$photo]);
+			$query = $conn->prepare("insert into topmember set Name=:var_name,Position=:var_position,BirthDate=:var_BirthDate,Class=:var_Class,Address=:var_Address,image=:var_image,description=:var_description");
+			$query->execute(["var_name"=>$name,"var_position"=>$position,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Address"=>$address,"var_image"=>$image,"var_description"=>$description]);
 			
 		}
 		//xoa ban ghi
@@ -86,7 +82,7 @@
 			$id = isset($_GET["ID"]) && is_numeric($_GET["ID"]) ? $_GET["ID"] : 0;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("delete from member where id=:var_id");
+			$query = $conn->prepare("delete from topmember where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 		}
 		//lay ten danh muc san pham

@@ -8,42 +8,42 @@
                     <div class="left-content">
                         <div class="register-form">
                             <h1>đơn xin tham gia đội</h1>
-                            <form action="">
+                            <form action="index.php?controller=account&action=registerPost" method="post">
                                 <div class=" group-form">
                                     <h5>Họ và tên</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <input type="text" name="name" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
-                                    <h5>ngày sinh</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <h5>Ngày sinh</h5>
+                                    <input type="date" name="birthdate" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
-                                    <h5>ma sinh vien</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <h5>Mã sinh viên</h5>
+                                    <input type="text" name="code" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
-                                    <h5>lớp-khóa</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <h5>Lớp-khóa</h5>
+                                    <input type="text" name="class" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
-                                    <h5>khoa</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <h5>Khoa</h5>
+                                    <input type="text" name="department" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
                                     <h5>quê quán</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <input type="text" name="address" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
                                     <h5>số điện thoại</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <input type="text" name="phone" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
                                     <h5>email</h5>
-                                    <input type="text" placeholder="Tìm kiếm thông tin">
+                                    <input type="text" name="email" placeholder="Tìm kiếm thông tin">
                                 </div>
                                 <div class=" group-form">
                                     <h5>mong muốn</h5>
-                                    <textarea type="text" placeholder="Tìm kiếm thông tin"></textarea>
+                                    <textarea type="text" name="desire" placeholder="Tìm kiếm thông tin"></textarea>
                                 </div>
                                 <div class=" group-form">
                                     <button type="submit">Nộp đơn</button>

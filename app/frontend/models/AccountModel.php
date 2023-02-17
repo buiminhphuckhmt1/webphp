@@ -3,20 +3,22 @@
 		//dang ky
 		public function modelRegister(){
 			$name = $_POST["name"];
-			$email = $_POST["email"];
-			$address = $_POST["address"];
-			$phone = $_POST["phone"];
-			$password = $_POST["password"];
-			//ma hoa password
-			$password = md5($password);
+            $birthdate = $_POST["birthdate"];
+            $class = $_POST["class"];
+            $department = $_POST["department"];
+            $address = $_POST["address"];
+            $phone = $_POST["phone"];
+            $email = $_POST["email"];
+            $desire = $_POST["desire"];
+
 			//kiem tra xem email nay da ton tai chua, neu chua ton tai thi moi insert vao csdl
 			$conn = Connection::getInstance();
-			$check = $conn->prepare("select email from customers where email=:var_email");
+			$check = $conn->prepare("select email from user where email=:var_email");
 			$check->execute(["var_email"=>$email]);
 			if($check->rowCount() == 0){
 				//insert du lieu vao table customer
-				$query = $conn->prepare("insert into customers set name=:var_name,email=:var_email,address=:var_address,phone=:var_phone,password=:var_password");
-				$query->execute(["var_name"=>$name,"var_email"=>$email,"var_address"=>$address,"var_phone"=>$phone,"var_password"=>$password]);
+				$query = $conn->prepare("insert into user set Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Address=:var_Address,Phone=:var_Phone,Email=:var_Email,Desire=:var_Desire");
+				$query->execute(["var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_Desire"=>$desire]);
 			}else{
 				header("location:index.php?controller=account&action=register&notify=error");
 			}
@@ -28,7 +30,7 @@
 			//ma hoa password
 			$password = md5($password);
 			$conn = Connection::getInstance();
-			$check = $conn->prepare("select id,email,password from customers where email=:var_email");
+			$check = $conn->prepare("select id,email,password from account where email=:var_email");
 			$check->execute(["var_email"=>$email]);
 			if($check->rowCount() > 0){
 				//lấy một bản ghi

@@ -5,7 +5,7 @@
 			$from = $page * $recordPerPage;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from news order by id desc limit $from, $recordPerPage");
+			$query = $conn->query("select * from actitvity order by id desc limit $from, $recordPerPage");
 			//lay tat ca cac ban ghi
 			$result = $query->fetchAll(PDO::FETCH_OBJ);
 			//tra ve ket qua
@@ -15,7 +15,7 @@
 		public function modelTotalRecord(){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from news");
+			$query = $conn->query("select * from actitvity");
 			//tra ve tong so ban ghi
 			return $query->rowCount();
 		}
@@ -24,7 +24,7 @@
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
 			//thuc hien truy van -> do co bien truyen tu url vao nen thuc hien prepare de truyen tham so
-			$query = $conn->prepare("select * from news where id=:var_id");
+			$query = $conn->prepare("select * from actitvity where id=:var_id");
 			//thuc thi truy van, co truyen tham so vao cau lenh sql
 			$query->execute(["var_id"=>$id]);
 			//tra ve mot ban ghi
