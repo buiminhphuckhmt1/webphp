@@ -14,6 +14,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../assets/admin/layout1/css/_all-skins.min.css">
+    <link href="../template/images/comon/logo_tntn.png" rel="shortcut icon" type="image/png">
     <!-- Google Font <!DOCTYPE html>
 <html>
 <head>

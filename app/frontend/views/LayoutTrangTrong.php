@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../template/css/style.css">
     <title>Thanh niên tình nguyện Haui
     </title>
+    <link href="../template/images/comon/logo_tntn.png" rel="shortcut icon" type="image/png">
 </head>
 
 <body>
