@@ -120,6 +120,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="index.php?controller=notify">
+                        <i class="fa fa-th"></i> <span>Thông báo</span>
+                    </a>
+                </li>
+                <li>
                     <a href="index.php?controller=news">
                         <i class="fa fa-th"></i> <span>Hoạt động</span>
                     </a>

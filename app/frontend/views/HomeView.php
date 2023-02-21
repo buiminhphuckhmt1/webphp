@@ -72,8 +72,8 @@
                         <div class="category-months-wrapper">
                     <div class="left-category-months">
                         <h1>Chuyên mục tháng: Lời muốn nói</h1>
-                        <form action="">
-                            <textarea name="" class="textarea-form" cols="30" rows="10" style="    overflow: hidden;
+                        <form action="index.php?controller=home&action=sendfb" method="post">
+                            <textarea name="content" class="textarea-form" cols="30" rows="10" style="    overflow: hidden;
                             resize: none;"></textarea>
                             <input class="btn-category" type="submit">
                         </form>

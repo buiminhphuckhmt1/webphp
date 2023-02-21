@@ -7,7 +7,7 @@
 			$from = $page * $recordPerPage;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from users order by id desc limit $from,$recordPerPage");
+			$query = $conn->query("select * from notify order by id desc limit $from,$recordPerPage");
 			//lay tat ca cac ban ghi
 			$result = $query->fetchAll(PDO::FETCH_OBJ);
 			//tra ve ket qua
@@ -17,7 +17,7 @@
 		public function modelTotalRecord(){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from users");
+			$query = $conn->query("select * from notify");
 			//tra ve tong so ban ghi
 			return $query->rowCount();
 		}
@@ -25,7 +25,7 @@
 		public function modelGetRecord($id){
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("select * from users where id=:var_id");
+			$query = $conn->prepare("select * from notify where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 			//tra ve mot ban ghi
 			return $query->fetch(PDO::FETCH_OBJ);

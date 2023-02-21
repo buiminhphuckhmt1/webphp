@@ -2,7 +2,7 @@
     <div class="header" style="background-image: url(../template/images/backgroud/vector_1908398.png);">
         <div class="header--inner">
             <div class="header-logo">
-                <a href="index.php?controller=home" title="">
+                <a href="index.php?controller=home" >
                     <img class="img-fluid no-scroll" src="../template/images/comon/logo_tntn.png" alt="">
                     <!-- <img class="img-fluid is-scroll" src="images/comon/logo_tntn.png" alt=""> -->
                 </a>

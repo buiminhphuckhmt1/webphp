@@ -10,17 +10,17 @@
                         <p>Hãy gửi cho chúng tôi thắc mắc, chúng tôi sẽ phản hồi sớm nhất có thể!</p>
                         <div class="contact-form">
                             <h1>Gửi thắc mắc, yêu cầu.</h1>
-                            <form action="">
+                            <form method="post" action="index.php?controller=contact&action=sendfb">
                                 <div class="group-form-wrapper">
                                 <div class=" group-form-1">
-                                    <input type="text" placeholder="Họ và tên">
+                                    <input type="text" placeholder="Họ và tên" name="name">
                                 </div>
                                 <div class=" group-form-2">
-                                    <input type="text" placeholder="Email">
+                                    <input type="text" placeholder="Email" name="email">
                                 </div>
                                 </div>
                                 <div class=" group-form">
-                                    <textarea type="text" placeholder="Nội dung"></textarea>
+                                    <textarea type="text" placeholder="Nội dung" name="content"></textarea>
                                 </div>
                                 <div class=" group-form">
                                     <button type="submit">Nộp đơn</button>
