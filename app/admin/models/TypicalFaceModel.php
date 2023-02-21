@@ -62,9 +62,9 @@
             $class = $_POST["class"];
             $address = $_POST["address"];
             $description = $_POST["description"];
-			$image = "";
+			$photo = "";
 			//neu user chon anh de update thi tien hanh upload anh
-			if($_FILES['image']['name'] != ""){
+			if($_FILES['photo']['name'] != ""){
 				//lay ten anh
 				$photo = time()."_".$_FILES['image']['name'];
 				//upload anh
@@ -74,7 +74,7 @@
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
 			$query = $conn->prepare("insert into topmember set Name=:var_name,Position=:var_position,BirthDate=:var_BirthDate,Class=:var_Class,Address=:var_Address,image=:var_image,description=:var_description");
-			$query->execute(["var_name"=>$name,"var_position"=>$position,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Address"=>$address,"var_image"=>$image,"var_description"=>$description]);
+			$query->execute(["var_name"=>$name,"var_position"=>$position,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Address"=>$address,"var_image"=>$photo,"var_description"=>$description]);
 			
 		}
 		//xoa ban ghi

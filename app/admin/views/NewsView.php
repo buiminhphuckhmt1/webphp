@@ -13,7 +13,6 @@
                 <tr>
                     <th style="width:100px;">Ảnh bìa</th>
                     <th>Tiêu đề</th>
-                    <th>Nội dung</th>
                     <!-- <th style="width:70px;">Hot</th> -->
                     <th style="width:100px;"></th>
                 </tr>
@@ -25,7 +24,6 @@
                         <?php endif; ?>
                     </td>
                     <td><?php echo $row->Title; ?></td>
-                    <td><?php echo $row->Content; ?></td>
                     <td style="text-align:center;">
                         <a href="index.php?controller=news&action=update&ID=<?php echo $row->ID; ?>">Sửa</a>&nbsp;
                         <a href="index.php?controller=news&action=delete&ID=<?php echo $row->ID; ?>" onclick="return window.confirm('Are you sure?');">Xóa</a>
