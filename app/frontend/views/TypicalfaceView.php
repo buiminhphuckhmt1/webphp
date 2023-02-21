@@ -5,37 +5,42 @@
  <div class="typical-face-wrapper">
             <div class="container">
                 <h1>GƯƠNG MẶT TIÊU BIỂU ĐỘI TNTN KHOA CNTT</h1>
-                <div class="typical-face-content-wrapper" v-for="item in 3">
+                <?php 
+                $hotface = $this->hotface();
+               ?>
+               <?php foreach($hotface as $row): ?>
+                <div class="typical-face-content-wrapper">
                     <div  class="typical-face-content">
                     <div class="left-content">
                         <div class="image-wrapper">
-                        <img src="../template/images/2.png" alt="">
+                        <img src="../assets/upload/news/<?php echo $row->Image; ?>" alt="">
                         </div>
-                        <h3>hoàng thu hằng</h3>
+                        <h3><?php echo $row->Name; ?></h3>
                     </div>
                     <div class="right-contet">
                         <ul>
                             <li>
-                                Họ và tên: Hoàng Thu Hằng
+                                Họ và tên: <?php echo $row->Name; ?>
                             </li>
                             <li>
-                                Chức vụ: Đội trưởng Khóa 12
+                                Chức vụ: <?php echo $row->Position; ?>
                             </li>
                             <li>
-                                Năm sinh: 2000
+                                Năm sinh: <?php echo $row->BirthDate; ?>
                             </li>
                             <li>
-                                Lớp - Khóa: HTTT01 - K13
+                                Lớp - Khóa: <?php echo $row->Class; ?>
                             </li>
                             <li>
-                                Quê quán: Bắc Giang
+                                Quê quán: <?php echo $row->Address; ?>
                             </li>
                         </ul>
                     </div>
                     </div>
                     <p>
-                        Là một trong những nữ đội trưởng vô cùng tài năng và năng động. Chị Hoàng Thu Hằng luôn mang đến những nguồn năng lượng vô cùng tích cực đến với tất cả anh chị em trong đội. 
+                        <?php echo $row->Description; ?> 
                     </p>
                 </div>
+                <?php endforeach; ?>
             </div>
         </div>
