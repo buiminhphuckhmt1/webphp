@@ -24,8 +24,8 @@
 		//dang xuat
 		public function logout(){
 			//huy cac bien session
-			unset($_SESSION['customer_email']);
-			unset($_SESSION['customer_id']);
+			unset($_SESSION['email']);
+			unset($_SESSION['id']);
 			header("location:index.php?controller=account&action=login");
 		}
 	}

@@ -130,6 +130,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="index.php?controller=userregister">
+                        <i class="fa fa-th"></i> <span>Quản lý users</span>
+                    </a>
+                </li>
+                <li>
                     <a href="index.php?controller=login&action=logout">
                         <i class="fa fa-th"></i> <span>Đăng xuất</span>
                     </a>

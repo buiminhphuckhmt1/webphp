@@ -37,8 +37,8 @@
 				$record = $check->fetch(PDO::FETCH_OBJ);
 				if($record->password == $password){
 					//dang nhap thanh cong
-					$_SESSION['customer_id'] = $record->id;
-					$_SESSION['customer_email'] = $record->email;
+					$_SESSION['id'] = $record->id;
+					$_SESSION['email'] = $record->email;
 					header("location:index.php");
 				}
 			}else{

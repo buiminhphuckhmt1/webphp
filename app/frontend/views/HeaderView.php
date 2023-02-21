@@ -23,7 +23,7 @@
                     </li>
                 </ul>
             </div>
-            <?php if(isset($_SESSION["customer_email"]) == false): ?>
+            <?php if(isset($_SESSION["email"]) == false): ?>
             <div class="header-register">
                 <button class="btn-register">
                 <a href="index.php?controller=account&action=register">Nộp đơn ứng tuyển</a>
