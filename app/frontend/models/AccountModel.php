@@ -30,7 +30,7 @@
 			//ma hoa password
 			$password = md5($password);
 			$conn = Connection::getInstance();
-			$check = $conn->prepare("select id,email,password from account where email=:var_email");
+			$check = $conn->prepare("select id,email,password,name from account where email=:var_email");
 			$check->execute(["var_email"=>$email]);
 			if($check->rowCount() > 0){
 				//lấy một bản ghi
@@ -39,6 +39,7 @@
 					//dang nhap thanh cong
 					$_SESSION['id'] = $record->id;
 					$_SESSION['email'] = $record->email;
+					$_SESSION['name'] = $record->name;
 					header("location:index.php");
 				}
 			}else{

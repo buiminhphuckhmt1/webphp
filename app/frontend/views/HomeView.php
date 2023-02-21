@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                    <?php if(isset($_SESSION["customer_email"]) == false): ?>
+                    <?php if(isset($_SESSION["email"]) == false): ?>
                     <?php else: ?>
                         <div class="category-months-wrapper">
                     <div class="left-category-months">

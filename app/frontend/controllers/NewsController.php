@@ -21,9 +21,9 @@
 		//url: index.php?controller=news&action=update&id=number
 		public function detail(){
 			//lay bien id truyen tu url
-			$id = isset($_GET['id'])&&isset($_GET['id']) ? $_GET['id'] : 0;			
+			$id = isset($_GET['ID'])&&isset($_GET['ID']) ? $_GET['ID'] : 0;			
 			$record = $this->modelGetRecord($id);
-			$this->loadView("NewsDetailView.php",["record"=>$record,"id"=>$id]);
+			$this->loadView("NewsDetailView.php",["record"=>$record,"ID"=>$id]);
 		}		
 	}
  ?>

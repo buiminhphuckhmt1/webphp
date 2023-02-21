@@ -54,19 +54,19 @@
 		public function modelCreate(){
 			$title = $_POST['title'];
 			$content = $_POST['content'];
-			$image = "";
+			$photo = "";
 			//neu user chon anh de update thi tien hanh upload anh
-			if($_FILES['image']['name'] != ""){
+			if($_FILES['photo']['name'] != ""){
 				//lay ten anh
-				$photo = time()."_".$_FILES['image']['name'];
+				$photo = time()."_".$_FILES['photo']['name'];
 				//upload anh
-				move_uploaded_file($_FILES['image']['tmp_name'], "../assets/upload/news/$photo");
+				move_uploaded_file($_FILES['photo']['tmp_name'], "../assets/upload/news/$photo");
 			}
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into actitvity set title=:var_title,content=:var_content,image=:var_image");
-			$query->execute(["var_title"=>$title,"var_content"=>$content,"var_image"=>$image]);
+			$query = $conn->prepare("insert into actitvity set title=:var_title,content=:var_content,coverimage=:var_image");
+			$query->execute(["var_title"=>$title,"var_content"=>$content,"var_image"=>$photo]);
 			
 		}
 		//xoa ban ghi
