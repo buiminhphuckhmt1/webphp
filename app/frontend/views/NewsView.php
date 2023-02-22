@@ -4,7 +4,6 @@ $layout = "LayoutTrangChu.php";
 <div class="activity-wrapper">
     <div class="container">
         <h1>Hoạt động mới nhất</h1>
-	</div>
         <div class="activity-content-wrapper">
             <!-- <div class="activity-content">
                 <div class="left-content">
@@ -100,7 +99,6 @@ $layout = "LayoutTrangChu.php";
 				</div>
 				</div>
 			</div>
-	<div class="container">
             <div class="blog-wrapper">
             <div class="row" style="width:100%;">
                 <?php foreach ($data as $row): ?>
