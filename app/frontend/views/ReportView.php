@@ -8,10 +8,10 @@ $layout = "LayoutTrangChu.php";
             <h1>BẠN CÓ THÔNG BÁO TỪ ĐỘI TNTN KHOA CNTT</h1>
             <form method="post" action="index.php?controller=report&action=getnotify" class="message-form">
                 <table>
-                    <?php foreach ($data as $rows): ?>
+                    <?php $index=1; foreach ($data as $rows): ?>
                         <tr>
                             <td>
-                                <div class="message-detail">1</div>
+                                <div class="message-detail"><?php echo($index);$index++;?></div>
                             </td>
                             <td>
                                 <div class="message-detail"><?php echo $rows->Title?></div>

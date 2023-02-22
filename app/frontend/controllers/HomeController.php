@@ -10,7 +10,7 @@
 		public function __construct(){
 			//kiem tra user dang nhap chua
 			if(isset($_SESSION['email']) == false)
-				header('location:index.php?controller=login');
+				header('location:index.php?controller=account&action=login');
 		}
 		public function index(){
 			$this->loadView("HomeView.php");

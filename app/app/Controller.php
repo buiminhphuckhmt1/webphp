@@ -33,7 +33,7 @@
 		public function authentication(){
 			//kiểm tra xem user đã đăng nhập chưa
 			if(isset($_SESSION['admin_email']) == false)
-				header("location:index.php?controller=login");
+				header("location:index.php?controller=account&action=login");
 		}
 	}
  ?>
