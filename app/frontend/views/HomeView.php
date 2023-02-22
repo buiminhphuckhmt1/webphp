@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right-contet">
+                    <div id="homeswipper" class="right-contet">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -78,8 +78,8 @@
                             <input class="btn-category" type="submit">
                         </form>
                     </div>
-                    <div class="right-category-months">
-                        <div id="category-months" class="swiper mySwiper">
+                    <div id="categorymonths" class="right-category-months">
+                        <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <img src="../template/images/month-slide.png" alt="">

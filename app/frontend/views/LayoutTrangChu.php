@@ -58,7 +58,22 @@
                 $(window).bind("load", function () {
 
                     // Home Banner
-                    var swiper = new Swiper(".mySwiper", {
+                    var homeswipper = new Swiper("#homeswipper .mySwiper", {
+                        slidesPerView: 1,
+                        speed: 1500,
+                        autoplay: {
+                            delay: 5000,
+                        },
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        dynamicBullets: true,
+                    },
+                    });
+                    var categorymonths = new Swiper("#categorymonths .mySwiper", {
                         slidesPerView: 1,
                         speed: 1500,
                         autoplay: {
