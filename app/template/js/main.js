@@ -31,6 +31,103 @@ function scrollHeader() {
     return false;
   }
 }
+const iconInterval = () => {
+	let wrapper = document.querySelector('#getInterval');
+	let item = document.querySelectorAll('#getInterval img');
+
+	const runInterval = () => {
+		for (var i = 0; i < item.length; i++) {
+			setTimeout(() => {
+				item[0].classList.add('active');
+			}, 0);
+
+			setTimeout(() => {
+				item[0].classList.remove('active');
+			}, 500);
+
+			setTimeout(() => {
+				item[1].classList.add('active');
+			}, 1000);
+
+			setTimeout(() => {
+				item[1].classList.remove('active');
+			}, 1500);
+
+			setTimeout(() => {
+				item[2].classList.add('active');
+			}, 2000);
+
+			setTimeout(() => {
+				item[2].classList.remove('active');
+			}, 2500);
+		}
+	};
+
+	const runningUp = setInterval(runInterval, 3000);
+};
+
+const fixedsocialPopup = () => {
+	const itemclicked = document.querySelector('.js-item-single');
+
+	itemclicked.addEventListener('click', (e) => {
+		let clicked = e.currentTarget;
+
+		clicked.nextElementSibling.classList.add('active');
+	});
+
+	var ignoreMe = document.querySelector('#fixedSocialList');
+	window.addEventListener('mouseup', function (event) {
+		if (
+			event.currentTarget != ignoreMe &&
+			event.currentTarget.parentNode != ignoreMe
+		) {
+			ignoreMe.classList.remove('active');
+		}
+	});
+};
+
+function triggerFixedEle() {
+	var sideEle = $('#sidefixed-ele');
+	var footerEle = $('#fixedScreen');
+
+	if (sideEle.length) {
+		let eleoffset = sideEle.offset().top;
+
+		$(window).scroll(function () {
+			let scrollTop = $(window).scrollTop();
+
+			if (scrollTop > eleoffset - 100) {
+				sideEle.addClass('fixed');
+			} else {
+				sideEle.removeClass('fixed');
+			}
+		});
+	}
+
+	if (footerEle.length) {
+		var backTop = footerEle.find('#backTop');
+		var wHeight = $(window).height();
+
+		backTop.on('click', function () {
+			$('html, body').animate(
+				{
+					scrollTop: 0
+				},
+				'linear'
+			);
+		});
+
+		$(window).scroll(function () {
+			let scrollTop = $(window).scrollTop();
+
+			if (scrollTop > wHeight - 100) {
+				footerEle.addClass('show');
+			} else {
+				footerEle.removeClass('show');
+			}
+		});
+	}
+}
 
 function gioithieuLink() {
   var wrapper = $('.home-gioithieu-nav');

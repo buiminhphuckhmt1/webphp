@@ -71,3 +71,164 @@
   }
 
 }
+.social-fixed {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 10;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 5px;
+
+}
+#phone{
+  display: inline-block;
+  background-color: #315ec9;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 66%;
+  border: 2px solid #ffffff;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  z-index: 1000;
+  text-decoration: none;
+  svg{
+    margin-top: 8px;
+  }
+  &:hover{span{
+    visibility: visible;
+    right: 60px;
+    opacity: 1;
+  } }
+  span {
+    line-height: 40px;
+      right:58px;
+      top:7px;
+      position: absolute;
+      text-align: center;
+      width: 120px;
+      visibility: hidden;
+      transition-duration: 0.5s;
+      z-index: 100;
+      opacity: 0;
+      background-color: #315ec9;
+      color: #ffffff;
+      border-radius: 6px;
+  }
+}
+#gmail{
+  display: inline-block;
+  background-color: #315ec9;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 66%;
+  border: 2px solid #ffffff;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  z-index: 1000;
+  text-decoration: none;
+  svg{
+    margin-top: 8px;
+  }
+  &:hover{span{
+    visibility: visible;
+    right: 60px;
+    opacity: 1;
+  } }
+  span {
+    line-height: 40px;
+      right:58px;
+      top:61px;
+      position: absolute;
+      text-align: center;
+      width: 200px;
+      visibility: hidden;
+      transition-duration: 0.5s;
+      z-index: 100;
+      opacity: 0;
+      background-color: #315ec9;
+      color: #ffffff;
+      border-radius: 6px;
+  }
+}
+#facebook{
+  display: inline-block;
+  background-color: #315ec9;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 66%;
+  border: 2px solid #ffffff;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  z-index: 1000;
+  text-decoration: none;
+  svg{
+    margin-top: 10px;
+  }
+  &:hover{span{
+    visibility: visible;
+    right: 60px;
+    opacity: 1;
+  } }
+  span {
+    line-height: 40px;
+      right:58px;
+      top:117px;
+      position: absolute;
+      text-align: center;
+      width: 120px;
+      visibility: hidden;
+      transition-duration: 0.5s;
+      z-index: 100;
+      opacity: 0;
+      background-color: #315ec9;
+      color: #ffffff;
+      border-radius: 6px;
+  }
+}
+#button {
+  display: inline-block;
+  background-color: #315ec9;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 66%;
+  border: 2px solid #ffffff;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none;
+  svg{
+    margin-top: 8px;
+  }
+}
+#button::after {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #5a79c3;
+}
+#button:active {
+  background-color: #3b6fe9;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+#phone.show {
+  opacity: 1;
+  visibility: visible;
+}
