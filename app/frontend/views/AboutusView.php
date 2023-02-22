@@ -36,19 +36,21 @@
                 </div>
                 <div class="section-img-content">
                     <div class="col-lg-3 col-md-6 col-12 total-content">
-                        <h1>250+</h1>
+                        <div class="totalcount"><h1 class="count">250</h1><h1>+</h1></div>
                         <p>
                             Thành viên, Cộng tác viên hoạt động thường trực
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 total-content">
-                        <h1>14+</h1>
+                        
+                        <div class="totalcount"><h1 class="count">14</h1><h1>+</h1></div>
                         <p>
                             Năm hoạt động và phát triển  lớn mạnh
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12 total-content">
-                        <h1>20+</h1>
+                        
+                        <div class="totalcount"><h1 class="count">20</h1><h1>+</h1></div>
                         <p>
                             Chương trình, hoạt động lớn nhỏ trong một năm.
                         </p>

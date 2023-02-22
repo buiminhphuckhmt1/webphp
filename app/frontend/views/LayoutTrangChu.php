@@ -43,6 +43,17 @@
         },
         mounted() {
             this.$nextTick(() => {
+                $('.count').each(function () {
+                    $(this).prop('Counter',0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
 
                 $(window).bind("load", function () {
 
@@ -64,67 +75,30 @@
                     });
 
                     // Home events
-                    let homeEventSwiper = new Swiper('.home-events-wrapper .swiper', {
-                        // Optional parameters
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                        speed: 1500,
+                    var thumbSwiper = new Swiper("#thumbSwiper .mySwiper", {
+                slidesPerView: 5,
+                spaceBetween: 10,
+            navigation: {
+              nextEl: "#thumbSwiper .swiper-button-next",
+              prevEl: "#thumbSwiper .swiper-button-prev",
+            },
+          });
 
-                        // Navigation arrows
-                        navigation: {
-                            nextEl: '.home-events-wrapper .swiper-button-next',
-                            prevEl: '.home-events-wrapper .swiper-button-prev',
-                        },
-                    });
-
-                    // Home videos
-                    let homeVideoSwiper = new Swiper('.home-video-slider .swiper', {
-                        // Optional parameters
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                        speed: 1500,
-
-                        // Navigation arrows
-                        navigation: {
-                            nextEl: '.home-video-slider .swiper-button-next',
-                            prevEl: '.home-video-slider .swiper-button-prev',
-                        },
-                    });
-
-                    // Home parent story
-                    let parentStorySwiper = new Swiper('.parents-story-slider .swiper', {
-                        // Optional parameters
-                        // slidesPerView: 3,
-                        spaceBetween: 0,
-                        // centerMode: true,
-                        speed: 1500,
-
-                        // Navigation arrows
-                        navigation: {
-                            nextEl: '.parents-story-slider .swiper-button-next',
-                            prevEl: '.parents-story-slider .swiper-button-prev',
-                        },
-                        on: {
-                            init: function () {
-                                this.slideTo(1)
-                            }
-                        }
-                    });
-
-                    // Home partners
-                    let partnerSwiper = new Swiper('.partner-slider .swiper', {
-                        // Optional parameters
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                        // centerMode: true,
-                        speed: 1500,
-
-                        // If we need pagination
-                        pagination: {
-                            el: '.partner-slider .swiper-pagination',
-                            clickable: true,
-                        },
-                    });
+          // main siwper
+          var mainSwiper = new Swiper("#mainSwiper .mySwiper", {
+            speed: 1000,
+            thumbs: {
+              swiper: thumbSwiper
+            },
+            navigation: {
+              nextEl: "#mainSwiper .swiper-button-next",
+              prevEl: "#mainSwiper .swiper-button-prev",
+            },
+            effect: 'fade',
+            fadeEffect: {
+              crossFade: true
+            },
+          });
 
                     iconInterval();
                     fixedsocialPopup();
