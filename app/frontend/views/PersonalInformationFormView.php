@@ -40,7 +40,7 @@
                                     </div>
                                     <div class=" group-form">
                                         <h5>email</h5>
-                                        <input type="text" value="<?php echo isset($record->Email)?$record->Email:''; ?>" name="email" >
+                                        <input type="text" value="<?php echo isset($record->Email)?$record->Email:''; ?>" name="email" readonly>
                                     </div>
                                     <div class=" group-form">
                                         <button type="submit">Sửa thông tin</button>
