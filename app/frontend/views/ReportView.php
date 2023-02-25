@@ -24,7 +24,7 @@ $layout = "LayoutTrangChu.php";
                             </td>
                             <td>
                                 <div class=" message-detail">
-                                    <button class="active"><a style="text-decoration: none;color:white" href="index.php?controller=report&action=getnotify&ID=<?php echo $rows->ID; ?>">Xem</a></button>
+                                    <a style="text-decoration: none;color:white;border-radius:10px;padding: 5px 10px;background-color: blue;" href="index.php?controller=report&action=getnotify&ID=<?php echo $rows->ID; ?>">Xem </a>
                                 </div>
                             </td>
                         </tr>

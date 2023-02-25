@@ -115,6 +115,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="index.php?controller=financialmanagement">
+                        <i class="fa fa-th"></i> <span>Quản lý tài chính</span>
+                    </a>
+                </li>
+                <li>
                     <a href="index.php?controller=typicalface">
                         <i class="fa fa-th"></i> <span>Gương mặt tiêu biểu</span>
                     </a>

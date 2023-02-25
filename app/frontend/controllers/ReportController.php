@@ -25,5 +25,18 @@
 			//goi view, truyen du lieu ra view
 			$this->loadView("ReportDetailView.php",["record"=>$record]);
 		}
+
+		public function getfinance(){
+			//quy dinh so ban ghi tren mot trang
+			$recordPerPage = 4;
+			//lay tong so bang hi
+			$totalRecord = $this->modelGetFinanceRecord();
+			//tinh so trang: ham ceil(so) se lay tran. VD: ceil(3.6) = 4
+			$numPage = ceil($totalRecord/$recordPerPage);
+			//lay du lieu
+			$data = $this->modelReadFinance($recordPerPage);
+			//goi view, truyen du lieu ra view
+			$this->loadView("FinancialManagementView.php",["data"=>$data,"numPage"=>$numPage]);
+		}
 	}
  ?>

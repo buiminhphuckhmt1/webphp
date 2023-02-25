@@ -46,7 +46,7 @@
 			$id = isset($_GET["ID"]) && is_numeric($_GET["ID"]) ? $_GET["ID"] : 0;
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("delete from memberfeedcak where id=:var_id");
+			$query = $conn->prepare("delete from memberfeedback where id=:var_id");
 			$query->execute(["var_id"=>$id]);
 		}
 	}

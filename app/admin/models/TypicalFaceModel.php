@@ -66,9 +66,9 @@
 			//neu user chon anh de update thi tien hanh upload anh
 			if($_FILES['photo']['name'] != ""){
 				//lay ten anh
-				$photo = time()."_".$_FILES['image']['name'];
+				$photo = time()."_".$_FILES['photo']['name'];
 				//upload anh
-				move_uploaded_file($_FILES['image']['tmp_name'], "../assets/upload/news/$photo");
+				move_uploaded_file($_FILES['photo']['tmp_name'], "../assets/upload/news/$photo");
 			}
 			//update name
 			//lay bien ket noi csdl

@@ -4,6 +4,7 @@
 		public function modelRegister(){
 			$name = $_POST["name"];
             $birthdate = $_POST["birthdate"];
+			$code = $_POST["code"];
             $class = $_POST["class"];
             $department = $_POST["department"];
             $address = $_POST["address"];
@@ -17,8 +18,8 @@
 			$check->execute(["var_email"=>$email]);
 			if($check->rowCount() == 0){
 				//insert du lieu vao table customer
-				$query = $conn->prepare("insert into user set Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Address=:var_Address,Phone=:var_Phone,Email=:var_Email,Desire=:var_Desire");
-				$query->execute(["var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_Desire"=>$desire]);
+				$query = $conn->prepare("insert into user set Name=:var_Name,Stu_Code=:var_code,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Address=:var_Address,Phone=:var_Phone,Email=:var_Email,Desire=:var_Desire");
+				$query->execute(["var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_Desire"=>$desire,"var_code"=>$code]);
 			}else{
 				header("location:index.php?controller=account&action=register&notify=error");
 			}

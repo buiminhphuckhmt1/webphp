@@ -35,7 +35,7 @@
             <div class="row" style="margin-top:5px;">
                 <div class="col-md-2">Role</div>
                 <div class="col-md-10">
-                    <input type="text" name="role" <?php if(isset($record->Email)): ?> placeholder="Không đổi role thì không nhập thông tin vào ô textbox này" <?php else: ?> required <?php endif; ?> class="form-control">
+                    <input type="text" name="role" value="<?php echo isset($record->Role)?$record->Role:''; ?>" class="form-control">
                 </div>
             </div>
             <!-- end rows -->

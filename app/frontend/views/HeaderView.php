@@ -63,6 +63,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="index.php?controller=report&action=getfinance">
+                                
+                                Tài chính
+                            </a>
+                        </li>
+                        <li>
                             <a href="index.php?controller=account&action=logout">
                                 Đăng xuất
                             </a>

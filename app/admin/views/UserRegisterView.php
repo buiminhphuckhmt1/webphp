@@ -10,6 +10,7 @@
                 <tr>
                     <th style="width:120px; ">Name</th>
                     <th style="width:100px;">BirthDate</th>
+                    <th style="width:100px;">Stu_Code</th>
                     <th style="width:100px;">Class</th>
                     <th style="width:100px;">Faculty</th>
                     <th style="width:200px;">Address</th>
@@ -23,6 +24,7 @@
                 <tr>
                     <td><?php echo $row->Name; ?></td>
                     <td><?php echo $row->BirthDate; ?></td>
+                    <td><?php echo $row->Stu_Code; ?></td>
                     <td><?php echo $row->Class; ?></td>
                     <td><?php echo $row->Department; ?></td>
                     <td><?php echo $row->Address; ?></td>

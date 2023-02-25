@@ -20,6 +20,7 @@
                     <th style="width:200px;">Address</th>
                     <th style="width:100px;">Phone</th>
                     <th style="width:150px;">Email</th>
+                    <th style="width:150px;">TimeJoin</th>
                     <th style="width:100px;"></th>
                 </tr>
                 <?php foreach($data as $row): ?>
@@ -37,6 +38,7 @@
                     <td><?php echo $row->Addresss; ?></td>
                     <td><?php echo $row->Phone; ?></td>
                     <td><?php echo $row->Email; ?></td>
+                    <td><?php echo $row->TimeJoin; ?></td>
                     <td style="text-align:center;">
                         <a href="index.php?controller=member&action=update&ID=<?php echo $row->ID; ?>">Edit</a>&nbsp;
                         <a href="index.php?controller=member&action=delete&ID=<?php echo $row->ID; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>

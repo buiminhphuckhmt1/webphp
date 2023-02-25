@@ -40,10 +40,5 @@
 			if(isset($_SESSION['admin_email']) == false)
 				header("location:index.php?controller=login");
 		}
-		public function authenticationadmin(){
-			//kiểm tra xem user đã đăng nhập chưa
-			if(isset($_SESSION['admin_email']) == false)
-				header("location:index.php?controller=login");
-		}
 	}
  ?>

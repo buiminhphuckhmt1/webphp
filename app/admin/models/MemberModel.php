@@ -40,11 +40,12 @@
             $address = $_POST["address"];
             $phone = $_POST["phone"];
             $email = $_POST["email"];
+			$time = $_POST['timejoin'];
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("update member set Stu_Code=:var_Code,Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email where id=:var_id");
-			$query->execute(["var_Code"=>$code,"var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_id"=>$id]);
+			$query = $conn->prepare("update member set Stu_Code=:var_Code,Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email,TimeJoin=:var_TimeJoin where id=:var_id");
+			$query->execute(["var_Code"=>$code,"var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_TimeJoin"=>$time,"var_id"=>$id]);
 			//neu user chon anh de update thi tien hanh upload anh
 			if($_FILES['photo']['name'] != ""){
 				//lay ten anh
@@ -66,6 +67,7 @@
             $address = $_POST["address"];
             $phone = $_POST["phone"];
             $email = $_POST["email"];
+			$time = $_POST['timejoin'];
 			$photo = "";
 			//neu user chon anh de update thi tien hanh upload anh
 			if($_FILES['photo']['name'] != ""){
@@ -77,8 +79,8 @@
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into member set Stu_Code=:var_Code,Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email,Image=:var_Image");
-			$query->execute(["var_Code"=>$code,"var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_Image"=>$photo]);
+			$query = $conn->prepare("insert into member set Stu_Code=:var_Code,Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email,Image=:var_Image,TimeJoin=:var_TimeJoin");
+			$query->execute(["var_Code"=>$code,"var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_Image"=>$photo,"var_TimeJoin"=>$time]);
 			
 		}
 		//xoa ban ghi

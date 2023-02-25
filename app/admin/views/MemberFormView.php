@@ -74,6 +74,14 @@
             <!-- end rows -->
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
+                <div class="col-md-2">Time Join</div>
+                <div class="col-md-10">
+                    <input type="date" value="<?php echo isset($record->TimeJoin)?$record->TimeJoin:''; ?>" name="timejoin" required class="form-control" style="width:600px">
+                </div>
+            </div>
+            <!-- end rows -->
+            <!-- rows -->
+            <div class="row" style="margin-top:5px;">
                 <div class="col-md-2">Upload image</div>
                 <div class="col-md-10">
                     <input type="file" name="photo">

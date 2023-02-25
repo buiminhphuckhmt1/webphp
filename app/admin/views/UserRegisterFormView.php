@@ -26,6 +26,14 @@
             <!-- end rows -->
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
+                <div class="col-md-2">Stu_Code</div>
+                <div class="col-md-10">
+                    <input type="text" value="<?php echo isset($record->Stu_Code)?$record->Stu_Code:''; ?>" name="code" required class="form-control" style="width:600px">
+                </div>
+            </div>
+            <!-- end rows -->
+            <!-- rows -->
+            <div class="row" style="margin-top:5px;">
                 <div class="col-md-2">Class</div>
                 <div class="col-md-10">
                     <input type="text" value="<?php echo isset($record->Class)?$record->Class:''; ?>" name="class" required class="form-control" style="width:600px">
@@ -64,6 +72,17 @@
                 </div>
             </div>
             <!-- end rows -->
+            <!-- rows -->
+            <div class="row" style="margin-top:5px;">
+                    <div class="col-md-2">Ngày tham gia</div>
+                    <div class="col-md-10">
+                        <input type="text"
+                            value="<?php $time = date("Y/m/d");
+                            echo $time; ?>"
+                            name="timejoin" class="form-control" required style="width:600px">
+                    </div>
+                </div>
+                <!-- end rows -->
             <!-- rows -->
             <div class="row" style="margin-top:5px;">
                 <div class="col-md-2"></div>

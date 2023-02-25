@@ -8,28 +8,29 @@
  		<div class="panel-body">
  			<table class="table table-hover table-borderd">
  				<tr>
-                    <th>Mã sinh viên</th>
+                    <th>Email</th>
  					<th>Họ và tên</th>
  					<th style="width: 150px;">Trạng thái</th>
  					<th style="width:150px;"></th>
  				</tr>
  				<?php foreach($data as $rows): ?>
  				<tr>
- 					<td><?php echo isset($rows->Stu_Code)?$rows->Stu_Code:""; ?></td>
+ 					<td><?php echo isset($rows->Email)?$rows->Email:""; ?></td>
  					<td><?php echo isset($rows->Name)?$rows->Name:""; ?></td>
  					<td>
  						<?php if($rows->Status == 1): ?>
- 							<div>Đã phản hồi</div>
+ 							<div>Đã duyệt</div>
  						<?php else: ?>
- 							<div>Chưa phản hồi</div>
+ 							<div>Chưa duyệt</div>
  						<?php endif; ?>
  					</td>
  					<td style="text-align:center;">
  						<?php if($rows->Status == 0): ?>
- 							<a href="index.php?controller=memberfeedback&action=delivery&ID=<?php echo $rows->ID; ?>" class="label label-info">Phản hồi</a>
+ 							<a href="index.php?controller=memberfeedback&action=delivery&ID=<?php echo $rows->ID; ?>" class="label label-info">Duyệt</a>
  							&nbsp;&nbsp;
  						<?php endif; ?>
  						<a href="index.php?controller=memberfeedback&action=detail&ID=<?php echo $rows->ID; ?>" class="label label-success">Chi tiết</a>
+						 <a href="index.php?controller=memberfeedback&action=delete&ID=<?php echo $rows->ID; ?>" class="label label-success">Delete</a>
  					</td>
  				</tr>
  				<?php endforeach; ?>

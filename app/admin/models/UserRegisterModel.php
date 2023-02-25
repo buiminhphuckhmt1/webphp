@@ -35,16 +35,18 @@
 		public function modelCreate(){
 			$name = $_POST['name'];
 			$birthdate = $_POST["birthdate"];
+			$code = $_POST['code'];
             $class = $_POST["class"];
             $department = $_POST["department"];
             $address = $_POST["address"];
             $phone = $_POST["phone"];
             $email = $_POST["email"];
+			$time = $_POST['timejoin'];
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into member set Stu_Name=:var_Name,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email");
-			$query->execute(["var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email]);
+			$query = $conn->prepare("insert into member set Stu_Name=:var_Name,Stu_Code=:var_Code,BirthDate=:var_BirthDate,Class=:var_Class,Department=:var_Department,Addresss=:var_Address,Phone=:var_Phone,Email=:var_Email,TimeJoin=:var_TimeJoin");
+			$query->execute(["var_Name"=>$name,"var_BirthDate"=>$birthdate,"var_Code"=>$code,"var_Class"=>$class,"var_Department"=>$department,"var_Address"=>$address,"var_Phone"=>$phone,"var_Email"=>$email,"var_TimeJoin"=>$time]);
 			
 		}
 		public function modelDelivery($id){

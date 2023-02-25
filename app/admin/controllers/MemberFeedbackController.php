@@ -43,7 +43,7 @@
 			//xoa ban ghi
 			$record = $this->modelDelete($id);
 			//quay tro lai trang member
-			header("location:index.php?controller=userfeedback");
+			header("location:index.php?controller=memberfeedback");
 		}
 	}
  ?>
