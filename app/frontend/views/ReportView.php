@@ -6,35 +6,29 @@ $layout = "LayoutTrangChu.php";
     <div class="container">
         <div class="message-content">
             <h1>BẠN CÓ THÔNG BÁO TỪ ĐỘI TNTN KHOA CNTT</h1>
-            <form method="post" action="index.php?controller=report&action=getnotify" class="message-form">
+            <form action="" class="message-form">
                 <table>
-                    <?php $index=1; foreach ($data as $rows): ?>
+                    <?php $index = 1;
+                    foreach ($data as $rows): ?>
                         <tr>
                             <td>
-                                <div class="message-detail"><?php echo($index);$index++;?></div>
+                                <div class="message-detail">
+                                    <?php echo ($index);
+                                    $index++; ?>
+                                </div>
                             </td>
                             <td>
-                                <div class="message-detail"><?php echo $rows->Title?></div>
+                                <div style="min-width: 700px;" class="message-detail">
+                                    <?php echo $rows->Title ?>
+                                </div>
                             </td>
                             <td>
                                 <div class=" message-detail">
-                                    <button class="active" type="submit">Đã xem</button>
+                                    <button class="active"><a style="text-decoration: none;color:white" href="index.php?controller=report&action=getnotify&ID=<?php echo $rows->ID; ?>">Xem</a></button>
                                 </div>
                             </td>
                         </tr>
-                        <!-- <tr v-for="item in 4">
-                                        <td>
-                                            <div class="message-detail">1</div>
-                                        </td>
-                                        <td>
-                                            <div class="message-detail">THÔNG BÁO HỌP ĐỘI THƯỜNG XUYÊN THÁNG 12</div>
-                                        </td>
-                                        <td>
-                                            <div class=" message-detail">
-                                                <button type="submit">Đã xem</button>
-                                            </div>
-                                        </td>
-                                    </tr> -->
+
                     <?php endforeach; ?>
                 </table>
             </form>

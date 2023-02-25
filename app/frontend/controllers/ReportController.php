@@ -17,5 +17,13 @@
 			//goi view, truyen du lieu ra view
 			$this->loadView("ReportView.php",["data"=>$data,"numPage"=>$numPage]);
 		}
+
+		public function getnotify(){
+			$id = isset($_GET["ID"])&&is_numeric($_GET["ID"])?$_GET["ID"]:0;
+
+			$record = $this->modelGetRecord($id);
+			//goi view, truyen du lieu ra view
+			$this->loadView("ReportDetailView.php",["record"=>$record]);
+		}
 	}
  ?>

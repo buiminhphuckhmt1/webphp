@@ -10,7 +10,7 @@
             <div class="header-content">
                 <ul class="content-nav-list">
                     <li class="content-nav-item ">
-                        <a href="index.php?controller=aboutus ">Giới thiệu</a>
+                        <a href="index.php?controller=aboutus">Giới thiệu</a>
                     </li>
                     <li class="content-nav-item ">
                         <a href="index.php?controller=news ">Hoạt động</a>
@@ -54,6 +54,12 @@
                             <a href="index.php?controller=report">
                                 
                                 Thông báo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php?controller=membergetlist">
+                                
+                                DS thành viên
                             </a>
                         </li>
                         <li>

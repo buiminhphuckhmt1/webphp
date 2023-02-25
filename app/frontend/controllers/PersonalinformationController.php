@@ -17,6 +17,7 @@
 		
 			$record = $this->modelGetRecord($email);
 			$this->loadView("PersonalinformationView.php",["record"=>$record]);
+			
 		}
 		public function update(){
 			//lay bien id truyen tu url
