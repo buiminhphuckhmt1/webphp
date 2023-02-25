@@ -7,7 +7,7 @@
                 <div class="t__top--slider">
                     <div class="backgroud-slide"></div>
                     <div class="left-content">
-                        <div class="home-search">
+                        <!-- <div class="home-search">
                             <form action="">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.3667 24L12.0167 16.65C11.4333 17.1167 10.7625 17.4861 10.0042 17.7583C9.24583 18.0306 8.43889 18.1667 7.58333 18.1667C5.46389 18.1667 3.67033 17.4328 2.20267 15.9652C0.734222 14.4967 0 12.7028 0 10.5833C0 8.46389 0.734222 6.66994 2.20267 5.2015C3.67033 3.73383 5.46389 3 7.58333 3C9.70278 3 11.4967 3.73383 12.9652 5.2015C14.4328 6.66994 15.1667 8.46389 15.1667 10.5833C15.1667 11.4389 15.0306 12.2458 14.7583 13.0042C14.4861 13.7625 14.1167 14.4333 13.65 15.0167L21 22.3667L19.3667 24ZM7.58333 15.8333C9.04167 15.8333 10.2814 15.3231 11.3027 14.3027C12.3231 13.2814 12.8333 12.0417 12.8333 10.5833C12.8333 9.125 12.3231 7.88522 11.3027 6.864C10.2814 5.84356 9.04167 5.33333 7.58333 5.33333C6.125 5.33333 4.88522 5.84356 3.864 6.864C2.84356 7.88522 2.33333 9.125 2.33333 10.5833C2.33333 12.0417 2.84356 13.2814 3.864 14.3027C4.88522 15.3231 6.125 15.8333 7.58333 15.8333Z" fill="#0C0F59"/>
@@ -15,7 +15,7 @@
                                 <input type="text" placeholder="Tìm kiếm thông tin">
                                 <button class="btn-search">Tìm kiếm</button>
                             </form>
-                        </div>
+                        </div> -->
                         <div>
                             <h1>
                                 ĐỘI THANH NIÊN TÌNH NGUYỆN<br>KHOA CÔNG NGHỆ THÔNG TIN
@@ -52,13 +52,13 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                <img src="../template/images/1.png" alt="">
+                                <img src="../template/images/linh.png" alt="">
                               </div>
                               <div class="swiper-slide">
                                 <img src="../template/images/1.png" alt="">
                               </div>
                               <div class="swiper-slide">
-                                <img src="../template/images/1.png" alt="">
+                                <img src="../template/images/toi.png" alt="">
                               </div>
                             </div>
                             <div class="swiper-button-next"></div>

@@ -80,7 +80,7 @@
                     </div>
                     <div class="right-contet">
                         <div class="avatar-img">
-                        <img src="../assets/upload/news/<?php echo isset($record->Image)?$record->Image:''; ?>">
+                        <img  class="img-fluid" src="../assets/upload/news/<?php echo isset($record->Image)?$record->Image:''; ?>">
                         </div>
                     </div>
                 </div>

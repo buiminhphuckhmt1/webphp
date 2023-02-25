@@ -24,7 +24,7 @@
                 <tr>
                     <td>
                         <?php if($row->Image!= ""&&file_exists("../assets/upload/news/".$row->Image)): ?>
-                        <img src="../assets/upload/news/<?php echo $row->Image; ?>" style="width:100px;">
+                        <img class="img-fluid" src="../assets/upload/news/<?php echo $row->Image; ?>" style="width:100px;">
                         <?php endif; ?>
                     </td>
                     <td><?php echo $row->Name; ?></td>

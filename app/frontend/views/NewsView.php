@@ -32,27 +32,27 @@ $layout = "LayoutTrangChu.php";
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity2.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity3.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity4.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity5.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity6.png" alt="">
 								</div>
 							</div>
 						</div>
@@ -62,34 +62,34 @@ $layout = "LayoutTrangChu.php";
 					<div class="wrapper">
 					<div  class="swiper mySwiper">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
+						<div class="swiper-slide">
 								<div class="item">
 									<img src="../template/images/ativity.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity2.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity3.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity4.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity5.png" alt="">
 								</div>
 							</div>
 							<div class="swiper-slide">
 								<div class="item">
-									<img src="../template/images/ativity.png" alt="">
+									<img src="../template/images/ativity6.png" alt="">
 								</div>
 							</div>
 						</div>

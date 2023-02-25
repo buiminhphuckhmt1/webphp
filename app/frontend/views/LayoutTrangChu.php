@@ -60,7 +60,7 @@
                     var btn = $('#button');
 
                     $(window).scroll(function() {
-                    if ($(window).scrollTop() > 300) {
+                    if ($(window).scrollTop() > 500) {
                         btn.addClass('show');
                     } else {
                         btn.removeClass('show');
@@ -69,7 +69,7 @@
 
                     btn.on('click', function(e) {
                     e.preventDefault();
-                    $('html, body').animate({scrollTop:0}, '300');
+                    $('html, body').animate({scrollTop:0}, '500');
                     });
 
 
@@ -128,6 +128,15 @@
             effect: 'fade',
             fadeEffect: {
               crossFade: true
+            },
+          });
+          var AboutSwiper = new Swiper("#AboutSwiper .mySwiper", {
+            autoplay: {
+                            delay: 3000,
+                        },
+            navigation: {
+              nextEl: "#AboutSwiper .swiper-button-next",
+              prevEl: "#AboutSwiper .swiper-button-prev",
             },
           });
 

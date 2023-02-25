@@ -53,7 +53,7 @@
 			//update name
 			//lay bien ket noi csdl
 			$conn = Connection::getInstance();
-			$query = $conn->prepare("insert into finance set total=:var_total,content=:var_content,collecter=:var_collecter,collectiondate=:var_collectiondate,action=:var_action");
+			$query = $conn->prepare("insert into finance set total=:var_total,content=:var_content,collecter=:var_collecter,collectiondate=:var_collectiondate,action=:var_action, status = 0");
 			$query->execute(["var_total"=>$total,"var_content"=>$content,"var_collecter"=>$colecter,"var_collectiondate"=>$collectiondate,"var_action"=>$action]);
 			
 		}

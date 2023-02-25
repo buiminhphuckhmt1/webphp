@@ -36,7 +36,7 @@ $layout = "LayoutTrangChu.php";
             </div>
         </div>
         <div class="section-img-wrapper">
-            <img src="../template/images/ativity.png" alt="">
+            <img src="../template/images/ativity1.png" alt="">
         </div>
         <div class="section-img-content">
             <div class="col-lg-3 col-md-6 col-12 total-content">
@@ -85,17 +85,26 @@ $layout = "LayoutTrangChu.php";
                 </p>
             </div>
         </div>
-        <div class="section-slide-wrapper">
+        <div id="AboutSwiper"  class="section-slide-wrapper">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="../template/images/ativity.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../template/images/ativity.png" alt="">
+                        <img src="../template/images/ativity1.png" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../template/images/ativity.png" alt="">
+                        <img src="../template/images/ativity3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../template/images/ativity4.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../template/images/ativity5.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../template/images/ativity6.png" alt="">
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
