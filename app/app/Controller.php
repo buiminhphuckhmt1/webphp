@@ -32,7 +32,7 @@
 		}
 		public function authentication(){
 			//kiểm tra xem user đã đăng nhập chưa
-			if(isset($_SESSION['admin_email']) == false)
+			if(isset($_SESSION['email']) == false)
 				header("location:index.php?controller=account");
 		}
 		public function authenticationadmin(){

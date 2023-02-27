@@ -8,7 +8,10 @@
                     <div class="left-content">
                         <h1>Liên hệ</h1>
                         <p>Hãy gửi cho chúng tôi thắc mắc, chúng tôi sẽ phản hồi sớm nhất có thể!</p>
-                        <div class="contact-form">
+                    </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.47102137418!2d105.7332520640287!3d21.053841592299495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455377a780795%3A0x52184cc9cccefc8c!2zS2hvYSBDTlRUIC0gxJBIIEPDtG5nIG5naGnhu4dwIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1677467182321!5m2!1svi!2s" width="1200" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="left-content">
+                            <div class="contact-form">
                             <h1>Gửi thắc mắc, yêu cầu.</h1>
                             <form method="post" action="index.php?controller=contact&action=sendfb">
                                 <div class="group-form-wrapper">

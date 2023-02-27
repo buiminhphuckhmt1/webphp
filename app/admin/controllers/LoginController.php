@@ -11,13 +11,13 @@
 		}
 		//khi ấn nút submit ở form login thì sẽ đến hàm sau
 		//url: index.php?controller=login&action=doLogin
-		public function doLogin(){
+		public function doLoginadmin(){
 			//gọi hàm modelLogin trong class LoginModel để kiểm tra đăng nhập
-			$this->modelLogin();
+			$this->modelLoginadmin();
 		}
 		//đăng xuất
 		//url: index.php?controller=login&action=logout
-		public function logout(){
+		public function logoutadmin(){
 			//hủy biến session
 			unset($_SESSION['admin_email']);
 			header("location:index.php");

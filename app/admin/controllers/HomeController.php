@@ -14,5 +14,9 @@
 			//goi view
 			$this->loadView("HomeView.php");
 		}
+		public function page404(){
+			//goi view
+			$this->loadView("404View.php");
+		}
 	}
  ?>

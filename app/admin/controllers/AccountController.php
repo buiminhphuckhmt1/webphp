@@ -43,7 +43,7 @@
 		public function create(){
 			//tao bien $action de gan vao thuoc tinh action cua the form
 			$action = "index.php?controller=account&action=createPost";
-			$this->loadView("UsersFormView.php",["action"=>$action]);
+			$this->loadView("AccountFormView.php",["action"=>$action]);
 		}
 		//them ban ghi - POST -> khi an nut submit
 		//url:index.php?controller=users&action=createPost

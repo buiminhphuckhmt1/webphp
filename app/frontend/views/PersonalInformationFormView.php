@@ -20,7 +20,7 @@
                                     </div>
                                     <div class=" group-form">
                                         <h5>ma sinh vien</h5>
-                                        <input type="text" value="<?php echo isset($record->Stu_Code)?$record->Stu_Code:''; ?>" name="code" >
+                                        <input type="text" value="<?php echo isset($record->Stu_Code)?$record->Stu_Code:''; ?>" name="code" readonly>
                                     </div>
                                     <div class=" group-form">
                                         <h5>lớp-khóa</h5>

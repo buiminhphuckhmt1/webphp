@@ -24,6 +24,8 @@
  		$obj = new $controllerClass();
  		//gọi đến action để lấy dữ liệu trả về
  		$obj->$action(); 		
- 	}else die("file $controllerFile không tồn tại");
+ 	}else{
+		header("location:index.php?controller=home&action=page404");
+	}
   ?>
   

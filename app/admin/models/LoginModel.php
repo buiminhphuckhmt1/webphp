@@ -1,7 +1,7 @@
 <?php 
 	trait LoginModel{
-		public function modelLogin(){
-			$email = $_POST['email'];
+		public function modelLoginadmin(){
+			$email = $_POST['admin_email'];
 			$password = $_POST['password'];
 			$role = "Admin";
 			//ma hoa password

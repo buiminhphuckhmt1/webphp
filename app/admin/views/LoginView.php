@@ -12,10 +12,10 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">Login</div>
 				<div class="panel-body">
-					<form method="post" action="index.php?controller=login&action=doLogin">
+					<form method="post" action="index.php?controller=login&action=doLoginadmin">
 					<div class="row" style="margin-top:5px;">
 						<div class="col-md-2">Email</div>
-						<div class="col-md-9"><input type="email" name="email" required class="form-control"></div>
+						<div class="col-md-9"><input type="email" name="admin_email" required class="form-control"></div>
 					</div>
 					<div class="row" style="margin-top:5px;">
 						<div class="col-md-2">Password</div>
