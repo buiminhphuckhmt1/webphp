@@ -13,6 +13,7 @@
 		// 		header('location:index.php?controller=account&action=login');
 		// }
 		public function index(){
+			$_SESSION['btnn'] = "display:block;";
 			$this->loadView("HomeView.php");
 		}
 		

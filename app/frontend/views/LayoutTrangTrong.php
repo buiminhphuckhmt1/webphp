@@ -18,6 +18,44 @@
         <?php echo $contentMvc; ?>
         </main>
     </div>
+<style>
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width:400px;
+  margin-right:auto;
+  margin-left:auto;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius:10px;
+  background-color:#000;
+  color:#ffffff;
+  padding:0 10px;
+  cursor: pointer;
+}
+</style>
 </body>
 
 
@@ -42,6 +80,19 @@
             this.$nextTick(() => {
 
                 $(window).bind("load", function () {
+const modal = document.querySelector("#modal");
+const close = document.querySelector(".close");
+modal.style.display = "<?php echo ($_SESSION["status"]);?>";
+
+close.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
                     // Home Banner
                     var homeswipper = new Swiper("#homeswipper .mySwiper", {

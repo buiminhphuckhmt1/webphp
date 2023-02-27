@@ -26,6 +26,8 @@
 			//huy cac bien session
 			unset($_SESSION['email']);
 			unset($_SESSION['id']);
+			$_SESSION['status'] = "none";
+			$_SESSION['btnn'] = "display:none;";
 			header("location:index.php?controller=account&action=login");
 		}
 	}

@@ -28,7 +28,7 @@
                 <button class="btn-register">
                 <a href="index.php?controller=account&action=register">Nộp đơn ứng tuyển</a>
                 </button>
-                <button class="btn-login">
+                <button style="<?php echo ($_SESSION["btnn"]);?>" class="btn-login">
                     <a href="index.php?controller=account&action=login">Đăng nhập</a>
                 </button>
             </div>

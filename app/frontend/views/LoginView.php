@@ -21,4 +21,11 @@
                     </div>
                 </form>
             </div>
-        </div>
+            <div id="modal">
+                <div class="modal-content">
+                    <p>Sai tài khoản hoặc mật khẩu!<br><br>
+                        <strong>vui lòng nhập lại</strong>.</p>
+                        <span class="close">&times;</span>
+                </div>
+            </div>
+</div>

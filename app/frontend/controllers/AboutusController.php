@@ -3,7 +3,7 @@
 	class AboutusController extends Controller{
 		use AboutusModel;
 		public function index(){
-			
+			$_SESSION['btnn'] = "display:block;";
 			//quy dinh so ban ghi tren mot trang
 			$recordPerPage = 3;
 			//lay tong so bang hi

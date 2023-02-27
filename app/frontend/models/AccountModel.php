@@ -43,8 +43,11 @@
 					$_SESSION['name'] = $record->name;
 					header("location:index.php");
 				}
-			}else{
+				else{
+				$_SESSION['status'] = "block";
 				header("location:index.php?controller=account&action=login&notify=error");
+				$_SESSION['btnn'] = "display:none;";
+				}
 			}
 		}
 	}
