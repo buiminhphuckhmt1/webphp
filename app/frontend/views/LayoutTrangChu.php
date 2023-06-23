@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,7 @@
     <div id="app">
         <?php include "Views/HeaderView.php"; ?>
         <main>
-        <?php echo $contentMvc; ?>
+            <?php echo $contentMvc; ?>
         </main>
         <myfooter></myfooter>
 
@@ -44,7 +45,7 @@
         mounted() {
             this.$nextTick(() => {
                 $('.count').each(function () {
-                    $(this).prop('Counter',0).animate({
+                    $(this).prop('Counter', 0).animate({
                         Counter: $(this).text()
                     }, {
                         duration: 5000,
@@ -55,21 +56,40 @@
                     });
                 });
                 $(window).bind("load", function () {
+                    var swipperparnercustomer = new Swiper("#swipperparnercustomer .mySwiper", {
+                        slidesPerView: 5,
+                        grid: {
+                            fill: 'row',
+                            rows: 4,
+                        },
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                        slidesPerGroup: 5,
+                        spaceBetween: 30,
+                        speed: 1500,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+
+                        },
+                    });
 
 
                     var btn = $('#button');
 
-                    $(window).scroll(function() {
-                    if ($(window).scrollTop() > 500) {
-                        btn.addClass('show');
-                    } else {
-                        btn.removeClass('show');
-                    }
+                    $(window).scroll(function () {
+                        if ($(window).scrollTop() > 500) {
+                            btn.addClass('show');
+                        } else {
+                            btn.removeClass('show');
+                        }
                     });
 
-                    btn.on('click', function(e) {
-                    e.preventDefault();
-                    $('html, body').animate({scrollTop:0}, '500');
+                    btn.on('click', function (e) {
+                        e.preventDefault();
+                        $('html, body').animate({ scrollTop: 0 }, '500');
                     });
 
 
@@ -81,13 +101,13 @@
                             delay: 5000,
                         },
                         navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        dynamicBullets: true,
-                    },
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            dynamicBullets: true,
+                        },
                     });
                     var categorymonths = new Swiper("#categorymonths .mySwiper", {
                         slidesPerView: 1,
@@ -96,49 +116,49 @@
                             delay: 5000,
                         },
                         navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        dynamicBullets: true,
-                    },
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            dynamicBullets: true,
+                        },
                     });
 
                     // Home events
                     var thumbSwiper = new Swiper("#thumbSwiper .mySwiper", {
-                slidesPerView: 5,
-                spaceBetween: 10,
-            navigation: {
-              nextEl: "#thumbSwiper .swiper-button-next",
-              prevEl: "#thumbSwiper .swiper-button-prev",
-            },
-          });
+                        slidesPerView: 5,
+                        spaceBetween: 10,
+                        navigation: {
+                            nextEl: "#thumbSwiper .swiper-button-next",
+                            prevEl: "#thumbSwiper .swiper-button-prev",
+                        },
+                    });
 
-          // main siwper
-          var mainSwiper = new Swiper("#mainSwiper .mySwiper", {
-            speed: 1000,
-            thumbs: {
-              swiper: thumbSwiper
-            },
-            navigation: {
-              nextEl: "#mainSwiper .swiper-button-next",
-              prevEl: "#mainSwiper .swiper-button-prev",
-            },
-            effect: 'fade',
-            fadeEffect: {
-              crossFade: true
-            },
-          });
-          var AboutSwiper = new Swiper("#AboutSwiper .mySwiper", {
-            autoplay: {
+                    // main siwper
+                    var mainSwiper = new Swiper("#mainSwiper .mySwiper", {
+                        speed: 1000,
+                        thumbs: {
+                            swiper: thumbSwiper
+                        },
+                        navigation: {
+                            nextEl: "#mainSwiper .swiper-button-next",
+                            prevEl: "#mainSwiper .swiper-button-prev",
+                        },
+                        effect: 'fade',
+                        fadeEffect: {
+                            crossFade: true
+                        },
+                    });
+                    var AboutSwiper = new Swiper("#AboutSwiper .mySwiper", {
+                        autoplay: {
                             delay: 3000,
                         },
-            navigation: {
-              nextEl: "#AboutSwiper .swiper-button-next",
-              prevEl: "#AboutSwiper .swiper-button-prev",
-            },
-          });
+                        navigation: {
+                            nextEl: "#AboutSwiper .swiper-button-next",
+                            prevEl: "#AboutSwiper .swiper-button-prev",
+                        },
+                    });
 
                     iconInterval();
                     fixedsocialPopup();
@@ -147,6 +167,8 @@
             });
         },
     });
+
+
 </script>
 
 </html>

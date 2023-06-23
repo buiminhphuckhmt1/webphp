@@ -6,53 +6,43 @@ $layout = "LayoutTrangChu.php";
     <div class="container">
         <div class="message-content">
             <h1>DANH SÁCH THÀNH VIÊN ĐỘI TNTN KHOA CNTT</h1>
-            <form action="" class="message-form">
-                <table>
-                    <tr style="text-align: center;">
-                        <th style="color:black">STT</th>
-                        <th style="border-left: 1px solid white; color:black;padding: 15px 0px;">Ảnh</th>
-                        <th style="border-left: 1px solid white;color:black">Họ Và Tên</th>
-                        <th style="border-left: 1px solid white;color:black">Lớp-Khóa</th>
-                        <th style="border-left: 1px solid white;color:black">Quê Quán</th>
-                        <th style="border-left: 1px solid white;color:black">Năm Tham Gia</th>
-                    </tr>
+            <div class="blog-wrapper">
+                <div class="row" style="width:100%;">
                     <?php $index = 1;
                     foreach ($data as $rows): ?>
-                        <tr>
-                            <td>
-                                <div class="message-detail">
-                                    <?php echo ($index);
-                                    $index++; ?>
+                        <div class="col-lg-3 col-md-6 col-12S">
+                            <div class="article-blog-news" style="background-color: #7e99f8; padding: 10px; border-radius: 10px; margin-bottom: 15px; height: 400px">
+                                <div class="item-image">
+                                    <a href="javascript:;" style="text-align: center">
+                                        <img src="../assets/upload/news/<?php echo $rows->Image; ?>" >
+                                    </a>
                                 </div>
-                            </td>
-                            <td style="text-align: center;max-width: 170px;">
-                                <img style="max-width: 150px;margin:10px  0px;" class="img-fluid" src="../assets/upload/news/<?php echo $rows->Image; ?>">
-                            </td>
-                            <td>
-                                <div  class="message-detail">
-                                    <?php echo $rows->Stu_Name ?>
+                                <div class="item-content" style="text-align: center">
+                                    <a href="javascript:;" class="item-name" title="" style="text-align: center">
+                                        <?php echo $rows->Stu_Name ?>
+                                    </a>
                                 </div>
-                            </td>
-                            <td>
-                                <div  class="message-detail">
-                                    <?php echo $rows->Class ?>
+                                <div class="item-content">
+                                    <a href="javascript:;" class="item-name" title="" style="text-align: center">
+                                        <?php echo $rows->Class ?>
+                                    </a>
                                 </div>
-                            </td>
-                            <td>
-                                <div  class="message-detail">
-                                    <?php echo $rows->Addresss ?>
+                                <div class="item-content">
+                                    <a href="javascript:;" class="item-name" title="" style="text-align: center">
+                                        <?php echo $rows->Addresss ?>
+                                    </a>
                                 </div>
-                            </td>
-                            <td>
-                                <div  class="message-detail">
-                                    <?php echo $rows->TimeJoin ?>
+                                <div class="item-content">
+                                    <a href="javascript:;" class="item-name" title="" style="text-align: center">
+                                        <?php echo $rows->TimeJoin ?>
+                                    </a>
                                 </div>
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
 
                     <?php endforeach; ?>
-                </table>
-            </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
